@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import { Button } from 'semantic-ui-react'
+
 
 function App() {
   return (
@@ -17,6 +20,11 @@ function App() {
         >
           Learn React
         </a>
+
+        <div>
+    <Button content='Primary' primary />
+    <Button content='Secondary' secondary />
+  </div>
       </header>
     </div>
   );
