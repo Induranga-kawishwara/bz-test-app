@@ -27,6 +27,80 @@
   font-family: 'Poppins Regular', sans-serif;
 }
 
+/* -------------------Center Class */
+#makeCenter{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: "4px solid Red";
+}
+
+/* --------------- client logo animate */
+.logoColour {
+  filter: grayscale(90%);
+  transition: all 200ms ease;
+
+}
+
+.logoColour:hover {
+  filter: grayscale(0%);
+}
+
+/* ------------------Header Text */
+.animationHeader{
+  animation: zoomup 3s ease infinite;
+}
+
+@keyframes zoomup {
+  0%,
+  100% {
+    color: #f4c700;
+    /* filter: blur(0.5px); */
+    text-shadow: 0 0 2px #fff;
+
+  }
+
+  50% {
+    filter: blur(0);
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
+.glow{
+  overflow: hidden;
+  font-size: 1em;
+  transition: all 300ms ease;
+}
+
+.glow:hover {
+  text-shadow: 0 0 4px #f4c700;
+}
+
+/* ------------------gemini  */
+.gemini {
+  background: radial-gradient(circle,#212121,#f4c700);
+  background-clip: text;
+  color: transparent;
+  animation: gemini 5s linear infinite;
+  background-size: 200% 200%;
+}
+@keyframes gemini {
+  
+  0%{
+      background-position: 0% 0%;
+  }
+  
+  50%{
+      background-position: 100% 100%;
+  }
+  
+  100%{
+      background-position: 0% 0%;
+  }
+}
+
+
 
 .stats-card {
     background-color: #212121 !important; 
@@ -53,4 +127,44 @@
 
 #grey{
   background-color: #eeeeee;
+}
+
+.ui{
+  cursor: default;
+}
+
+.ui.card{
+  transition: all 300ms;
+
+}
+
+.ui.card:hover{
+  box-shadow: 0 4px 8px 0 #00000015, 0 6px 20px 0 #00000015;
+}
+
+.clipArt{
+  border-radius: 0.5em;
+  transition: all 300ms;
+}
+.clipArt:hover{
+  box-shadow: 0 4px 8px 0 #00000015, 0 6px 20px 0 #00000015;
+}
+
+/* landing page zoom in and out */
+.zoom-in-out-box {
+  
+  background: #f500cc;
+  animation: zoom-in-zoom-out 20s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.01, 1.01);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
