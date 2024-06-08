@@ -61,16 +61,17 @@ const HomepageHeading = ({ mobile }) => (
       content="Crowdsource your security testing in a smart way with Bug Zero"
       inverted
       style={{
-        fontSize: mobile ? "2em" : "4em",
+        fontSize: mobile ? "3em" : "4em",
         marginBottom: "2em",
         fontFamily: "Poppins Regular",
         marginTop: mobile ? "1.5em" : "2em",
-        marginLeft: mobile ? "0em" : "2em",
-        marginRight: mobile ? "0em" : "2em",
+        marginLeft: mobile ? "0.5rem" : "10rem",
+        marginRight: mobile ? "0.5rem" : "10rem",
+        animation: "zoomup 5s ease infinite"
       }}
     />
     <row>
-      <Button size="huge" color="yellow" style={{ color: "Black" }}>
+      <Button size="huge" color="yellow" style={{ color: "Black"}}>
         Get Started
         <Icon name="right arrow" />
       </Button>
@@ -203,8 +204,8 @@ class MobileContainer extends Component {
             <Menu.Item as="a" active>
               Home
             </Menu.Item>
-            <Menu.Item as="a">Work</Menu.Item>
-            <Menu.Item as="a">Company</Menu.Item>
+            <Menu.Item as="a">Blog</Menu.Item>
+            <Menu.Item as="a">Zerofeed</Menu.Item>
             <Menu.Item as="a">Careers</Menu.Item>
             <Menu.Item as="a">Log in</Menu.Item>
             <Menu.Item as="a">Sign Up</Menu.Item>
@@ -262,29 +263,6 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 };
 
-const images = [
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/bug-zero.appspot.com/o/images%2Forganization%2Fbhasha%2FBhasha%20Logo%20512x512.png?alt=media&token=5fdba03a-bf71-4dd4-9ecf-e7432137d101",
-    alt: "Image 1",
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/bug-zero.appspot.com/o/images%2Forganization%2Fhelakuru%2FHelakuru%20Logo-circle_profile_pic.png?alt=media&token=8a296db5-9eac-4272-b0d3-bd73811e3fbd",
-    alt: "Image 2",
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/bug-zero.appspot.com/o/images%2Forganization%2Fpayhere%2Fphoto.png?alt=media&token=98ad34d3-2c0c-43a7-be1d-9f8a63bf3d36",
-    alt: "Image 3",
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/bug-zero.appspot.com/o/images%2Forganization%2Fsri_lanka_cert%2Flogo.png?alt=media&token=3902c510-a820-4fdf-bc13-06f466d0bba9",
-    alt: "Image 4",
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/bug-zero.appspot.com/o/images%2Forganization%2Fworklenz%2Flarge-worklenz-icon-512-x-512-px%20copy.png?alt=media&token=5bf38ed2-a80d-4c08-b0a6-f2b1ea33abb9",
-    alt: "Image 5",
-  },
-];
-
 const HomepageLayout = () => (
   // const [counterOn, setCounterOn] = useState(false);
 
@@ -295,14 +273,14 @@ const HomepageLayout = () => (
         Protecting Sri Lanka's most valuable platforms
       </Header>
       {/* ---------------------------------------------Partners Logo Bar--------------------------------------------- */}
-      <Grid columns="equal" stackable style={{ filter: "grayscale(100%)" }}>
+      <Grid columns="equal" stackable >
         <Grid.Column width={1}></Grid.Column>
-        <Grid.Column textAlign="center">
-          <Card
+        <Grid.Column textAlign="center" className="logoColour">
+          <Card 
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
-            <Card.Content>
-              <Image
+            <Card.Content >
+              <Image 
                 src={require("./Images/logo/bhasha.png")}
                 alt="Bhasha Logo"
                 size="tiny"
@@ -310,7 +288,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column className="logoColour">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -323,7 +301,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column className="logoColour">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -336,7 +314,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column className="logoColour">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -349,7 +327,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column className="logoColour">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -362,7 +340,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column className="logoColour">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -381,8 +359,8 @@ const HomepageLayout = () => (
     {/* ---------------------------------------------Why join bug zero--------------------------------------------- */}
     <Segment style={{ padding: "6em 0em", border: "none" }} id="grey" vertical>
       <Container text>
-        <Header as="h3" style={{ fontSize: "2em" }}>
-          Why Join Bug Zero
+        <Header as="h2" style={{ fontSize: "2.5em" }}>
+          Why Join <span className="gemini">Bug Zero</span>
         </Header>
         <p style={{ fontSize: "1.33em" }}>
           Check Your Security Vulnerabilities For FREE! <br />
@@ -400,8 +378,8 @@ const HomepageLayout = () => (
     {/* ---------------------------------------------Secure your organization--------------------------------------------- */}
     <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
       <Container text>
-        <Header as="h3" style={{ fontSize: "2em" }}>
-          Secure your organization 24/7
+        <Header style={{ fontSize: "2.5em" }} >
+          <h3 className="glow">Secure your organization 24/7</h3>
         </Header>
         <p className="mb-4" style={{ fontSize: "1.33em" }}>
           For organizations, Bug Zero provides
@@ -410,7 +388,7 @@ const HomepageLayout = () => (
       </Container>
       <Grid columns="equal" stackable>
         <Grid.Column width={1}></Grid.Column>
-        <Grid.Column textAlign="center">
+        <Grid.Column textAlign="center"  className="clipArt">
           {/* card */}
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
@@ -421,7 +399,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column  className="clipArt">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -433,7 +411,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column  className="clipArt">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -443,7 +421,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column  className="clipArt">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -473,7 +451,7 @@ const HomepageLayout = () => (
     {/* ---------------------------------------------Bug Bounty Stats--------------------------------------------- */}
     <Segment vertical style={{ padding: "6em 0em", border: "none" }} id="grey">
       <Container text style={{ marginBottom: "3em" }}>
-        <Header as="h3" style={{ fontSize: "2em" }}>
+        <Header as="h3" style={{ fontSize: "2.5em" }}>
           Our Bug Bounty Stats
         </Header>
       </Container>
@@ -526,7 +504,7 @@ const HomepageLayout = () => (
     {/* ---------------------------------------Earn Money by doing what you love--------------------------------------------- */}
     <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
       <Container text>
-        <Header as="h3" style={{ fontSize: "2em" }}>
+        <Header as="h3" style={{ fontSize: "2.5em" }}>
           Earn Money By Doing What You Love!
         </Header>
         <p className="mb-4" style={{ fontSize: "1.33em" }}>
@@ -536,10 +514,10 @@ const HomepageLayout = () => (
       </Container>
       <Grid columns="equal" stackable>
         <Grid.Column width={1}></Grid.Column>
-        <Grid.Column textAlign="center">
+        <Grid.Column textAlign="center" className="clipArt">
           {/* card */}
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{ boxShadow: "none", width: "100%", textAlign: "center" }} 
           >
             <Card.Content>
               <Image src={imgmoney} alt="BigCo Inc. logo" size="tiny" />
@@ -547,7 +525,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column  className="clipArt">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -557,7 +535,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column  className="clipArt">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -570,7 +548,7 @@ const HomepageLayout = () => (
             </Card.Content>
           </Card>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column  className="clipArt">
           <Card
             style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
           >
@@ -598,72 +576,105 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
     {/* ---------------------------------------The Bug Zero Team--------------------------------------------- */}
-    <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
+    <Segment style={{ padding: "6em 0em", border: "none" }} id="grey">
       <Container text>
-        <Header as="h3" style={{ fontSize: "2em" }}>
+        <Header style={{ fontSize: "2.5em" }}>
           The Bug Zero Team
         </Header>
         <br></br>
       </Container>
-      <Grid columns="equal" stackable>
-        <Grid.Column width={1}></Grid.Column>
-        <Grid.Column textAlign="center">
+      <Grid container doubling columns={5}>
+        {/* -----------------Kasun */}
+        <Grid.Column>
           {/* card */}
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
               src={require("./Images/team/kasun.jpg")}
-              alt="BigCo Inc. logo"
+              alt="Prof Kasun De Zoysa"
             />
             <Card.Content>
-              <CardHeader>Dr. Kasun De Zoysa</CardHeader>
+              <CardHeader>Prof. Kasun<br/>De Zoysa</CardHeader>
             </Card.Content>
+            <CardContent extra>
+              <a href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en" target="blank">
+                <Icon name='graduation' />
+                Profile
+              </a>
+            </CardContent>
           </Card>
         </Grid.Column>
+        {/* -----------------Primal */}
         <Grid.Column>
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
               src={require("./Images/team/primal.jpg")}
-              alt="BigCo Inc. logo"
+              alt="Dr Primal Wijesekara"
             />
             <Card.Content>
-              <CardHeader>Dr. Primal Wijesekera</CardHeader>
+              <CardHeader>Dr. Primal <br/>Wijesekera</CardHeader>
             </Card.Content>
+            <CardContent extra>
+              <a href="https://www.linkedin.com/in/primalwijesekera/" target="blank">
+                <Icon name='linkedin' />
+                Profile
+              </a>
+            </CardContent>
           </Card>
         </Grid.Column>
+        {/* -----------------Kenneth */}
         <Grid.Column>
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
               src={require("./Images/team/kenneth.jpg")}
-              alt="BigCo Inc. logo"
+              alt="Kenneth Thilakarathna"
             />
             <Card.Content>
-              <CardHeader>Kenneth Thilakarathna</CardHeader>
+              <CardHeader>Kenneth<br/>Thilakarathna</CardHeader>
             </Card.Content>
+            <CardContent extra>
+              <a href="https://www.linkedin.com/in/kenneth-thilakarathna-51aa0a5a/" target="blank">
+                <Icon name='linkedin' />
+                Profile
+              </a>
+            </CardContent>
           </Card>
         </Grid.Column>
+        {/* -----------------Charitha */}
         <Grid.Column>
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
               src={require("./Images/team/charitha.png")}
-              alt="BigCo Inc. logo"
+              alt="Charitha Elvitigala"
             />
             <Card.Content>
-              <CardHeader>Charitha Elvitigala</CardHeader>
+              <CardHeader>Charitha<br/>Elvitigala</CardHeader>
             </Card.Content>
+            <CardContent extra>
+              <a href="https://www.linkedin.com/in/charitha-elvitigala-42a5081a/" target="blank">
+                <Icon name='linkedin' />
+                Profile
+              </a>
+            </CardContent>
           </Card>
         </Grid.Column>
+        {/* -----------------Nipuna */}
         <Grid.Column>
-          <Card style={{ width: "100%", textAlign: "center" }}>
+          <Card>
             <Image
                 src={require("./Images/team/nipuna.jpg")}
-                alt="BigCo Inc. logo"
+                alt="Nipuna Weerasekara"
               />
             <Card.Content>
-              <CardHeader>Nipuna Weerasekara</CardHeader>
+              <CardHeader>Nipuna<br/>Weerasekara</CardHeader>
             </Card.Content>
+            <CardContent extra>
+              <a href="https://niweera.gq/" target="blank">
+                <Icon name='globe' />
+                Profile
+              </a>
+            </CardContent>
           </Card>
         </Grid.Column>
-        <Grid.Column width={1}></Grid.Column>
       </Grid>
       {/*-------------- Button --------------*/}
     </Segment>
