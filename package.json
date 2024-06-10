@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@artsy/fresnel": "^6.1.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,6 +13,7 @@
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.3",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-scroll-trigger": "^0.6.14",
     "react-timeline-animation": "^1.2.3",
@@ -19,12 +22,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-   
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject"
-    
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,4 @@
     "@craco/craco": "^7.1.0",
     "@semantic-ui-react/craco-less": "^3.0.0"
   }
-  
 }
-
