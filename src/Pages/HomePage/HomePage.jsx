@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { InView } from "react-intersection-observer";
 
-import BugBountyStats from "../../Pages/BugBountyStats/BugBountyStats";
-import EarnMoney from "../../Pages/EarnMoney/EarnMoney";
-import Partners from "../../Pages/Partners/Partners";
-import SecureOrganization from "../../Pages/SecureOrganization/SecureOrganization";
-import Team from "../../Pages/Team/Team";
-import WhyJoin from "../../Pages/WhyJoin/WhyJoin";
+import BugBountyStats from "../BugBountyStats/BugBountyStats";
+import EarnMoney from "../EarnMoney/EarnMoney";
+import Partners from "../Partners/Partners";
+import SecureOrganization from "../SecureOrganization/SecureOrganization";
+import Team from "../Team/Team";
+import WhyJoin from "../WhyJoin/WhyJoin";
 
 import "./style.css";
 
@@ -241,19 +241,19 @@ const HomepageLayout = () => (
         <WhyJoin />
       </section>
 
-      <section id="about">
+      <section id="SecureOrganization">
         <SecureOrganization />
       </section>
 
-      <section id="home">
+      <section id="BugBountyStats">
         <BugBountyStats />
       </section>
 
-      <section id="home">
+      <section id="EarnMoney">
         <EarnMoney />
       </section>
 
-      <section id="about">
+      <section id="Team">
         <Team />
       </section>
     </div>
