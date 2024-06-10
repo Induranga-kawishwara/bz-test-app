@@ -1,5 +1,5 @@
 import "./App.css";
-import HomepageLayout from "./Pages/home/HomePage";
+import HomepageLayout from "./Pages/HomePage/HomePage";
 import Footer from "./components/Footer/Footer";
 
 function App() {
