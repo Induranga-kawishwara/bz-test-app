@@ -19,7 +19,7 @@ const Main = () => {
           const sectionOffset = 100;
           const offsetTop = targetSection.offsetTop - sectionOffset;
           window.scrollTo({ top: offsetTop, behavior: "smooth" });
-        }, 10); // Delay the calculation by 100 milliseconds
+        }, 10);
       }
     };
 
