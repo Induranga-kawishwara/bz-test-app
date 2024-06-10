@@ -9,9 +9,7 @@ const Footer = () => {
             <Grid.Column width={3}>
               <Header inverted as="h4" content="About" />
               <List link inverted>
-                {/* <List.Item as="a">Sitemap</List.Item> */}
                 <List.Item as="a">Contact Us</List.Item>
-                {/* <List.Item as="a">Religious Ceremonies</List.Item> */}
                 <List.Item as="a">About Bug Zero</List.Item>
                 <List.Item as="a">Privacy Policy</List.Item>
               </List>
@@ -22,7 +20,6 @@ const Footer = () => {
                 <List.Item as="a">Bug Bounty</List.Item>
                 <List.Item as="a">Consulting</List.Item>
                 <List.Item as="a">Blog</List.Item>
-                {/* <List.Item as="a">Favorite X-Men</List.Item> */}
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
