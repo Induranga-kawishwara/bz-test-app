@@ -2,25 +2,15 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { InView } from "react-intersection-observer";
-
-import BugBountyStats from "../BugBountyStats/BugBountyStats";
-import EarnMoney from "../EarnMoney/EarnMoney";
-import Partners from "../Partners/Partners";
-import SecureOrganization from "../SecureOrganization/SecureOrganization";
-import Team from "../Team/Team";
-import WhyJoin from "../WhyJoin/WhyJoin";
-
-import "./style.css";
-
 import {
   Button,
   Container,
-  Header,
   Icon,
   Menu,
   Segment,
   Sidebar,
 } from "semantic-ui-react";
+import "./style.css";
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -29,39 +19,6 @@ const { MediaContextProvider, Media } = createMedia({
     computer: 1368,
   },
 });
-
-const HomepageHeading = ({ mobile }) => (
-  <Container fluid>
-    <Header
-      as="h1"
-      content="Crowdsource your security testing in a smart way with Bug Zero"
-      inverted
-      style={{
-        fontSize: mobile ? "3em" : "4em",
-        marginBottom: "2em",
-        fontFamily: "Poppins Regular",
-        marginTop: mobile ? "1.5em" : "2em",
-        marginLeft: mobile ? "0.5rem" : "10rem",
-        marginRight: mobile ? "0.5rem" : "10rem",
-        animation: "zoomup 5s ease infinite",
-      }}
-    />
-    <row>
-      <Button size="huge" color="yellow" style={{ color: "Black" }}>
-        Get Started
-        <Icon name="right arrow" />
-      </Button>
-      <Button size="huge" color="yellow" inverted>
-        Learn More
-      </Button>
-    </row>
-  </Container>
-);
-
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool,
-};
-
 class DesktopContainer extends Component {
   state = {};
 
@@ -74,19 +31,7 @@ class DesktopContainer extends Component {
     return (
       <Media greaterThan="mobile">
         <InView onChange={this.toggleFixedMenu}>
-          <Segment
-            inverted
-            textAlign="center"
-            style={{
-              minHeight: 750,
-              padding: "1em 0em",
-              backgroundImage:
-                'url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")',
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-            vertical
-          >
+          <Segment inverted>
             <Menu
               fixed={fixed ? "top" : null}
               inverted={fixed}
@@ -117,26 +62,25 @@ class DesktopContainer extends Component {
                   Programs
                 </Menu.Item>
                 <Menu.Item position="right">
-                  <button
+                  <Button
                     as="a"
                     inverted={!fixed}
-                    class="ui inverted yellow basic button"
+                    className="ui inverted yellow basic button"
                   >
                     Log in
-                  </button>
-                  <button
+                  </Button>
+                  <Button
                     as="a"
                     inverted={!fixed}
-                    class="ui inverted yellow button"
+                    className="ui inverted yellow button"
                     primary={fixed}
                     style={{ marginLeft: "0.5em" }}
                   >
                     Sign Up
-                  </button>
+                  </Button>
                 </Menu.Item>
               </Container>
             </Menu>
-            <HomepageHeading />
           </Segment>
         </InView>
 
@@ -183,12 +127,7 @@ class MobileContainer extends Component {
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
-            <Segment
-              inverted
-              textAlign="center"
-              style={{ minHeight: 350, padding: "1em 0em" }}
-              vertical
-            >
+            <Segment inverted textAlign="center" vertical>
               <Container>
                 <Menu inverted pointing secondary size="large">
                   <Menu.Item onClick={this.handleToggle}>
@@ -204,7 +143,6 @@ class MobileContainer extends Component {
                   </Menu.Item>
                 </Menu>
               </Container>
-              <HomepageHeading mobile />
             </Segment>
 
             {children}
@@ -219,45 +157,15 @@ MobileContainer.propTypes = {
   children: PropTypes.node,
 };
 
-const ResponsiveContainer = ({ children }) => (
+const NavBar = ({ children }) => (
   <MediaContextProvider>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
   </MediaContextProvider>
 );
 
-ResponsiveContainer.propTypes = {
+NavBar.propTypes = {
   children: PropTypes.node,
 };
 
-const HomepageLayout = () => (
-  <ResponsiveContainer>
-    <div>
-      <section id="Partners">
-        <Partners />
-      </section>
-
-      <section id="WhyJoin">
-        <WhyJoin />
-      </section>
-
-      <section id="SecureOrganization">
-        <SecureOrganization />
-      </section>
-
-      <section id="BugBountyStats">
-        <BugBountyStats />
-      </section>
-
-      <section id="EarnMoney">
-        <EarnMoney />
-      </section>
-
-      <section id="Team">
-        <Team />
-      </section>
-    </div>
-  </ResponsiveContainer>
-);
-
-export default HomepageLayout;
+export default NavBar;
