@@ -3,44 +3,24 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { InView } from "react-intersection-observer";
 
+import BugBountyStats from "../../Pages/BugBountyStats/BugBountyStats";
+import EarnMoney from "../../Pages/EarnMoney/EarnMoney";
+import Partners from "../../Pages/Partners/Partners";
+import SecureOrganization from "../../Pages/SecureOrganization/SecureOrganization";
+import Team from "../../Pages/Team/Team";
+import WhyJoin from "../../Pages/WhyJoin/WhyJoin";
+
 import "./style.css";
 
 import {
   Button,
-  Card,
-  CardMeta,
-  CardHeader,
-  CardDescription,
-  CardContent,
   Container,
-  Divider,
-  Embed,
-  Grid,
   Header,
   Icon,
-  Image,
-  List,
   Menu,
   Segment,
   Sidebar,
 } from "semantic-ui-react";
-
-// Import Clip arts
-import imgmoney from "./Images/money.png";
-import imgbudget from "./Images/budget.png";
-import imganony from "./Images/anonymous.png";
-import imgeyescan from "./Images/eye-scanner.png";
-import imgknowledge from "./Images/knowledge.png";
-import imgnetwork from "./Images/networking.png";
-import imgsuitacase from "./Images/suitcase.png";
-import imgswords from "./Images/swords.png";
-
-// import 'semantic-ui-css/semantic.min.css';
-import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
-import { useState } from "react";
-
-// import time line
-import TimelineObserver from "react-timeline-animation";
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -50,10 +30,6 @@ const { MediaContextProvider, Media } = createMedia({
   },
 });
 
-/* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
- * components for such things.
- */
 const HomepageHeading = ({ mobile }) => (
   <Container fluid>
     <Header
@@ -67,17 +43,16 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "1.5em" : "2em",
         marginLeft: mobile ? "0.5rem" : "10rem",
         marginRight: mobile ? "0.5rem" : "10rem",
-        animation: "zoomup 5s ease infinite"
+        animation: "zoomup 5s ease infinite",
       }}
     />
     <row>
-      <Button size="huge" color="yellow" style={{ color: "Black"}}>
+      <Button size="huge" color="yellow" style={{ color: "Black" }}>
         Get Started
         <Icon name="right arrow" />
       </Button>
       <Button size="huge" color="yellow" inverted>
         Learn More
-        {/* <i class="info icon"></i> */}
       </Button>
     </row>
   </Container>
@@ -87,10 +62,6 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 };
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = {};
 
@@ -249,10 +220,6 @@ MobileContainer.propTypes = {
 };
 
 const ResponsiveContainer = ({ children }) => (
-  /* Heads up!
-   * For large applications it may not be best option to put all page into these containers at
-   * they will be rendered twice for SSR.
-   */
   <MediaContextProvider>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
@@ -264,551 +231,32 @@ ResponsiveContainer.propTypes = {
 };
 
 const HomepageLayout = () => (
-  // const [counterOn, setCounterOn] = useState(false);
-
   <ResponsiveContainer>
-    <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
-      {/* Logo bar */}
-      <Header as="h3" style={{ fontSize: "2em", padding: "0 0 2em 0" }}>
-        Protecting Sri Lanka's most valuable platforms
-      </Header>
-      {/* ---------------------------------------------Partners Logo Bar--------------------------------------------- */}
-      <Grid columns="equal" stackable >
-        <Grid.Column width={1}></Grid.Column>
-        <Grid.Column textAlign="center" className="logoColour">
-          <Card 
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content >
-              <Image 
-                src={require("./Images/logo/bhasha.png")}
-                alt="Bhasha Logo"
-                size="tiny"
-              />
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column className="logoColour">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image
-                src={require("./Images/logo/citadel.jpg")}
-                alt="Citadel Logo"
-                size="tiny"
-              />
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column className="logoColour">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image
-                src={require("./Images/logo/helakuru.png")}
-                alt="Helakuru Logo"
-                size="tiny"
-              />
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column className="logoColour">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image
-                src={require("./Images/logo/janashakthi.jpg")}
-                alt="Janashakthi Logo"
-                size="tiny"
-              />
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column className="logoColour">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image
-                src={require("./Images/logo/payhere.png")}
-                alt="Payhere Logo"
-                size="tiny"
-              />
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column className="logoColour">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image
-                src={require("./Images/logo/webt.jpg")}
-                alt="Web Telescope Logo"
-                size="tiny"
-              />
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column width={1}></Grid.Column>
-      </Grid>
-    </Segment>
-    {/* ---------------------------------------------Why join bug zero--------------------------------------------- */}
-    <Segment style={{ padding: "6em 0em", border: "none" }} id="grey" vertical>
-      <Container text>
-        <Header as="h2" style={{ fontSize: "2.5em" }}>
-          Why Join <span className="gemini">Bug Zero</span>
-        </Header>
-        <p style={{ fontSize: "1.33em" }}>
-          Check Your Security Vulnerabilities For FREE! <br />
-          The crowdsource approach of Bug Zero will get a diverse set of eyes
-          for your system with zero recruitment, logistical, or down payment
-          overhead.
-        </p>
-        <Embed
-          id="-s9dfdlQnSo"
-          placeholder="https://i.imgur.com/McYF2j8.png"
-          source="youtube"
-        />
-      </Container>
-    </Segment>
-    {/* ---------------------------------------------Secure your organization--------------------------------------------- */}
-    <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
-      <Container text>
-        <Header style={{ fontSize: "2.5em" }} >
-          <h3 className="glow">Secure your organization 24/7</h3>
-        </Header>
-        <p className="mb-4" style={{ fontSize: "1.33em" }}>
-          For organizations, Bug Zero provides
-        </p>
-        <br></br>
-      </Container>
-      <Grid columns="equal" stackable>
-        <Grid.Column width={1}></Grid.Column>
-        <Grid.Column textAlign="center"  className="clipArt">
-          {/* card */}
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image src={imgmoney} alt="BigCo Inc. logo" size="tiny" />
-              <h3>Security testing for no upfront capital investment</h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column  className="clipArt">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image src={imgbudget} alt="BigCo Inc. logo" size="tiny" />
-              <h3>
-                Security testing for no staffing or fixed budget constraints
-              </h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column  className="clipArt">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image src={imgnetwork} alt="BigCo Inc. logo" size="tiny" />
-              <h3>A diverse set of eyes on your system with no recruitment </h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column  className="clipArt">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image src={imgeyescan} alt="BigCo Inc. logo" size="tiny" />
-              <h3>Increased visibility and transparency for your system</h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column width={1}></Grid.Column>
-      </Grid>
-      {/*-------------- Button --------------*/}
-      <Grid style={{ marginTop: "2rem", padding: "2rem" }}>
-        <Grid.Row>
-          <Grid.Column>
-            <button
-              class="big ui yellow button"
-              style={{ color: "Black", fontSize: "20px" }}
-              size="huge"
-            >
-              Register as an organization
-            </button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-    {/* ---------------------------------------------Bug Bounty Stats--------------------------------------------- */}
-    <Segment vertical style={{ padding: "6em 0em", border: "none" }} id="grey">
-      <Container text style={{ marginBottom: "3em" }}>
-        <Header as="h3" style={{ fontSize: "2.5em" }}>
-          Our Bug Bounty Stats
-        </Header>
-      </Container>
-      <Container>
-        <Grid
-          columns="equal"
-          stackable
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>1M+ LKR</Card.Header>
-                <Card.Description>Bounties Granted</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>75K LKR</Card.Header>
-                <Card.Description>Maximum Bounty</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>25K LKR</Card.Header>
-                <Card.Description>Average Bounty</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>750 Plus</Card.Header>
-                <Card.Description>Bug Hunters</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-        </Grid>
-      </Container>
-    </Segment>
-    {/* ---------------------------------------Earn Money by doing what you love--------------------------------------------- */}
-    <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
-      <Container text>
-        <Header as="h3" style={{ fontSize: "2.5em" }}>
-          Earn Money By Doing What You Love!
-        </Header>
-        <p className="mb-4" style={{ fontSize: "1.33em" }}>
-          For individuals, Bug Zero provides
-        </p>
-        <br></br>
-      </Container>
-      <Grid columns="equal" stackable>
-        <Grid.Column width={1}></Grid.Column>
-        <Grid.Column textAlign="center" className="clipArt">
-          {/* card */}
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }} 
-          >
-            <Card.Content>
-              <Image src={imgmoney} alt="BigCo Inc. logo" size="tiny" />
-              <h3>An opportunity to learn about security from scratch</h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column  className="clipArt">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image src={imgbudget} alt="BigCo Inc. logo" size="tiny" />
-              <h3>Complete Anonymity for Anyone Who Asks For Privacy</h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column  className="clipArt">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image src={imgnetwork} alt="BigCo Inc. logo" size="tiny" />
-              <h3>
-                Increased Visibility in the Makret which could lead to lucrative
-                job opportunites
-              </h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column  className="clipArt">
-          <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
-          >
-            <Card.Content>
-              <Image src={imgeyescan} alt="BigCo Inc. logo" size="tiny" />
-              <h3>Be a part of the ethical force against malicious actors</h3>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-        <Grid.Column width={1}></Grid.Column>
-      </Grid>
-      {/*-------------- Button --------------*/}
-      <Grid style={{ marginTop: "2rem", padding: "2rem" }}>
-        <Grid.Row>
-          <Grid.Column>
-            <button
-              class="big ui yellow button"
-              style={{ color: "Black", fontSize: "20px" }}
-              size="huge"
-            >
-              Register as an individual
-            </button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-    {/* ---------------------------------------The Bug Zero Team--------------------------------------------- */}
-    <Segment style={{ padding: "6em 0em", border: "none" }} id="grey">
-      <Container text>
-        <Header style={{ fontSize: "2.5em" }}>
-          The Bug Zero Team
-        </Header>
-        <br></br>
-      </Container>
-      <Grid container doubling columns={5}>
-        {/* -----------------Kasun */}
-        <Grid.Column>
-          {/* card */}
-          <Card style={{ width: "100%", textAlign: "center" }}>
-            <Image
-              src={require("./Images/team/kasun.jpg")}
-              alt="Prof Kasun De Zoysa"
-            />
-            <Card.Content>
-              <CardHeader>Prof. Kasun<br/>De Zoysa</CardHeader>
-            </Card.Content>
-            <CardContent extra>
-              <a href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en" target="blank">
-                <Icon name='graduation' />
-                Profile
-              </a>
-            </CardContent>
-          </Card>
-        </Grid.Column>
-        {/* -----------------Primal */}
-        <Grid.Column>
-          <Card style={{ width: "100%", textAlign: "center" }}>
-            <Image
-              src={require("./Images/team/primal.jpg")}
-              alt="Dr Primal Wijesekara"
-            />
-            <Card.Content>
-              <CardHeader>Dr. Primal <br/>Wijesekera</CardHeader>
-            </Card.Content>
-            <CardContent extra>
-              <a href="https://www.linkedin.com/in/primalwijesekera/" target="blank">
-                <Icon name='linkedin' />
-                Profile
-              </a>
-            </CardContent>
-          </Card>
-        </Grid.Column>
-        {/* -----------------Kenneth */}
-        <Grid.Column>
-          <Card style={{ width: "100%", textAlign: "center" }}>
-            <Image
-              src={require("./Images/team/kenneth.jpg")}
-              alt="Kenneth Thilakarathna"
-            />
-            <Card.Content>
-              <CardHeader>Kenneth<br/>Thilakarathna</CardHeader>
-            </Card.Content>
-            <CardContent extra>
-              <a href="https://www.linkedin.com/in/kenneth-thilakarathna-51aa0a5a/" target="blank">
-                <Icon name='linkedin' />
-                Profile
-              </a>
-            </CardContent>
-          </Card>
-        </Grid.Column>
-        {/* -----------------Charitha */}
-        <Grid.Column>
-          <Card style={{ width: "100%", textAlign: "center" }}>
-            <Image
-              src={require("./Images/team/charitha.png")}
-              alt="Charitha Elvitigala"
-            />
-            <Card.Content>
-              <CardHeader>Charitha<br/>Elvitigala</CardHeader>
-            </Card.Content>
-            <CardContent extra>
-              <a href="https://www.linkedin.com/in/charitha-elvitigala-42a5081a/" target="blank">
-                <Icon name='linkedin' />
-                Profile
-              </a>
-            </CardContent>
-          </Card>
-        </Grid.Column>
-        {/* -----------------Nipuna */}
-        <Grid.Column>
-          <Card>
-            <Image
-                src={require("./Images/team/nipuna.jpg")}
-                alt="Nipuna Weerasekara"
-              />
-            <Card.Content>
-              <CardHeader>Nipuna<br/>Weerasekara</CardHeader>
-            </Card.Content>
-            <CardContent extra>
-              <a href="https://niweera.gq/" target="blank">
-                <Icon name='globe' />
-                Profile
-              </a>
-            </CardContent>
-          </Card>
-        </Grid.Column>
-      </Grid>
-      {/*-------------- Button --------------*/}
-    </Segment>
+    <div>
+      <section id="home">
+        <BugBountyStats />
+      </section>
 
-    {/* -----------------------------------------Providing end to end support--------------------------------------------- */}
+      <section id="home">
+        <EarnMoney />
+      </section>
 
-    {/* <Grid container stackable verticalAlign="middle">
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              We Help Companies and Companions
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              We can give your company superpowers to do things that they never
-              thought possible. Let us delight your customers and empower your
-              needs... through pure data analytics.
-            </p>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              We Make Bananas That Can Dance
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              Yes that's right, you thought it was the stuff of dreams, but even
-              bananas can be bioengineered.
-            </p>
-          </Grid.Column>
-          <Grid.Column floated="right" width={6}>
-            <Image
-              bordered
-              rounded
-              size="large"
-              src="/images/wireframe/white-image.png"
-            />
-          </Grid.Column>
-        </Grid.Row>
-        
-      </Grid> */}
+      <section id="info">
+        <Partners />
+      </section>
 
-    {/* <Segment style={{ padding: "0em" }} vertical>
-      <Grid celled="internally" columns="equal" stackable>
-        <Grid.Row textAlign="center">
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              "What a Company"
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              That is what they all say about us
-            </p>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              "I shouldn't have gone with their competitor."
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              <Image avatar src="/images/avatar/large/nan.jpg" />
-              <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment> */}
+      <section id="about">
+        <SecureOrganization />
+      </section>
 
-    {/* <Segment style={{ padding: "8em 0em" }} vertical>
-      <Container text>
-        <Header as="h3" style={{ fontSize: "2em" }}>
-          Breaking The Grid, Grabs Your Attention
-        </Header>
-        <p style={{ fontSize: "1.33em" }}>
-          Instead of focusing on content creation and hard work, we have learned
-          how to master the art of doing nothing by providing massive amounts of
-          whitespace and generic content that can seem massive, monolithic and
-          worth your attention.
-        </p>
-        <Button as="a" size="large">
-          Read More
-        </Button>
+      <section id="about">
+        <Team />
+      </section>
 
-        <Divider
-          as="h4"
-          className="header"
-          horizontal
-          style={{ margin: "3em 0em", textTransform: "uppercase" }}
-        >
-          <a href="#">Case Studies</a>
-        </Divider>
-
-        <Header as="h3" style={{ fontSize: "2em" }}>
-          Did We Tell You About Our Bananas?
-        </Header>
-        <p style={{ fontSize: "1.33em" }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur
-          filler content, but it's really true. It took years of gene splicing
-          and combinatory DNA research, but our bananas can really dance.
-        </p>
-        <Button as="a" size="large">
-          I'm Still Quite Interested
-        </Button>
-      </Container>
-    </Segment> */}
-
-    {/* ------------------------------- Footer  -------------------------------*/}
-
-    <Segment inverted vertical style={{ padding: "5em 0em" }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as="h4" content="About" />
-              <List link inverted>
-                {/* <List.Item as="a">Sitemap</List.Item> */}
-                <List.Item as="a">Contact Us</List.Item>
-                {/* <List.Item as="a">Religious Ceremonies</List.Item> */}
-                <List.Item as="a">About Bug Zero</List.Item>
-                <List.Item as="a">Privacy Policy</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as="h4" content="Services" />
-              <List link inverted>
-                <List.Item as="a">Bug Bounty</List.Item>
-                <List.Item as="a">Consulting</List.Item>
-                <List.Item as="a">Blog</List.Item>
-                {/* <List.Item as="a">Favorite X-Men</List.Item> */}
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as="h4" inverted>
-                Bug Zero
-              </Header>
-              <p>Securing Your Organization, One Cyberspace at a Time.</p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </Segment>
+      <section id="reviews">
+        <WhyJoin />
+      </section>
+    </div>
   </ResponsiveContainer>
 );
 
