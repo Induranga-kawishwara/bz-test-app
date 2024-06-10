@@ -233,6 +233,18 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
   <ResponsiveContainer>
     <div>
+      <section id="Partners">
+        <Partners />
+      </section>
+
+      <section id="WhyJoin">
+        <WhyJoin />
+      </section>
+
+      <section id="about">
+        <SecureOrganization />
+      </section>
+
       <section id="home">
         <BugBountyStats />
       </section>
@@ -241,20 +253,8 @@ const HomepageLayout = () => (
         <EarnMoney />
       </section>
 
-      <section id="info">
-        <Partners />
-      </section>
-
-      <section id="about">
-        <SecureOrganization />
-      </section>
-
       <section id="about">
         <Team />
-      </section>
-
-      <section id="reviews">
-        <WhyJoin />
       </section>
     </div>
   </ResponsiveContainer>
