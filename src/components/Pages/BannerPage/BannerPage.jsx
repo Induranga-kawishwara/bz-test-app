@@ -22,7 +22,7 @@ const BannerPage = () => {
 
   useEffect(() => {
     const onPageScroll = () => {
-      setGoUp(window.scrollY > 600);
+      setGoUp(window.scrollY > 200);
     };
 
     window.addEventListener("scroll", onPageScroll);

@@ -23,7 +23,7 @@ const Team = () => {
           {/* card */}
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
-              src={require("../../Assets/team/kasun.jpg")}
+              src={require("../../../Assets/team/kasun.jpg")}
               alt="Prof Kasun De Zoysa"
             />
             <Card.Content>
@@ -48,7 +48,7 @@ const Team = () => {
         <Grid.Column>
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
-              src={require("../../Assets/team/primal.jpg")}
+              src={require("../../../Assets/team/primal.jpg")}
               alt="Dr Primal Wijesekara"
             />
             <Card.Content>
@@ -72,7 +72,7 @@ const Team = () => {
         <Grid.Column>
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
-              src={require("../../Assets/team/kenneth.jpg")}
+              src={require("../../../Assets/team/kenneth.jpg")}
               alt="Kenneth Thilakarathna"
             />
             <Card.Content>
@@ -97,7 +97,7 @@ const Team = () => {
         <Grid.Column>
           <Card style={{ width: "100%", textAlign: "center" }}>
             <Image
-              src={require("../../Assets/team/charitha.png")}
+              src={require("../../../Assets/team/charitha.png")}
               alt="Charitha Elvitigala"
             />
             <Card.Content>
@@ -122,7 +122,7 @@ const Team = () => {
         <Grid.Column>
           <Card>
             <Image
-              src={require("../../Assets/team/nipuna.jpg")}
+              src={require("../../../Assets/team/nipuna.jpg")}
               alt="Nipuna Weerasekara"
             />
             <Card.Content>

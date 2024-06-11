@@ -16,7 +16,7 @@ const Partners = () => {
           >
             <Card.Content>
               <Image
-                src={require("../../Assets/logo/bhasha.png")}
+                src={require("../../../Assets/logo/bhasha.png")}
                 alt="Bhasha Logo"
                 size="tiny"
               />
@@ -29,7 +29,7 @@ const Partners = () => {
           >
             <Card.Content>
               <Image
-                src={require("../../Assets/logo/citadel.jpg")}
+                src={require("../../../Assets/logo/citadel.jpg")}
                 alt="Citadel Logo"
                 size="tiny"
               />
@@ -42,7 +42,7 @@ const Partners = () => {
           >
             <Card.Content>
               <Image
-                src={require("../../Assets/logo/helakuru.png")}
+                src={require("../../../Assets/logo/helakuru.png")}
                 alt="Helakuru Logo"
                 size="tiny"
               />
@@ -55,7 +55,7 @@ const Partners = () => {
           >
             <Card.Content>
               <Image
-                src={require("../../Assets/logo/janashakthi.jpg")}
+                src={require("../../../Assets/logo/janashakthi.jpg")}
                 alt="Janashakthi Logo"
                 size="tiny"
               />
@@ -68,7 +68,7 @@ const Partners = () => {
           >
             <Card.Content>
               <Image
-                src={require("../../Assets/logo/payhere.png")}
+                src={require("../../../Assets/logo/payhere.png")}
                 alt="Payhere Logo"
                 size="tiny"
               />
@@ -81,7 +81,7 @@ const Partners = () => {
           >
             <Card.Content>
               <Image
-                src={require("../../Assets/logo/webt.jpg")}
+                src={require("../../../Assets/logo/webt.jpg")}
                 alt="Web Telescope Logo"
                 size="tiny"
               />

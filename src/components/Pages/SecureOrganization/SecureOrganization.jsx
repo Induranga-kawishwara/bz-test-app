@@ -7,10 +7,10 @@ import {
   Segment,
 } from "semantic-ui-react";
 
-import imgmoney from "../../Assets/money.png";
-import imgbudget from "../../Assets/budget.png";
-import imgeyescan from "../../Assets/eye-scanner.png";
-import imgnetwork from "../../Assets/networking.png";
+import imgmoney from "../../../Assets/money.png";
+import imgbudget from "../../../Assets/budget.png";
+import imgeyescan from "../../../Assets/eye-scanner.png";
+import imgnetwork from "../../../Assets/networking.png";
 
 const SecureOrganization = () => {
   return (
