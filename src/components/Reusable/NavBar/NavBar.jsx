@@ -2,6 +2,8 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { InView } from "react-intersection-observer";
+import style from "./NavBar.module.css";
+
 import {
   Button,
   Container,
@@ -10,7 +12,6 @@ import {
   Segment,
   Sidebar,
 } from "semantic-ui-react";
-import "./style.css";
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -41,15 +42,7 @@ class DesktopContainer extends Component {
               style={{ border: "none" }}
             >
               <Container style={{ color: "White" }}>
-                <Menu.Item
-                  as="a"
-                  active
-                  style={{
-                    fontFamily: "Edo",
-                    fontSize: "1.3em",
-                    color: "#f4c700",
-                  }}
-                >
+                <Menu.Item as="a" className={style.important_color}>
                   Bug Zero
                 </Menu.Item>
                 <Menu.Item as="a" style={{ color: "White" }}>
@@ -122,8 +115,6 @@ class MobileContainer extends Component {
             <Menu.Item as="a">Blog</Menu.Item>
             <Menu.Item as="a">Zerofeed</Menu.Item>
             <Menu.Item as="a">Careers</Menu.Item>
-            <Menu.Item as="a">Log in</Menu.Item>
-            <Menu.Item as="a">Sign Up</Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
