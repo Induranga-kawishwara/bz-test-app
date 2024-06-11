@@ -10,11 +10,6 @@
   background-position: center;
 }
 
-/* Text section */
-.text_section {
-  width: 60%;
-  padding: 0 32px;
-}
 .text_headline {
   margin-bottom: 12px;
   color: rgb(77, 75, 75);
@@ -24,7 +19,7 @@
   letter-spacing: 0.7px;
 }
 .text_title {
-  width: 500px;
+  padding: 5% 0% 5% 0;
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 40px;
