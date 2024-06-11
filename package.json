@@ -19,6 +19,7 @@
     "react-timeline-animation": "^1.2.3",
     "semantic-ui-less": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
+    "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

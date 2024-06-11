@@ -2,6 +2,8 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { InView } from "react-intersection-observer";
+import style from "./NavBar.module.css";
+
 import {
   Button,
   Container,
@@ -40,15 +42,7 @@ class DesktopContainer extends Component {
               style={{ border: "none" }}
             >
               <Container style={{ color: "White" }}>
-                <Menu.Item
-                  as="a"
-                  active
-                  style={{
-                    fontFamily: "Edo",
-                    fontSize: "1.3em",
-                    color: "#f4c700 !important",
-                  }}
-                >
+                <Menu.Item as="a" className={style.important_color}>
                   Bug Zero
                 </Menu.Item>
                 <Menu.Item as="a" style={{ color: "White" }}>
