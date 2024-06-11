@@ -10,7 +10,6 @@ import {
   Segment,
   Sidebar,
 } from "semantic-ui-react";
-import "./style.css";
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -122,8 +121,6 @@ class MobileContainer extends Component {
             <Menu.Item as="a">Blog</Menu.Item>
             <Menu.Item as="a">Zerofeed</Menu.Item>
             <Menu.Item as="a">Careers</Menu.Item>
-            <Menu.Item as="a">Log in</Menu.Item>
-            <Menu.Item as="a">Sign Up</Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
