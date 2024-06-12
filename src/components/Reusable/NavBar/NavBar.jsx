@@ -2,7 +2,6 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { InView } from "react-intersection-observer";
-import style from "./NavBar.module.css";
 
 import {
   Button,
@@ -23,58 +22,50 @@ const { MediaContextProvider, Media } = createMedia({
 class DesktopContainer extends Component {
   state = {};
 
-  toggleFixedMenu = (inView) => this.setState({ fixed: !inView });
-
   render() {
     const { children } = this.props;
-    const { fixed } = this.state;
 
     return (
       <Media greaterThan="mobile">
-        <InView onChange={this.toggleFixedMenu}>
-          <Segment inverted>
-            <Menu
-              fixed={fixed ? "top" : null}
-              inverted={fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size="large"
-              style={{ border: "none" }}
-            >
-              <Container style={{ color: "White" }}>
-                <Menu.Item as="a" className={style.important_color}>
-                  Bug Zero
-                </Menu.Item>
-                <Menu.Item as="a" style={{ color: "White" }}>
-                  Blog
-                </Menu.Item>
-                <Menu.Item as="a" style={{ color: "White" }}>
-                  ZeroFeed
-                </Menu.Item>
-                <Menu.Item as="a" style={{ color: "White" }}>
-                  Programs
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Button
-                    as="a"
-                    inverted={!fixed}
-                    className="ui inverted yellow basic button"
-                  >
-                    Log in
-                  </Button>
-                  <Button
-                    as="a"
-                    inverted={!fixed}
-                    className="ui inverted yellow button"
-                    primary={fixed}
-                    style={{ marginLeft: "0.5em" }}
-                  >
-                    Sign Up
-                  </Button>
-                </Menu.Item>
-              </Container>
-            </Menu>
-          </Segment>
+        <InView>
+          <Menu
+            fixed={"top"}
+            style={{ border: "none", backgroundColor: "black" }}
+          >
+            <Container style={{ color: "white" }}>
+              <Menu.Item
+                as="a"
+                style={{
+                  color: "#f4c700",
+                  fontFamily: "Edo",
+                  fontSize: "1.3em",
+                }}
+              >
+                Bug Zero
+              </Menu.Item>
+              <Menu.Item as="a" style={{ color: "White" }}>
+                Blog
+              </Menu.Item>
+              <Menu.Item as="a" style={{ color: "White" }}>
+                ZeroFeed
+              </Menu.Item>
+              <Menu.Item as="a" style={{ color: "White" }}>
+                Programs
+              </Menu.Item>
+              <Menu.Item position="right">
+                <Button as="a" className="ui inverted yellow basic button">
+                  Log in
+                </Button>
+                <Button
+                  as="a"
+                  className="ui inverted yellow button"
+                  style={{ marginLeft: "0.5em" }}
+                >
+                  Sign Up
+                </Button>
+              </Menu.Item>
+            </Container>
+          </Menu>
         </InView>
 
         {children}
