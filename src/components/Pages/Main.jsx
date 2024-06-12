@@ -23,7 +23,7 @@ const Main = () => {
       }
     };
 
-    handleScrollToSection(); // Scroll to section on initial load
+    handleScrollToSection();
 
     window.addEventListener("hashchange", handleScrollToSection);
 

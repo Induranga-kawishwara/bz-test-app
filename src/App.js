@@ -6,10 +6,9 @@ import NavBar from "./components/Reusable/NavBar/NavBar";
 function App() {
   return (
     <div className="App">
-      <NavBar>
-        <HomepageLayout />
-        <Footer />
-      </NavBar>
+      <NavBar />
+      <HomepageLayout />
+      <Footer />
     </div>
   );
 }
