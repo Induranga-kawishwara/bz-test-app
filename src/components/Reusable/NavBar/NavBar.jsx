@@ -110,6 +110,14 @@ class MobileContainer extends Component {
             vertical
             visible={sidebarOpened}
           >
+            <Menu.Item onClick={this.handleToggle}>
+              <Icon
+                name="x"
+                style={{
+                  color: "red",
+                }}
+              />
+            </Menu.Item>
             <Menu.Item as="a" active>
               Home
             </Menu.Item>
@@ -118,12 +126,13 @@ class MobileContainer extends Component {
             <Menu.Item as="a">Careers</Menu.Item>
           </Sidebar>
 
-          <Sidebar.Pusher dimmed={sidebarOpened} style={{ minHeight: "100vh" }}>
+          <Sidebar.Pusher dimmed={sidebarOpened} style={{ height: "100vh" }}>
             <Container
               vertical
               style={{
                 backgroundColor: "black",
-                margin: "0%",
+                margin: "0",
+                padding: "0",
                 textAlign: "center",
               }}
             >
