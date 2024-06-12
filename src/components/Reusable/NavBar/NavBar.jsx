@@ -28,44 +28,46 @@ class DesktopContainer extends Component {
     return (
       <Media greaterThan="mobile">
         <InView>
-          <Menu
-            fixed={"top"}
-            style={{ border: "none", backgroundColor: "black" }}
-          >
-            <Container style={{ color: "white" }}>
-              <Menu.Item
-                as="a"
-                style={{
-                  color: "#f4c700",
-                  fontFamily: "Edo",
-                  fontSize: "1.3em",
-                }}
-              >
-                Bug Zero
-              </Menu.Item>
-              <Menu.Item as="a" style={{ color: "White" }}>
-                Blog
-              </Menu.Item>
-              <Menu.Item as="a" style={{ color: "White" }}>
-                ZeroFeed
-              </Menu.Item>
-              <Menu.Item as="a" style={{ color: "White" }}>
-                Programs
-              </Menu.Item>
-              <Menu.Item position="right">
-                <Button as="a" className="ui inverted yellow basic button">
-                  Log in
-                </Button>
-                <Button
+          <Segment>
+            <Menu
+              fixed={"top"}
+              style={{ border: "none", backgroundColor: "black" }}
+            >
+              <Container style={{ color: "white" }}>
+                <Menu.Item
                   as="a"
-                  className="ui inverted yellow button"
-                  style={{ marginLeft: "0.5em" }}
+                  style={{
+                    color: "#f4c700",
+                    fontFamily: "Edo",
+                    fontSize: "1.3em",
+                  }}
                 >
-                  Sign Up
-                </Button>
-              </Menu.Item>
-            </Container>
-          </Menu>
+                  Bug Zero
+                </Menu.Item>
+                <Menu.Item as="a" style={{ color: "White" }}>
+                  Blog
+                </Menu.Item>
+                <Menu.Item as="a" style={{ color: "White" }}>
+                  ZeroFeed
+                </Menu.Item>
+                <Menu.Item as="a" style={{ color: "White" }}>
+                  Programs
+                </Menu.Item>
+                <Menu.Item position="right">
+                  <Button as="a" className="ui inverted yellow basic button">
+                    Log in
+                  </Button>
+                  <Button
+                    as="a"
+                    className="ui inverted yellow button"
+                    style={{ marginLeft: "0.5em" }}
+                  >
+                    Sign Up
+                  </Button>
+                </Menu.Item>
+              </Container>
+            </Menu>
+          </Segment>
         </InView>
 
         {children}
@@ -79,7 +81,9 @@ DesktopContainer.propTypes = {
 };
 
 class MobileContainer extends Component {
-  state = {};
+  state = {
+    sidebarOpened: false,
+  };
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
 
@@ -90,16 +94,30 @@ class MobileContainer extends Component {
     const { sidebarOpened } = this.state;
 
     return (
-      <Media as={Sidebar.Pushable} at="mobile">
-        <Sidebar.Pushable>
+      <Media at="mobile" style={{ border: "none" }}>
+        <Sidebar.Pushable
+          style={{
+            height: "100vh",
+            width: "100%",
+            position: "fixed",
+            zIndex: "1",
+          }}
+        >
           <Sidebar
             as={Menu}
             animation="overlay"
-            inverted
             onHide={this.handleSidebarHide}
             vertical
             visible={sidebarOpened}
           >
+            <Menu.Item onClick={this.handleToggle}>
+              <Icon
+                name="x"
+                style={{
+                  color: "red",
+                }}
+              />
+            </Menu.Item>
             <Menu.Item as="a" active>
               Home
             </Menu.Item>
@@ -108,24 +126,39 @@ class MobileContainer extends Component {
             <Menu.Item as="a">Careers</Menu.Item>
           </Sidebar>
 
-          <Sidebar.Pusher dimmed={sidebarOpened}>
-            <Segment inverted textAlign="center" vertical>
-              <Container>
-                <Menu inverted pointing secondary size="large">
-                  <Menu.Item onClick={this.handleToggle}>
-                    <Icon name="sidebar" />
-                  </Menu.Item>
-                  <Menu.Item position="right">
-                    <Button as="a" inverted>
-                      Log in
-                    </Button>
-                    <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                      Sign Up
-                    </Button>
-                  </Menu.Item>
-                </Menu>
-              </Container>
-            </Segment>
+          <Sidebar.Pusher dimmed={sidebarOpened} style={{ height: "100vh" }}>
+            <Container
+              vertical
+              style={{
+                backgroundColor: "black",
+                margin: "0",
+                padding: "0",
+                textAlign: "center",
+              }}
+            >
+              <Menu pointing secondary size="large">
+                <Menu.Item onClick={this.handleToggle}>
+                  <Icon
+                    name="sidebar"
+                    style={{
+                      color: "white",
+                    }}
+                  />
+                </Menu.Item>
+                <Menu.Item position="right">
+                  <Button as="a" className="ui inverted yellow basic button">
+                    Log in
+                  </Button>
+                  <Button
+                    as="a"
+                    style={{ marginLeft: "0.5em" }}
+                    className="ui inverted yellow button"
+                  >
+                    Sign Up
+                  </Button>
+                </Menu.Item>
+              </Menu>
+            </Container>
 
             {children}
           </Sidebar.Pusher>
