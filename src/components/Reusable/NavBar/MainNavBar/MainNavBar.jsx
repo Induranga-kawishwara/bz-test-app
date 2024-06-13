@@ -39,7 +39,7 @@ class DesktopContainer extends Component {
                   style={{
                     color: "#f4c700",
                     fontFamily: "Edo",
-                    fontSize: "1.3em",
+                    fontSize: "2em",
                   }}
                 >
                   Bug Zero
