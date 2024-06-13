@@ -8,7 +8,7 @@ const BannerPage = () => {
         <h2 className={style.text_title}>
           Crowdsource your security testing in a smart way with Bug Zero
         </h2>
-        <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+        <div className={style.button_section}>
           <Button size="huge" color="yellow" style={{ color: "Black" }}>
             Get Started
             <Icon name="right arrow" />

@@ -11,6 +11,11 @@
   background-position: center;
   height: 100vh;
 }
+.button_section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
 .text_title {
   padding: 5% 0% 5% 0;
