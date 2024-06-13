@@ -89,6 +89,8 @@ class MobileContainer extends Component {
 
   handleToggle = () => this.setState({ sidebarOpened: true });
 
+  handleCancel = () => this.setState({ sidebarOpened: false });
+
   render() {
     const { children } = this.props;
     const { sidebarOpened } = this.state;
@@ -110,7 +112,7 @@ class MobileContainer extends Component {
             vertical
             visible={sidebarOpened}
           >
-            <Menu.Item onClick={this.handleToggle}>
+            <Menu.Item onClick={this.handleCancel}>
               <Icon
                 name="x"
                 style={{
@@ -127,7 +129,7 @@ class MobileContainer extends Component {
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened} style={{ height: "100vh" }}>
-            <Container
+            <Segment
               vertical
               style={{
                 backgroundColor: "black",
@@ -158,7 +160,7 @@ class MobileContainer extends Component {
                   </Button>
                 </Menu.Item>
               </Menu>
-            </Container>
+            </Segment>
 
             {children}
           </Sidebar.Pusher>
