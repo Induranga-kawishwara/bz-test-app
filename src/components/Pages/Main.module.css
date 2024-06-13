@@ -1,0 +1,59 @@
+.scroll_up {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  background-color: #f4c700;
+  font-size: 24px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 20;
+}
+
+.show_scroll {
+  opacity: 1;
+  transform: scale(1);
+  animation: popup 0.3s ease-in-out;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes border-fill {
+  0% {
+    border-color: white;
+  }
+  25% {
+    border-color: white blue blue white;
+  }
+  50% {
+    border-color: white blue blue blue;
+  }
+  75% {
+    border-color: blue blue blue blue;
+  }
+  100% {
+    border-color: blue blue blue blue;
+  }
+}
+
+.fill_border {
+  animation: border-fill 1s forwards;
+}
