@@ -31,7 +31,6 @@ const Main = () => {
     const onPageScroll = () => {
       setGoUp(window.scrollY > 200);
 
-      // Check which section is currently in view
       const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
