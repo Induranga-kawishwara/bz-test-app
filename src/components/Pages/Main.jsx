@@ -1,3 +1,7 @@
+import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import HomePageNavBar from "../Reusable/NavBar/HomePageNavBar/HomePageNavBar";
 import BugBountyStats from "./BugBountyStats/BugBountyStats";
 import EarnMoney from "./EarnMoney/EarnMoney";
 import Partners from "./Partners/Partners";
@@ -5,18 +9,11 @@ import HomePage from "./BannerPage/BannerPage";
 import SecureOrganization from "./SecureOrganization/SecureOrganization";
 import Team from "./Team/Team";
 import WhyJoin from "./WhyJoin/WhyJoin";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect, useState } from "react";
 import style from "./Main.module.css";
-
-import HomePageNavBar from "../Reusable/NavBar/HomePageNavBar/HomePageNavBar";
-
 import "./style.css";
 
 const Main = () => {
   const [goUp, setGoUp] = useState(false);
-  const [fillBorder, setFillBorder] = useState(false);
 
   const scrollToTop = () => {
     const scrollToTopAnimation = () => {
@@ -41,34 +38,10 @@ const Main = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScrollToSection = () => {
-      const path = window.location.hash.substring(1);
-      const targetSection = document.getElementById(path);
-      if (targetSection) {
-        setFillBorder(true);
-        setTimeout(() => setFillBorder(false), 1000); // reset after animation
-        setTimeout(() => {
-          const sectionOffset = 100;
-          const offsetTop = targetSection.offsetTop - sectionOffset;
-          window.scrollTo({ top: offsetTop, behavior: "smooth" });
-        }, 10);
-      }
-    };
-
-    handleScrollToSection();
-
-    window.addEventListener("hashchange", handleScrollToSection);
-
-    return () => {
-      window.removeEventListener("hashchange", handleScrollToSection);
-    };
-  }, []);
-
   return (
     <div>
       <HomePageNavBar />
-      <section id="HomePage">
+      <section id="home">
         <HomePage />
       </section>
 
@@ -76,7 +49,7 @@ const Main = () => {
         <Partners />
       </section>
 
-      <section id="WhyJoin">
+      <section id="why-join-us">
         <WhyJoin />
       </section>
 
@@ -92,15 +65,13 @@ const Main = () => {
         <EarnMoney />
       </section>
 
-      <section id="Team">
+      <section id="the-team">
         <Team />
       </section>
 
       <div
         onClick={scrollToTop}
-        className={`${style.scroll_up} ${goUp ? style.show_scroll : ""} ${
-          fillBorder ? style.fill_border : ""
-        }`}
+        className={`${style.scroll_up} ${goUp ? style.show_scroll : ""}`}
       >
         <FontAwesomeIcon icon={faAngleUp} />
       </div>
