@@ -36,7 +36,7 @@ const HomePageNavBar = ({ activeSection }) => {
       }`}
     >
       {!isScrolled ? (
-        <Menu.Item as="a" className={`${style.navbar_logo} ${style.visible}`}>
+        <Menu.Item as="a" className={style.navbar_logo}>
           Bug Zero
         </Menu.Item>
       ) : null}
