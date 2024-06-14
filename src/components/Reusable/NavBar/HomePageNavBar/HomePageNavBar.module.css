@@ -1,14 +1,24 @@
 .navbar_segment {
-  /* margin-top: 2% !important; */
+  padding-top: 2% !important;
+  margin-top: 2% !important;
   position: fixed !important;
   z-index: 10;
   width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.navbar_segment.hidden {
+  background-color: transparent !important;
+}
+
+.navbar_segment.visible {
+  background-color: #212121 !important;
 }
 
 .navbar_logo {
   color: #f4c700 !important;
   font-family: Edo;
-  font-size: 2em;
+  font-size: 5em;
 }
 
 .navbar_menu {

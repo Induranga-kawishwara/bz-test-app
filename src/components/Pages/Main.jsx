@@ -67,7 +67,7 @@ const Main = () => {
 
   return (
     <div>
-      {/* <HomePageNavBar /> */}
+      <HomePageNavBar />
       <section id="HomePage">
         <HomePage />
       </section>
