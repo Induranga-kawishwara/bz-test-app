@@ -19,6 +19,15 @@
   color: #f4c700 !important;
   font-family: Edo;
   font-size: 5em;
+  visibility: visible;
+}
+
+.navbar_logo.hidden {
+  visibility: hidden;
+}
+
+.navbar_logo.visible {
+  visibility: visible;
 }
 
 .navbar_menu {

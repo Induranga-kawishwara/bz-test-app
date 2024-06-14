@@ -6,7 +6,8 @@ const BannerPage = () => {
     <div className={style.section_container}>
       <div className={style.text_section}>
         <h2 className={style.text_title}>
-          Crowdsource your security testing in a smart way with Bug Zero
+          Crowdsource your security testing in a smart way with
+          <span className="gemini"> Bug Zero</span>
         </h2>
         <div className={style.button_section}>
           <Button size="huge" color="yellow" style={{ color: "Black" }}>

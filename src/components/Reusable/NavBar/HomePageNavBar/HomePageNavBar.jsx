@@ -35,9 +35,11 @@ const HomePageNavBar = ({ activeSection }) => {
         isScrolled ? style.visible : style.hidden
       }`}
     >
-      <Menu.Item as="a" className={style.navbar_logo}>
-        Bug Zero
-      </Menu.Item>
+      {!isScrolled ? (
+        <Menu.Item as="a" className={`${style.navbar_logo} ${style.visible}`}>
+          Bug Zero
+        </Menu.Item>
+      ) : null}
       <Menu inverted pointing secondary className={style.navbar_menu}>
         {[
           { name: "home", label: "Home" },

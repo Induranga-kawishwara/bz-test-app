@@ -3,8 +3,6 @@ import { Container, Embed, Header, Segment } from "semantic-ui-react";
 const WhyJoin = () => {
   return (
     <Segment style={{ padding: "6em 0em", border: "none" }} id="grey" vertical>
-      {/* ---------------------------------------------Why join bug zero--------------------------------------------- */}
-
       <Container text>
         <Header as="h2" style={{ fontSize: "2.5em" }}>
           Why Join <span className="gemini">Bug Zero</span>
