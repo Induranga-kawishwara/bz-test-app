@@ -10,6 +10,8 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import style from "./Main.module.css";
 
+import HomePageNavBar from "../Reusable/NavBar/HomePageNavBar/HomePageNavBar";
+
 import "./style.css";
 
 const Main = () => {
@@ -65,6 +67,7 @@ const Main = () => {
 
   return (
     <div>
+      <HomePageNavBar />
       <section id="HomePage">
         <HomePage />
       </section>
