@@ -6,7 +6,7 @@ import NavBar from "./components/Reusable/NavBar/MainNavBar/MainNavBar";
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
+      <NavBar />
       <HomepageLayout />
       <Footer />
     </div>

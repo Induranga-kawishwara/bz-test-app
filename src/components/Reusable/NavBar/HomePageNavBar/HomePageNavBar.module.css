@@ -1,0 +1,17 @@
+.navbar_segment {
+  /* margin-top: 2% !important; */
+  position: fixed !important;
+  z-index: 10;
+  width: 100%;
+}
+
+.navbar_logo {
+  color: #f4c700 !important;
+  font-family: Edo;
+  font-size: 2em;
+}
+
+.navbar_menu {
+  display: flex !important;
+  justify-content: center;
+}

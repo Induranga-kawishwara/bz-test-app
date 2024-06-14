@@ -1,62 +1,31 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Menu, Segment } from "semantic-ui-react";
+import style from "./HomePageNavBar.module.css";
 
-class HomePageNavBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { activeItem: "home" };
-  }
+const HomePageNavBar = () => {
+  const [activeItem, setActiveItem] = useState("home");
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  const handleItemClick = (e, { name }) => setActiveItem(name);
 
-  render() {
-    const { activeItem } = this.state;
-
-    return (
-      <Segment
-        inverted
-        style={{ position: "fixed", zIndex: 10, width: "100%" }}
-      >
-        <Menu.Item
-          as="a"
-          style={{
-            color: "#f4c700",
-            fontFamily: "Edo",
-            fontSize: "2em",
-          }}
-        >
-          Bug Zero
-        </Menu.Item>
-        <Menu inverted pointing secondary>
-          <Menu.Item
-            name="home"
-            active={activeItem === "home"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Why Join Us?"
-            active={activeItem === "Why Join Us?"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Features"
-            active={activeItem === "Features"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Our Scope"
-            active={activeItem === "Our Scope"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="The Team"
-            active={activeItem === "The Team"}
-            onClick={this.handleItemClick}
-          />
-        </Menu>
-      </Segment>
-    );
-  }
-}
+  return (
+    <Segment inverted className={style.navbar_segment}>
+      <Menu.Item as="a" className={style.navbar_logo}>
+        Bug Zero
+      </Menu.Item>
+      <Menu inverted pointing secondary className={style.navbar_menu}>
+        {["home", "Why Join Us?", "Features", "Our Scope", "The Team"].map(
+          (item) => (
+            <Menu.Item
+              key={item}
+              name={item}
+              active={activeItem === item}
+              onClick={handleItemClick}
+            />
+          )
+        )}
+      </Menu>
+    </Segment>
+  );
+};
 
 export default HomePageNavBar;
