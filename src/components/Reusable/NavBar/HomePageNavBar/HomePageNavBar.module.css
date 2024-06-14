@@ -25,3 +25,7 @@
   display: flex !important;
   justify-content: center;
 }
+
+body {
+  scroll-behavior: smooth; /* This makes the scrolling smooth */
+}

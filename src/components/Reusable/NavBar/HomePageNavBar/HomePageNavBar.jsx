@@ -35,16 +35,24 @@ const HomePageNavBar = () => {
         Bug Zero
       </Menu.Item>
       <Menu inverted pointing secondary className={style.navbar_menu}>
-        {["home", "Why Join Us?", "Features", "Our Scope", "The Team"].map(
-          (item) => (
-            <Menu.Item
-              key={item}
-              name={item}
-              active={activeItem === item}
-              onClick={handleItemClick}
-            />
-          )
-        )}
+        {[
+          { name: "home", label: "Home" },
+          { name: "why-join-us", label: "Why Join Us?" },
+          { name: "features", label: "Features" },
+          { name: "our-scope", label: "Our Scope" },
+          { name: "the-team", label: "The Team" },
+        ].map((item) => (
+          <Menu.Item
+            key={item.name}
+            name={item.name}
+            active={activeItem === item.name}
+            onClick={handleItemClick}
+            as="a"
+            href={`/#${item.name}`}
+          >
+            {item.label}
+          </Menu.Item>
+        ))}
       </Menu>
     </Segment>
   );
