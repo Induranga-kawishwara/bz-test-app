@@ -31,7 +31,7 @@ class DesktopContainer extends Component {
           <Segment>
             <Menu
               fixed={"top"}
-              style={{ border: "none", backgroundColor: "black" }}
+              style={{ border: "none", backgroundColor: "#212121" }}
             >
               <Container style={{ color: "white" }}>
                 <Menu.Item
@@ -111,6 +111,7 @@ class MobileContainer extends Component {
             onHide={this.handleSidebarHide}
             vertical
             visible={sidebarOpened}
+            style={{ backgroundColor: "#212121" }}
           >
             <Menu.Item onClick={this.handleCancel}>
               <Icon
@@ -120,22 +121,28 @@ class MobileContainer extends Component {
                 }}
               />
             </Menu.Item>
-            <Menu.Item as="a" active>
+            <Menu.Item as="a" style={{ color: "#F8F8F8" }}>
               Home
             </Menu.Item>
-            <Menu.Item as="a">Blog</Menu.Item>
-            <Menu.Item as="a">Zerofeed</Menu.Item>
-            <Menu.Item as="a">Careers</Menu.Item>
+            <Menu.Item as="a" style={{ color: "#F8F8F8" }}>
+              Blog
+            </Menu.Item>
+            <Menu.Item as="a" style={{ color: "#F8F8F8" }}>
+              Zerofeed
+            </Menu.Item>
+            <Menu.Item as="a" style={{ color: "#F8F8F8" }}>
+              Careers
+            </Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened} style={{ height: "100vh" }}>
             <Segment
               vertical
               style={{
-                backgroundColor: "black",
                 margin: "0",
                 padding: "0",
                 textAlign: "center",
+                backgroundColor: "#212121",
               }}
             >
               <Menu pointing secondary size="large">

@@ -13,7 +13,20 @@ class HomePageNavBar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Segment inverted>
+      <Segment
+        inverted
+        style={{ position: "fixed", zIndex: 10, width: "100%" }}
+      >
+        <Menu.Item
+          as="a"
+          style={{
+            color: "#f4c700",
+            fontFamily: "Edo",
+            fontSize: "2em",
+          }}
+        >
+          Bug Zero
+        </Menu.Item>
         <Menu inverted pointing secondary>
           <Menu.Item
             name="home"
@@ -21,13 +34,23 @@ class HomePageNavBar extends Component {
             onClick={this.handleItemClick}
           />
           <Menu.Item
-            name="messages"
-            active={activeItem === "messages"}
+            name="Why Join Us?"
+            active={activeItem === "Why Join Us?"}
             onClick={this.handleItemClick}
           />
           <Menu.Item
-            name="friends"
-            active={activeItem === "friends"}
+            name="Features"
+            active={activeItem === "Features"}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="Our Scope"
+            active={activeItem === "Our Scope"}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="The Team"
+            active={activeItem === "The Team"}
             onClick={this.handleItemClick}
           />
         </Menu>
