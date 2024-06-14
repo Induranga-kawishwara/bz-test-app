@@ -14,6 +14,7 @@ import "./style.css";
 
 const Main = () => {
   const [goUp, setGoUp] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
 
   const scrollToTop = () => {
     const scrollToTopAnimation = () => {
@@ -29,6 +30,14 @@ const Main = () => {
   useEffect(() => {
     const onPageScroll = () => {
       setGoUp(window.scrollY > 200);
+
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          setActiveSection(section.id);
+        }
+      });
     };
 
     window.addEventListener("scroll", onPageScroll);
@@ -40,7 +49,7 @@ const Main = () => {
 
   return (
     <div>
-      <HomePageNavBar />
+      <HomePageNavBar activeSection={activeSection} />
       <section id="home">
         <HomePage />
       </section>

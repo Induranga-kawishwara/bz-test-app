@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Menu, Segment } from "semantic-ui-react";
 import style from "./HomePageNavBar.module.css";
 
-const HomePageNavBar = () => {
-  const [activeItem, setActiveItem] = useState("home");
+const HomePageNavBar = ({ activeSection }) => {
+  const [activeItem, setActiveItem] = useState();
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
+
+  useEffect(() => {
+    setActiveItem(activeSection || "home");
+  }, [activeSection]);
 
   useEffect(() => {
     const handleScroll = () => {
