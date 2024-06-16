@@ -120,6 +120,7 @@ const DesktopContainer = ({ children, activeSection }) => {
               display: "flex",
               justifyContent: "center",
               margin: "0%",
+              paddingBottom: "2%",
             }}
             inverted
             pointing
