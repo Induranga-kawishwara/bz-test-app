@@ -29,6 +29,11 @@ const Main = ({ setActiveSection }) => {
     const onPageScroll = () => {
       setGoUp(window.scrollY > 200);
 
+      if (window.scrollY === 0) {
+        setActiveSection("home");
+        return;
+      }
+
       const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
