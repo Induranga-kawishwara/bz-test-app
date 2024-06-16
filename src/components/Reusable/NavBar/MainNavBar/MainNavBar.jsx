@@ -11,6 +11,7 @@ import {
   Segment,
   Sidebar,
 } from "semantic-ui-react";
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -61,7 +62,7 @@ const DesktopContainer = ({ children, activeSection }) => {
             style={{
               border: "none",
               backgroundColor: "#212121",
-              padding: "0%",
+              margin: "0%",
             }}
           >
             <Container style={{ color: "white" }}>
@@ -96,8 +97,22 @@ const DesktopContainer = ({ children, activeSection }) => {
             </Container>
           </Menu>
           {!isScrolled ? (
-            <Menu.Item className={style.navbar_logo}>Bug Zero</Menu.Item>
+            <Segment
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                padding: "3,0,3,0",
+                backgroundColor: "#212121",
+                margin: "0%",
+                color: "#f4c700 ",
+                fontFamily: " Edo",
+                fontSize: "5em",
+              }}
+            >
+              Bug Zero
+            </Segment>
           ) : null}
+
           <Menu
             style={{
               border: "none",
