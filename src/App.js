@@ -1,11 +1,12 @@
 import "./App.css";
-import HomepageLayout from "./components/Pages/Main";
+import HomepageLayout from "./components/Pages/HomepageLayout";
 import Footer from "./components/Reusable/Footer/Footer";
 import NavBar from "./components/Reusable/NavBar/MainNavBar/MainNavBar";
 import React, { useState, useEffect } from "react";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
+
   useEffect(() => {
     const onPageScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -27,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <NavBar activeSection={activeSection} />
-      <HomepageLayout />
+      <HomepageLayout setActiveSection={setActiveSection} />
       <Footer />
     </div>
   );

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { createMedia } from "@artsy/fresnel";
 import { InView } from "react-intersection-observer";
-import style from "../HomePageNavBar/HomePageNavBar.module.css";
 import {
   Button,
   Container,
@@ -19,6 +18,7 @@ const { MediaContextProvider, Media } = createMedia({
     computer: 1368,
   },
 });
+
 const DesktopContainer = ({ children, activeSection }) => {
   const [activeItem, setActiveItem] = useState();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,8 +26,10 @@ const DesktopContainer = ({ children, activeSection }) => {
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   useEffect(() => {
-    setActiveItem(activeSection || "home");
+    setActiveItem(activeSection == null ? "home" : activeSection);
+    console.log(activeSection);
   }, [activeSection]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
@@ -55,12 +57,12 @@ const DesktopContainer = ({ children, activeSection }) => {
             position: "fixed",
             width: "100%",
             backgroundColor: "transparent",
+            zIndex: "10",
           }}
         >
           <Menu
             style={{
               border: "none",
-              // backgroundColor: "#212121",
               backgroundColor: "transparent",
               margin: "0%",
             }}
@@ -115,8 +117,6 @@ const DesktopContainer = ({ children, activeSection }) => {
                   fontSize: "5em",
                   margin: "0%",
                   backgroundColor: "transparent",
-
-                  // backgroundColor: "#212121",
                 }}
               >
                 Bug Zero
@@ -129,9 +129,6 @@ const DesktopContainer = ({ children, activeSection }) => {
                 display: "flex",
                 justifyContent: "center",
                 margin: "0%",
-                // backgroundColor: "transparent",
-
-                // backgroundColor: isScrolled ? "#212121" : "transparent",
                 paddingBottom: "1%",
               }}
               inverted
@@ -168,6 +165,7 @@ const DesktopContainer = ({ children, activeSection }) => {
 
 DesktopContainer.propTypes = {
   children: PropTypes.node,
+  activeSection: PropTypes.string,
 };
 
 const MobileContainer = ({ children }) => {
@@ -245,15 +243,18 @@ MobileContainer.propTypes = {
   children: PropTypes.node,
 };
 
-const MainNavBar = ({ children }) => (
+const MainNavBar = ({ children, activeSection }) => (
   <MediaContextProvider>
-    <DesktopContainer>{children}</DesktopContainer>
+    <DesktopContainer activeSection={activeSection}>
+      {children}
+    </DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
   </MediaContextProvider>
 );
 
 MainNavBar.propTypes = {
   children: PropTypes.node,
+  activeSection: PropTypes.string,
 };
 
 export default MainNavBar;

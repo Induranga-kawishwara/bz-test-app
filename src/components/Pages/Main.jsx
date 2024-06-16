@@ -11,7 +11,7 @@ import WhyJoin from "./WhyJoin/WhyJoin";
 import style from "./Main.module.css";
 import "./style.css";
 
-const Main = () => {
+const Main = ({ setActiveSection }) => {
   const [goUp, setGoUp] = useState(false);
 
   const scrollToTop = () => {
@@ -28,6 +28,14 @@ const Main = () => {
   useEffect(() => {
     const onPageScroll = () => {
       setGoUp(window.scrollY > 200);
+
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          setActiveSection(section.id);
+        }
+      });
     };
 
     window.addEventListener("scroll", onPageScroll);
@@ -35,7 +43,7 @@ const Main = () => {
     return () => {
       window.removeEventListener("scroll", onPageScroll);
     };
-  }, []);
+  }, [setActiveSection]);
 
   return (
     <div>
