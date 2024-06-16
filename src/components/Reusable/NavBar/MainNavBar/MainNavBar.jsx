@@ -27,7 +27,6 @@ const DesktopContainer = ({ children, activeSection }) => {
 
   useEffect(() => {
     setActiveItem(activeSection == null ? "home" : activeSection);
-    console.log(activeSection);
   }, [activeSection]);
 
   useEffect(() => {
