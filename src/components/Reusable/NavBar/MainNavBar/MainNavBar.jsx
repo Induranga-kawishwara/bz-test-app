@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { createMedia } from "@artsy/fresnel";
 import { InView } from "react-intersection-observer";
+import style from "../HomePageNavBar/HomePageNavBar.module.css";
 import {
   Button,
   Container,
@@ -51,19 +52,20 @@ const DesktopContainer = ({ children, activeSection }) => {
           style={{
             padding: "0%",
             border: "none",
-            backgroundColor: "transparent",
             position: "fixed",
             width: "100%",
+            backgroundColor: "transparent",
           }}
         >
           <Menu
             style={{
               border: "none",
-              backgroundColor: "#212121",
+              // backgroundColor: "#212121",
+              backgroundColor: "transparent",
               margin: "0%",
             }}
           >
-            <Container style={{ color: "white" }}>
+            <Container>
               <Menu.Item
                 as="a"
                 style={{
@@ -97,7 +99,10 @@ const DesktopContainer = ({ children, activeSection }) => {
           <Segment
             style={{
               margin: "0%",
-              backgroundColor: "#212121",
+              height: "0%",
+              padding: "0%",
+              border: "none",
+              backgroundColor: "transparent",
             }}
           >
             {!isScrolled ? (
@@ -105,11 +110,13 @@ const DesktopContainer = ({ children, activeSection }) => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  backgroundColor: "#212121",
                   color: "#f4c700 ",
                   fontFamily: " Edo",
                   fontSize: "5em",
                   margin: "0%",
+                  backgroundColor: "transparent",
+
+                  // backgroundColor: "#212121",
                 }}
               >
                 Bug Zero
@@ -122,6 +129,10 @@ const DesktopContainer = ({ children, activeSection }) => {
                 display: "flex",
                 justifyContent: "center",
                 margin: "0%",
+                // backgroundColor: "transparent",
+
+                // backgroundColor: isScrolled ? "#212121" : "transparent",
+                paddingBottom: "1%",
               }}
               inverted
               pointing

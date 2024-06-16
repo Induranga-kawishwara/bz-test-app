@@ -5,12 +5,9 @@ import NavBar from "./components/Reusable/NavBar/MainNavBar/MainNavBar";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const [goUp, setGoUp] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   useEffect(() => {
     const onPageScroll = () => {
-      setGoUp(window.scrollY > 200);
-
       const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
