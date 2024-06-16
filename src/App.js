@@ -1,7 +1,7 @@
 import "./App.css";
 import HomepageLayout from "./components/Pages/Main";
 import Footer from "./components/Reusable/Footer/Footer";
-import NavBar from "./components/Reusable/NavBar/MainNavBar/MainNavBar";
+import NavBar from "./components/Reusable/NavBar/MainNavBar";
 import React, { useState, useEffect } from "react";
 
 function App() {
