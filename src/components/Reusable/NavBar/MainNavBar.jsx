@@ -9,6 +9,7 @@ import {
   Menu,
   Segment,
   Sidebar,
+  Divider,
 } from "semantic-ui-react";
 
 const { MediaContextProvider, Media } = createMedia({
@@ -194,6 +195,27 @@ const MobileContainer = ({ children }) => {
           <Menu.Item onClick={handleSidebarHide}>
             <Icon name="x" style={{ color: "red" }} />
           </Menu.Item>
+
+          {[
+            { name: "home", label: "Home" },
+            { name: "why-join-us", label: "Why Join Us?" },
+            { name: "features", label: "Features" },
+            { name: "our-scope", label: "Our Scope" },
+            { name: "the-team", label: "The Team" },
+          ].map((item) => (
+            <Menu.Item
+              key={item.name}
+              name={item.name}
+              as="a"
+              style={{ color: "#F8F8F8" }}
+              href={`/#${item.name}`}
+            >
+              {item.label}
+            </Menu.Item>
+          ))}
+
+          <Divider style={{ backgroundColor: "#F8F8F8" }} />
+
           {["Home", "Blog", "ZeroFeed", "Careers"].map((item) => (
             <Menu.Item key={item} as="a" style={{ color: "#F8F8F8" }}>
               {item}
