@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { createMedia } from "@artsy/fresnel";
 import { InView } from "react-intersection-observer";
-import style from "../HomePageNavBar/HomePageNavBar.module.css";
 import {
   Button,
   Container,
@@ -11,7 +10,6 @@ import {
   Segment,
   Sidebar,
 } from "semantic-ui-react";
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
