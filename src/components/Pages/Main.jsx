@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import HomePageNavBar from "../Reusable/NavBar/HomePageNavBar/HomePageNavBar";
 import BugBountyStats from "./BugBountyStats/BugBountyStats";
 import EarnMoney from "./EarnMoney/EarnMoney";
 import Partners from "./Partners/Partners";
@@ -14,7 +13,6 @@ import "./style.css";
 
 const Main = () => {
   const [goUp, setGoUp] = useState(false);
-  const [activeSection, setActiveSection] = useState(null);
 
   const scrollToTop = () => {
     const scrollToTopAnimation = () => {
@@ -30,14 +28,6 @@ const Main = () => {
   useEffect(() => {
     const onPageScroll = () => {
       setGoUp(window.scrollY > 200);
-
-      const sections = document.querySelectorAll("section");
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-          setActiveSection(section.id);
-        }
-      });
     };
 
     window.addEventListener("scroll", onPageScroll);
@@ -49,7 +39,6 @@ const Main = () => {
 
   return (
     <div>
-      <HomePageNavBar activeSection={activeSection} />
       <section id="home">
         <HomePage />
       </section>

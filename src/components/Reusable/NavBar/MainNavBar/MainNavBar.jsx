@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { createMedia } from "@artsy/fresnel";
 import { InView } from "react-intersection-observer";
+import style from "../HomePageNavBar/HomePageNavBar.module.css";
 import {
   Button,
   Container,
@@ -18,15 +19,50 @@ const { MediaContextProvider, Media } = createMedia({
     computer: 1368,
   },
 });
+const DesktopContainer = ({ children, activeSection }) => {
+  const [activeItem, setActiveItem] = useState();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-const DesktopContainer = ({ children }) => {
+  const handleItemClick = (e, { name }) => setActiveItem(name);
+
+  useEffect(() => {
+    setActiveItem(activeSection || "home");
+  }, [activeSection]);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsScrolled(false);
+      } else {
+        setIsScrolled(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Media greaterThan="mobile">
       <InView>
-        <Segment>
+        <Segment
+          fixed="top"
+          style={{
+            padding: "0%",
+            border: "none",
+            backgroundColor: "transparent",
+            position: "fixed",
+            width: "100%",
+          }}
+        >
           <Menu
-            fixed="top"
-            style={{ border: "none", backgroundColor: "#212121" }}
+            style={{
+              border: "none",
+              backgroundColor: "#212121",
+              padding: "0%",
+            }}
           >
             <Container style={{ color: "white" }}>
               <Menu.Item
@@ -58,6 +94,40 @@ const DesktopContainer = ({ children }) => {
                 </Button>
               </Menu.Item>
             </Container>
+          </Menu>
+          {!isScrolled ? (
+            <Menu.Item className={style.navbar_logo}>Bug Zero</Menu.Item>
+          ) : null}
+          <Menu
+            style={{
+              border: "none",
+              backgroundColor: "#212121",
+              display: "flex",
+              justifyContent: "center",
+              margin: "0%",
+            }}
+            inverted
+            pointing
+            secondary
+          >
+            {[
+              { name: "home", label: "Home" },
+              { name: "why-join-us", label: "Why Join Us?" },
+              { name: "features", label: "Features" },
+              { name: "our-scope", label: "Our Scope" },
+              { name: "the-team", label: "The Team" },
+            ].map((item) => (
+              <Menu.Item
+                key={item.name}
+                name={item.name}
+                active={activeItem === item.name}
+                onClick={handleItemClick}
+                as="a"
+                href={`/#${item.name}`}
+              >
+                {item.label}
+              </Menu.Item>
+            ))}
           </Menu>
         </Segment>
       </InView>
