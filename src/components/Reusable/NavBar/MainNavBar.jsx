@@ -21,6 +21,7 @@ const { MediaContextProvider, Media } = createMedia({
 });
 
 const DesktopContainer = ({ children, activeSection }) => {
+  console.log(activeSection);
   const [activeItem, setActiveItem] = useState();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -98,63 +99,65 @@ const DesktopContainer = ({ children, activeSection }) => {
               </Menu.Item>
             </Container>
           </Menu>
-          <Segment
-            style={{
-              margin: "0%",
-              height: "0%",
-              padding: "0%",
-              border: "none",
-              backgroundColor: isScrolled ? " #212121" : "transparent",
-            }}
-          >
-            {!isScrolled ? (
-              <Segment
+          {activeSection && (
+            <Segment
+              style={{
+                margin: "0%",
+                height: "0%",
+                padding: "0%",
+                border: "none",
+                backgroundColor: isScrolled ? " #212121" : "transparent",
+              }}
+            >
+              {!isScrolled && (
+                <Segment
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    color: "#f4c700 ",
+                    fontFamily: " Edo",
+                    fontSize: "5em",
+                    margin: "0%",
+                    backgroundColor: "transparent",
+                  }}
+                >
+                  Bug Zero
+                </Segment>
+              )}
+
+              <Menu
                 style={{
+                  border: "none",
                   display: "flex",
                   justifyContent: "center",
-                  color: "#f4c700 ",
-                  fontFamily: " Edo",
-                  fontSize: "5em",
                   margin: "0%",
-                  backgroundColor: "transparent",
+                  paddingBottom: "1%",
                 }}
+                inverted
+                pointing
+                secondary
               >
-                Bug Zero
-              </Segment>
-            ) : null}
-
-            <Menu
-              style={{
-                border: "none",
-                display: "flex",
-                justifyContent: "center",
-                margin: "0%",
-                paddingBottom: "1%",
-              }}
-              inverted
-              pointing
-              secondary
-            >
-              {[
-                { name: "home", label: "Home" },
-                { name: "why-join-us", label: "Why Join Us?" },
-                { name: "features", label: "Features" },
-                { name: "our-scope", label: "Our Scope" },
-                { name: "the-team", label: "The Team" },
-              ].map((item) => (
-                <Menu.Item
-                  key={item.name}
-                  name={item.name}
-                  active={activeItem === item.name}
-                  onClick={handleItemClick}
-                  as="a"
-                  href={`/#${item.name}`}
-                >
-                  {item.label}
-                </Menu.Item>
-              ))}
-            </Menu>
-          </Segment>
+                {[
+                  { name: "home", label: "Home" },
+                  { name: "why-join-us", label: "Why Join Us?" },
+                  { name: "features", label: "Features" },
+                  { name: "our-scope", label: "Our Scope" },
+                  { name: "the-team", label: "The Team" },
+                ].map((item) => (
+                  <Menu.Item
+                    key={item.name}
+                    name={item.name}
+                    active={activeItem === item.name}
+                    onClick={handleItemClick}
+                    as="a"
+                    href={`/#${item.name}`}
+                  >
+                    {item.label}
+                  </Menu.Item>
+                ))}
+              </Menu>
+            </Segment>
+          )}
         </Segment>
       </InView>
 
@@ -168,7 +171,7 @@ DesktopContainer.propTypes = {
   activeSection: PropTypes.string,
 };
 
-const MobileContainer = ({ children }) => {
+const MobileContainer = ({ children, activeSection }) => {
   const [sidebarOpened, setSidebarOpened] = useState(false);
 
   const handleToggle = () => setSidebarOpened(!sidebarOpened);
@@ -196,25 +199,28 @@ const MobileContainer = ({ children }) => {
             <Icon name="x" style={{ color: "red" }} />
           </Menu.Item>
 
-          {[
-            { name: "home", label: "Home" },
-            { name: "why-join-us", label: "Why Join Us?" },
-            { name: "features", label: "Features" },
-            { name: "our-scope", label: "Our Scope" },
-            { name: "the-team", label: "The Team" },
-          ].map((item) => (
-            <Menu.Item
-              key={item.name}
-              name={item.name}
-              as="a"
-              style={{ color: "#F8F8F8" }}
-              href={`/#${item.name}`}
-            >
-              {item.label}
-            </Menu.Item>
-          ))}
-
-          <Divider style={{ backgroundColor: "#F8F8F8" }} />
+          {activeSection && (
+            <>
+              {[
+                { name: "home", label: "Home" },
+                { name: "why-join-us", label: "Why Join Us?" },
+                { name: "features", label: "Features" },
+                { name: "our-scope", label: "Our Scope" },
+                { name: "the-team", label: "The Team" },
+              ].map((item) => (
+                <Menu.Item
+                  key={item.name}
+                  name={item.name}
+                  as="a"
+                  style={{ color: "#F8F8F8" }}
+                  href={`/#${item.name}`}
+                >
+                  {item.label}
+                </Menu.Item>
+              ))}
+              <Divider style={{ backgroundColor: "#F8F8F8" }} />
+            </>
+          )}
 
           {["Home", "Blog", "ZeroFeed", "Careers"].map((item) => (
             <Menu.Item key={item} as="a" style={{ color: "#F8F8F8" }}>
@@ -262,6 +268,7 @@ const MobileContainer = ({ children }) => {
 
 MobileContainer.propTypes = {
   children: PropTypes.node,
+  activeSection: PropTypes.string,
 };
 
 const MainNavBar = ({ children, activeSection }) => (
@@ -269,7 +276,7 @@ const MainNavBar = ({ children, activeSection }) => (
     <DesktopContainer activeSection={activeSection}>
       {children}
     </DesktopContainer>
-    <MobileContainer>{children}</MobileContainer>
+    <MobileContainer activeSection={activeSection}>{children}</MobileContainer>
   </MediaContextProvider>
 );
 
