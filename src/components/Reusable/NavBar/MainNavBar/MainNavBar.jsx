@@ -62,7 +62,7 @@ const DesktopContainer = ({ children, activeSection }) => {
           <Menu
             style={{
               border: "none",
-              backgroundColor: "transparent",
+              backgroundColor: " #212121",
               margin: "0%",
             }}
           >
@@ -103,7 +103,7 @@ const DesktopContainer = ({ children, activeSection }) => {
               height: "0%",
               padding: "0%",
               border: "none",
-              backgroundColor: "transparent",
+              backgroundColor: isScrolled ? " #212121" : "transparent",
             }}
           >
             {!isScrolled ? (
