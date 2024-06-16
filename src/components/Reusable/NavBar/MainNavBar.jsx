@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { createMedia } from "@artsy/fresnel";
 import { InView } from "react-intersection-observer";
@@ -9,6 +9,7 @@ import {
   Menu,
   Segment,
   Sidebar,
+  Divider,
 } from "semantic-ui-react";
 
 const { MediaContextProvider, Media } = createMedia({
@@ -19,16 +20,54 @@ const { MediaContextProvider, Media } = createMedia({
   },
 });
 
-const DesktopContainer = ({ children }) => {
+const DesktopContainer = ({ children, activeSection }) => {
+  const [activeItem, setActiveItem] = useState();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleItemClick = (e, { name }) => setActiveItem(name);
+
+  useEffect(() => {
+    setActiveItem(activeSection == null ? "home" : activeSection);
+  }, [activeSection]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsScrolled(false);
+      } else {
+        setIsScrolled(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Media greaterThan="mobile">
       <InView>
-        <Segment>
+        <Segment
+          fixed="top"
+          style={{
+            padding: "0%",
+            border: "none",
+            position: "fixed",
+            width: "100%",
+            backgroundColor: "transparent",
+            zIndex: "10",
+          }}
+        >
           <Menu
-            fixed="top"
-            style={{ border: "none", backgroundColor: "#212121" }}
+            style={{
+              border: "none",
+              backgroundColor: " #212121",
+              margin: "0%",
+            }}
           >
-            <Container style={{ color: "white" }}>
+            <Container>
               <Menu.Item
                 as="a"
                 style={{
@@ -59,6 +98,63 @@ const DesktopContainer = ({ children }) => {
               </Menu.Item>
             </Container>
           </Menu>
+          <Segment
+            style={{
+              margin: "0%",
+              height: "0%",
+              padding: "0%",
+              border: "none",
+              backgroundColor: isScrolled ? " #212121" : "transparent",
+            }}
+          >
+            {!isScrolled ? (
+              <Segment
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  color: "#f4c700 ",
+                  fontFamily: " Edo",
+                  fontSize: "5em",
+                  margin: "0%",
+                  backgroundColor: "transparent",
+                }}
+              >
+                Bug Zero
+              </Segment>
+            ) : null}
+
+            <Menu
+              style={{
+                border: "none",
+                display: "flex",
+                justifyContent: "center",
+                margin: "0%",
+                paddingBottom: "1%",
+              }}
+              inverted
+              pointing
+              secondary
+            >
+              {[
+                { name: "home", label: "Home" },
+                { name: "why-join-us", label: "Why Join Us?" },
+                { name: "features", label: "Features" },
+                { name: "our-scope", label: "Our Scope" },
+                { name: "the-team", label: "The Team" },
+              ].map((item) => (
+                <Menu.Item
+                  key={item.name}
+                  name={item.name}
+                  active={activeItem === item.name}
+                  onClick={handleItemClick}
+                  as="a"
+                  href={`/#${item.name}`}
+                >
+                  {item.label}
+                </Menu.Item>
+              ))}
+            </Menu>
+          </Segment>
         </Segment>
       </InView>
 
@@ -69,6 +165,7 @@ const DesktopContainer = ({ children }) => {
 
 DesktopContainer.propTypes = {
   children: PropTypes.node,
+  activeSection: PropTypes.string,
 };
 
 const MobileContainer = ({ children }) => {
@@ -98,6 +195,27 @@ const MobileContainer = ({ children }) => {
           <Menu.Item onClick={handleSidebarHide}>
             <Icon name="x" style={{ color: "red" }} />
           </Menu.Item>
+
+          {[
+            { name: "home", label: "Home" },
+            { name: "why-join-us", label: "Why Join Us?" },
+            { name: "features", label: "Features" },
+            { name: "our-scope", label: "Our Scope" },
+            { name: "the-team", label: "The Team" },
+          ].map((item) => (
+            <Menu.Item
+              key={item.name}
+              name={item.name}
+              as="a"
+              style={{ color: "#F8F8F8" }}
+              href={`/#${item.name}`}
+            >
+              {item.label}
+            </Menu.Item>
+          ))}
+
+          <Divider style={{ backgroundColor: "#F8F8F8" }} />
+
           {["Home", "Blog", "ZeroFeed", "Careers"].map((item) => (
             <Menu.Item key={item} as="a" style={{ color: "#F8F8F8" }}>
               {item}
@@ -146,15 +264,18 @@ MobileContainer.propTypes = {
   children: PropTypes.node,
 };
 
-const MainNavBar = ({ children }) => (
+const MainNavBar = ({ children, activeSection }) => (
   <MediaContextProvider>
-    <DesktopContainer>{children}</DesktopContainer>
+    <DesktopContainer activeSection={activeSection}>
+      {children}
+    </DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
   </MediaContextProvider>
 );
 
 MainNavBar.propTypes = {
   children: PropTypes.node,
+  activeSection: PropTypes.string,
 };
 
 export default MainNavBar;
