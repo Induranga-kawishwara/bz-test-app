@@ -96,55 +96,59 @@ const DesktopContainer = ({ children, activeSection }) => {
               </Menu.Item>
             </Container>
           </Menu>
-          {!isScrolled ? (
-            <Segment
+          <Segment
+            style={{
+              margin: "0%",
+              backgroundColor: "#212121",
+            }}
+          >
+            {!isScrolled ? (
+              <Segment
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  backgroundColor: "#212121",
+                  color: "#f4c700 ",
+                  fontFamily: " Edo",
+                  fontSize: "5em",
+                  margin: "0%",
+                }}
+              >
+                Bug Zero
+              </Segment>
+            ) : null}
+
+            <Menu
               style={{
+                border: "none",
                 display: "flex",
                 justifyContent: "center",
-                padding: "3,0,3,0",
-                backgroundColor: "#212121",
                 margin: "0%",
-                color: "#f4c700 ",
-                fontFamily: " Edo",
-                fontSize: "5em",
               }}
+              inverted
+              pointing
+              secondary
             >
-              Bug Zero
-            </Segment>
-          ) : null}
-
-          <Menu
-            style={{
-              border: "none",
-              backgroundColor: "#212121",
-              display: "flex",
-              justifyContent: "center",
-              margin: "0%",
-              paddingBottom: "2%",
-            }}
-            inverted
-            pointing
-            secondary
-          >
-            {[
-              { name: "home", label: "Home" },
-              { name: "why-join-us", label: "Why Join Us?" },
-              { name: "features", label: "Features" },
-              { name: "our-scope", label: "Our Scope" },
-              { name: "the-team", label: "The Team" },
-            ].map((item) => (
-              <Menu.Item
-                key={item.name}
-                name={item.name}
-                active={activeItem === item.name}
-                onClick={handleItemClick}
-                as="a"
-                href={`/#${item.name}`}
-              >
-                {item.label}
-              </Menu.Item>
-            ))}
-          </Menu>
+              {[
+                { name: "home", label: "Home" },
+                { name: "why-join-us", label: "Why Join Us?" },
+                { name: "features", label: "Features" },
+                { name: "our-scope", label: "Our Scope" },
+                { name: "the-team", label: "The Team" },
+              ].map((item) => (
+                <Menu.Item
+                  key={item.name}
+                  name={item.name}
+                  active={activeItem === item.name}
+                  onClick={handleItemClick}
+                  as="a"
+                  href={`/#${item.name}`}
+                >
+                  {item.label}
+                </Menu.Item>
+              ))}
+            </Menu>
+          </Segment>
         </Segment>
       </InView>
 
