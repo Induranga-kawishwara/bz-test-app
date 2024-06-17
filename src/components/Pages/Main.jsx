@@ -8,6 +8,7 @@ import HomePage from "./BannerPage/BannerPage";
 import SecureOrganization from "./SecureOrganization/SecureOrganization";
 import Team from "./Team/Team";
 import WhyJoin from "./WhyJoin/WhyJoin";
+import BugZeroUnique from "../../Pages/BugZeroUnique/BugZeroUnique";
 import style from "./Main.module.css";
 import "./style.css";
 
@@ -74,6 +75,10 @@ const Main = ({ setActiveSection }) => {
 
       <section id="EarnMoney">
         <EarnMoney />
+      </section>
+
+      <section id="bugzerounique">
+        <BugZeroUnique />
       </section>
 
       <section id="the-team">

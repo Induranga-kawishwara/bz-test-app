@@ -1,0 +1,27 @@
+.cardheader {
+  font-family: "Poppins Regular", sans-serif;
+  font-size: large;
+}
+
+.ui.steps .step {
+  justify-content: flex-start !important;
+}
+
+@media (width >= 991px) {
+  .title,
+  .description {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+
+@media (767px <= width <= 991px) {
+  .ui.steps .step {
+    justify-content: space-between;
+  }
+  .title,
+  .description {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
