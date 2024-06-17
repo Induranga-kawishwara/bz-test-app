@@ -5,7 +5,7 @@ import NavBar from "./components/Reusable/NavBar/MainNavBar";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const onPageScroll = () => {
