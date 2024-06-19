@@ -2,12 +2,12 @@ import React from "react";
 import "./Unique.css";
 import { GridColumn, Grid, Container, Header, Image } from "semantic-ui-react";
 
-import clock from "../../Assets/clock.png";
-import equalizer from "../../Assets/equalizer.png";
-import iteration from "../../Assets/iteration.png";
-import guru from "../../Assets/guru.png";
-import wallet from "../../Assets/wallet.png";
-import range from "../../Assets/range.png";
+import clock from "../../../Assets/clock.png";
+import equalizer from "../../../Assets/equalizer.png";
+import iteration from "../../../Assets/iteration.png";
+import guru from "../../../Assets/guru.png";
+import wallet from "../../../Assets/wallet.png";
+import range from "../../../Assets/range.png";
 
 const Step = ({ img, title, desc }) => (
   <GridColumn>

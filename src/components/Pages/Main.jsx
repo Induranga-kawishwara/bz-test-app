@@ -10,6 +10,7 @@ import Team from "./Team/Team";
 import WhyJoin from "./WhyJoin/WhyJoin";
 import EarnMoney from "./EarnMoney/EarnMoney";
 import BugZeroUnique from "../../Pages/BugZeroUnique/BugZeroUnique";
+import BugZeroUnique from "./BugZeroUnique/BugZeroUnique";
 import style from "./Main.module.css";
 import "./style.css";
 
