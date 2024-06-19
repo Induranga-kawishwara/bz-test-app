@@ -20,6 +20,14 @@ const { MediaContextProvider, Media } = createMedia({
   },
 });
 
+const menuItems = [
+  { name: "home", label: "Home" },
+  { name: "why-join-us", label: "Why Join Us?" },
+  { name: "features", label: "Features" },
+  { name: "our-scope", label: "Our Scope" },
+  { name: "the-team", label: "The Team" },
+];
+
 const DesktopContainer = ({ children, activeSection }) => {
   console.log(activeSection);
   const [activeItem, setActiveItem] = useState();
@@ -137,13 +145,7 @@ const DesktopContainer = ({ children, activeSection }) => {
                 pointing
                 secondary
               >
-                {[
-                  { name: "home", label: "Home" },
-                  { name: "why-join-us", label: "Why Join Us?" },
-                  { name: "features", label: "Features" },
-                  { name: "our-scope", label: "Our Scope" },
-                  { name: "the-team", label: "The Team" },
-                ].map((item) => (
+                {menuItems.map((item) => (
                   <Menu.Item
                     key={item.name}
                     name={item.name}
@@ -201,13 +203,7 @@ const MobileContainer = ({ children, activeSection }) => {
 
           {activeSection && (
             <>
-              {[
-                { name: "home", label: "Home" },
-                { name: "why-join-us", label: "Why Join Us?" },
-                { name: "features", label: "Features" },
-                { name: "our-scope", label: "Our Scope" },
-                { name: "the-team", label: "The Team" },
-              ].map((item) => (
+              {menuItems.map((item) => (
                 <Menu.Item
                   key={item.name}
                   name={item.name}
