@@ -74,6 +74,7 @@ const DesktopContainer = ({ children, activeSection }) => {
               border: "none",
               backgroundColor: " #212121",
               margin: "0%",
+              borderRadius: "0%",
             }}
           >
             <Container>
@@ -115,6 +116,7 @@ const DesktopContainer = ({ children, activeSection }) => {
                 padding: "0%",
                 border: "none",
                 backgroundColor: isScrolled ? " #212121" : "transparent",
+                borderRadius: "0%",
               }}
             >
               {!isScrolled && (
@@ -127,6 +129,7 @@ const DesktopContainer = ({ children, activeSection }) => {
                     fontSize: "5em",
                     margin: "0%",
                     backgroundColor: "transparent",
+                    borderRadius: "0%",
                   }}
                 >
                   Bug Zero

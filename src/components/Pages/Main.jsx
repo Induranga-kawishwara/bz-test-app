@@ -10,6 +10,7 @@ import Team from "./Team/Team";
 import WhyJoin from "./WhyJoin/WhyJoin";
 import EarnMoney from "./EarnMoney/EarnMoney";
 import BugZeroUnique from "./BugZeroUnique/BugZeroUnique";
+import BlogPage from "./BlogPage/BlogPage";
 import style from "./Main.module.css";
 import "./style.css";
 
@@ -88,6 +89,9 @@ const Main = ({ setActiveSection }) => {
 
       <section id="the-team">
         <Team />
+      </section>
+      <section id="blog-page">
+        <BlogPage />
       </section>
 
       <div
