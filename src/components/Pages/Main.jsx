@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import BugBountyStats from "./BugBountyStats/BugBountyStats";
-import EarnMoney from "./EarnMoney/EarnMoney";
+import EndtoEndSupport from "./EndtoEndSupport/EndtoEndSupport";
 import Partners from "./Partners/Partners";
 import HomePage from "./BannerPage/BannerPage";
 import SecureOrganization from "./SecureOrganization/SecureOrganization";
 import Team from "./Team/Team";
 import WhyJoin from "./WhyJoin/WhyJoin";
+import EarnMoney from "./EarnMoney/EarnMoney";
+import BugZeroUnique from "../../Pages/BugZeroUnique/BugZeroUnique";
 import BugZeroUnique from "./BugZeroUnique/BugZeroUnique";
 import style from "./Main.module.css";
 import "./style.css";
@@ -75,6 +77,10 @@ const Main = ({ setActiveSection }) => {
 
       <section id="EarnMoney">
         <EarnMoney />
+      </section>
+
+      <section id="EndtoEndSupport">
+        <EndtoEndSupport />
       </section>
 
       <section id="bugzerounique">
