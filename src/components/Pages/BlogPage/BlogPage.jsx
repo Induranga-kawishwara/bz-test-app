@@ -2,7 +2,7 @@ import React from "react";
 import {
   CardMeta,
   CardHeader,
-  CardDescription,
+  Grid,
   CardContent,
   Card,
   Icon,
@@ -52,22 +52,45 @@ const CardExampleImageCard = () => {
   ];
   return (
     <Segment style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-      {test.map((item) => (
-        <Card>
-          <Image src={item.image} wrapped ui={false} />
-          <CardContent>
-            <CardHeader>{item.title}</CardHeader>
-            <CardMeta>{`Author ${item.author}`}</CardMeta>
-            <CardMeta>{`Publish on ${item.date}`}</CardMeta>
-          </CardContent>
-          <CardContent extra>
-            <a>
-              <Icon name="user" />
-              10 Friends
-            </a>
-          </CardContent>
-        </Card>
-      ))}
+      <Grid container doubling columns={4}>
+        {test.map((item) => (
+          // <Card>
+          //   <Image src={item.image} wrapped ui={false} />
+          //   <CardContent>
+          //     <CardHeader>{item.title}</CardHeader>
+          //     <CardMeta>{`Author ${item.author}`}</CardMeta>
+          //     <CardMeta>{`Publish on ${item.date}`}</CardMeta>
+          //   </CardContent>
+          //   <CardContent extra>
+          //     <a>
+          //       <Icon name="user" />
+          //       10 Friends
+          //     </a>
+          //   </CardContent>
+          // </Card>
+
+          <Grid.Column>
+            {/* card */}
+            <Card style={{ width: "100%", textAlign: "center" }}>
+              <Image src={item.image} alt="Prof Kasun De Zoysa" />
+              <CardContent>
+                <CardHeader>{item.title}</CardHeader>
+                <CardMeta>{`Author ${item.author}`}</CardMeta>
+                <CardMeta>{`Publish on ${item.date}`}</CardMeta>
+              </CardContent>
+              <CardContent extra>
+                <a
+                  href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en"
+                  target="blank"
+                >
+                  <Icon name="graduation" />
+                  Profile
+                </a>
+              </CardContent>
+            </Card>
+          </Grid.Column>
+        ))}
+      </Grid>
     </Segment>
   );
 };
