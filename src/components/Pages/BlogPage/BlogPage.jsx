@@ -37,6 +37,18 @@ const CardExampleImageCard = () => {
       author: "induranga",
       date: "2024/05/15",
     },
+    {
+      image: testimge,
+      title: "testing cat ",
+      author: "induranga",
+      date: "2024/05/15",
+    },
+    {
+      image: testimge,
+      title: "testing cat ",
+      author: "induranga",
+      date: "2024/05/15",
+    },
   ];
   return (
     <Segment style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
