@@ -78,7 +78,14 @@ const Main = ({ setActiveSection }) => {
         <EarnMoney />
       </section>
 
-      <section id="EndtoEndSupport">
+      <section
+        id="EndtoEndSupport"
+        style={{
+          backgroundColor: "#f0f0f0",
+          padding: "6em 0em",
+          border: "none",
+        }}
+      >
         <EndtoEndSupport />
       </section>
 
