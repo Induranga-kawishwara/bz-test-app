@@ -39,7 +39,7 @@ const CardExampleImageCard = () => {
     },
   ];
   return (
-    <Segment>
+    <Segment style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
       {test.map((item) => (
         <Card>
           <Image src={item.image} wrapped ui={false} />
