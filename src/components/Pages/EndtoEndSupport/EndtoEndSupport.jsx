@@ -12,10 +12,10 @@ const Step = ({ img, title, desc }) => (
       <div class="step" style={{ padding: "2em 1em", flexDirection: "column" }}>
         <Image src={img} alt="BigCo Inc. logo" size="tiny" />
         <div class="content">
-          <div class="title" style={{ margin: "5px 0 0 0" }}>
+          <div class="title" style={{ margin: "5px 0 0 5px" }}>
             {title}
           </div>
-          <div class="description" style={{ margin: "0" }}>
+          <div class="description" style={{ margin: "0", fontSize: "10px" }}>
             {desc}
           </div>
         </div>
@@ -32,7 +32,12 @@ const EndtoEndSupport = () => (
       </Header>
       <br></br>
     </Container>
-    <Grid container stackable columns={4}>
+    <Grid
+      container
+      stackable
+      columns={4}
+      style={{ backgroundcolor: " #f0f0f0" }}
+    >
       <Step img={clock} title="Fast..." desc="Result" />
       <Step img={equalizer} title="Flexible" desc="Programs" />
       <Step img={iteration} title="Agile" desc="Teams" />
