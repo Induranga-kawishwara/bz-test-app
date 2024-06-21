@@ -24,7 +24,7 @@ const Step = ({ img, title, desc }) => (
 );
 
 const BugZeroUnique = () => (
-  <>
+  <div style={{ margin: "80px 0" }}>
     <Container text>
       <Header as="h3" style={{ fontSize: "2.5em" }}>
         What Makes Bug Zero Unique
@@ -41,6 +41,7 @@ const BugZeroUnique = () => (
     </Grid>
     <br />
     <br />
-  </>
+  </div>
 );
+
 export default BugZeroUnique;

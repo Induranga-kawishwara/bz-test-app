@@ -12,6 +12,7 @@
   .description {
     text-align: left;
     margin-left: 10px;
+    font-size: 20px !important;
   }
 }
 
@@ -23,5 +24,15 @@
   .description {
     text-align: left;
     margin-left: 10px;
+    font-size: larger;
   }
+}
+.step {
+  padding: 2em 1em;
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.step:hover {
+  transform: translateY(-5px); /* Example: Move the element 5px up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
