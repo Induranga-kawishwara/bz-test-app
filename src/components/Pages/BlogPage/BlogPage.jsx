@@ -10,17 +10,14 @@ import {
   Segment,
   Container,
   Header,
+  CardDescription,
+  Button,
+  Input,
 } from "semantic-ui-react";
 import testimge from "../../../Assets/logo/bhasha.png";
 
 const CardExampleImageCard = () => {
   const test = [
-    {
-      image: testimge,
-      title: "testing cat ",
-      author: "induranga",
-      date: "2024/05/15",
-    },
     {
       image: testimge,
       title: "testing cat ",
@@ -98,6 +95,45 @@ const CardExampleImageCard = () => {
             </Card>
           </Grid.Column>
         ))}
+        <Grid.Column
+          q
+          style={{
+            alignItems: "center",
+          }}
+        >
+          <Card
+            style={{
+              width: "100%",
+              textAlign: "center",
+              paddingTop: "10%",
+              display: "flex",
+              border: "3px , solid ,#F4C700",
+              color: "black",
+              // backgroundColor: "#F4C700",
+              // opacity: "0.6",
+            }}
+          >
+            <Segment>
+              <CardDescription>
+                Subscribe to our mailing list to keep updated with latest on
+                cyber security
+              </CardDescription>
+              <br /> <br />
+              <Input
+                iconPosition="left"
+                placeholder="Email"
+                style={{ width: "100%", marginBottom: "10px" }}
+              >
+                <Icon name="at" />
+                <input />
+              </Input>
+              <Button color="yellow" style={{ color: "Black", width: "100%" }}>
+                Subscribe
+              </Button>
+              <br /> <br />
+            </Segment>
+          </Card>
+        </Grid.Column>
       </Grid>
     </Segment>
   );
