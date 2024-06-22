@@ -1,4 +1,11 @@
-import { Container, Grid, Header, List, Segment } from "semantic-ui-react";
+import {
+  Container,
+  Grid,
+  Header,
+  List,
+  Segment,
+  Button,
+} from "semantic-ui-react";
 
 const Footer = () => {
   return (
@@ -27,6 +34,12 @@ const Footer = () => {
                 Bug Zero
               </Header>
               <p>Securing Your Organization, One Cyberspace at a Time.</p>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Button circular color="facebook" icon="facebook" />
+              <Button circular color="twitter" icon="twitter" />
+              <Button circular color="linkedin" icon="linkedin" />
+              <Button circular color="google plus" icon="google plus" />
             </Grid.Column>
           </Grid.Row>
         </Grid>
