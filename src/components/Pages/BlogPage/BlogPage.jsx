@@ -98,15 +98,18 @@ const BlogPage = () => {
                     color: "white",
                   }}
                 >{`Publish on ${item.date}`}</CardMeta>
-              </CardContent>
-              <CardContent extra>
-                <a
-                  href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en"
-                  target="blank"
-                >
-                  <Icon name="graduation" />
-                  Profile
-                </a>
+
+                <CardMeta>
+                  <a
+                    href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en"
+                    target="blank"
+                    style={{
+                      color: "white",
+                    }}
+                  >
+                    Read more
+                  </a>
+                </CardMeta>
               </CardContent>
             </Card>
           </Grid.Column>
