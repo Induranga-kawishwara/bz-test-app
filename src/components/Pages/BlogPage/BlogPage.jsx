@@ -49,30 +49,25 @@ const BlogPage = () => {
       </Container>
       <Grid container doubling columns={4}>
         {test.map((item, index) => (
-          <Grid.Column
-            key={index}
-            style={{
-              alignItems: "center",
-            }}
-          >
+          <Grid.Column key={index}>
             <Card
               style={{
                 height: "100%",
                 width: "100%",
-                textAlign: "center",
+                textAlign: "start",
                 paddingTop: "10%",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 border: "3px solid #F4C700",
-                backgroundColor: "rgba(244, 199, 0, 0.2)", // Adjusted for opacity
+                backgroundColor: "rgba(244, 199, 0, 0.2)",
               }}
             >
               <Segment
                 style={{
                   width: "90%",
                   borderColor: "none",
-                  padding: "none",
+                  padding: "0%",
                   flex: "1 0 auto",
                 }}
               >
@@ -82,6 +77,8 @@ const BlogPage = () => {
               <CardContent
                 style={{
                   borderTop: "none",
+                  width: "100%",
+                  textAlign: "none",
                 }}
               >
                 <CardHeader
@@ -114,29 +111,26 @@ const BlogPage = () => {
             </Card>
           </Grid.Column>
         ))}
-        <Grid.Column
-          style={{
-            alignItems: "center",
-          }}
-        >
+        <Grid.Column>
           <Card
             style={{
               height: "100%",
               width: "100%",
-              textAlign: "center",
+              textAlign: "start",
               paddingTop: "15%",
               display: "flex",
               flexDirection: "column",
               border: "3px solid #F4C700",
               color: "black",
-              backgroundColor: "rgba(244, 199, 0, 0.2)", // Adjusted for opacity
+              backgroundColor: "rgba(244, 199, 0, 0.2)",
             }}
           >
             <Segment
               style={{
-                background: "none", // Adjusted for opacity
+                background: "none",
                 boxShadow: "none",
                 border: "none",
+                color: "white",
               }}
             >
               <CardDescription>
