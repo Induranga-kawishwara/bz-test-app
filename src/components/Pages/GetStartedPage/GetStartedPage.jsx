@@ -13,10 +13,14 @@ const GetStartedPage = () => {
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
-            <Grid.Column width={7}>
+            <Grid.Column width={9}>
               <Header as="h3" style={{ fontSize: "2.5em" }}>
                 Get Started With Bug Zero
               </Header>
+              <p style={{ fontSize: "1.5em" }}>
+                Hackers aren't waiting. So why would you? See how Nug Zero can
+                help you.
+              </p>
               <br />
             </Grid.Column>
             <Grid.Column width={7}>
