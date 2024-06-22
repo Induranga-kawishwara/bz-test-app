@@ -57,15 +57,15 @@ const BlogPage = () => {
           >
             <Card
               style={{
-                height: "400px", // Set the desired height
-                width: "100%", // Set the desired width
+                height: "100%",
+                width: "100%",
                 textAlign: "center",
                 paddingTop: "10%",
                 display: "flex",
-                flexDirection: "column", // Ensure the content is stacked vertically
+                flexDirection: "column",
                 alignItems: "center",
                 border: "3px solid #F4C700",
-                backgroundColor: "#F4C700",
+                backgroundColor: "rgba(244, 199, 0, 0.2)", // Adjusted for opacity
               }}
             >
               <Segment
@@ -73,7 +73,7 @@ const BlogPage = () => {
                   width: "90%",
                   borderColor: "none",
                   padding: "none",
-                  flex: "1 0 auto", // Make the segment take available space
+                  flex: "1 0 auto",
                 }}
               >
                 <Image src={item.image} alt="Prof Kasun De Zoysa" />
@@ -121,15 +121,15 @@ const BlogPage = () => {
         >
           <Card
             style={{
-              height: "400px", // Set the desired height
-              width: "100%", // Set the desired width
+              height: "100%",
+              width: "100%",
               textAlign: "center",
               paddingTop: "15%",
               display: "flex",
               flexDirection: "column",
               border: "3px solid #F4C700",
               color: "black",
-              backgroundColor: "#212121",
+              backgroundColor: "rgba(244, 199, 0, 0.2)", // Adjusted for opacity
             }}
           >
             <Segment>
