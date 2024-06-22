@@ -74,10 +74,17 @@
 .input {
   width: 100% !important;
   margin-top: 20% !important;
+  height: 20% !important;
+}
+
+.input input {
+  border-radius: 100px !important;
 }
 
 .button {
   color: black !important;
+  height: 20% !important;
   width: 100% !important;
   margin-top: 10% !important;
+  border-radius: 100px !important;
 }
