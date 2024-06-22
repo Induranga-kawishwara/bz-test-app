@@ -16,7 +16,7 @@ import {
 } from "semantic-ui-react";
 import testimge from "../../../Assets/logo/bhasha.png";
 
-const CardExampleImageCard = () => {
+const BlogPage = () => {
   const test = [
     {
       image: testimge,
@@ -105,7 +105,7 @@ const CardExampleImageCard = () => {
             style={{
               width: "100%",
               textAlign: "center",
-              paddingTop: "10%",
+              paddingTop: "15%",
               display: "flex",
               border: "3px , solid ,#F4C700",
               color: "black",
@@ -122,15 +122,17 @@ const CardExampleImageCard = () => {
               <Input
                 iconPosition="left"
                 placeholder="Email"
-                style={{ width: "100%", marginBottom: "10px" }}
+                style={{ width: "100%", marginTop: "20%" }}
               >
                 <Icon name="at" />
                 <input />
               </Input>
-              <Button color="yellow" style={{ color: "Black", width: "100%" }}>
+              <Button
+                color="yellow"
+                style={{ color: "Black", width: "100%", marginTop: "10%" }}
+              >
                 Subscribe
               </Button>
-              <br /> <br />
             </Segment>
           </Card>
         </Grid.Column>
@@ -139,4 +141,4 @@ const CardExampleImageCard = () => {
   );
 };
 
-export default CardExampleImageCard;
+export default BlogPage;
