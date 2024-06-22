@@ -16,7 +16,7 @@ import {
 } from "semantic-ui-react";
 import testimge from "../../../Assets/logo/bhasha.png";
 
-const CardExampleImageCard = () => {
+const BlogPage = () => {
   const test = [
     {
       image: testimge,
@@ -43,7 +43,7 @@ const CardExampleImageCard = () => {
     >
       <Container text>
         <Header style={{ fontSize: "2.5em", color: "#F4C700" }}>
-          Expore Our Knowledge Base
+          Explore Our Knowledge Base
         </Header>
         <br></br>
       </Container>
@@ -57,15 +57,15 @@ const CardExampleImageCard = () => {
           >
             <Card
               style={{
+                height: "100%",
                 width: "100%",
                 textAlign: "center",
                 paddingTop: "10%",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                border: "3px , solid ,#F4C700",
-                color: "white",
-                // backgroundColor: "#F4C700",
-                // opacity: "0.6",
+                border: "3px solid #F4C700",
+                backgroundColor: "rgba(244, 199, 0, 0.2)", // Adjusted for opacity
               }}
             >
               <Segment
@@ -73,15 +73,34 @@ const CardExampleImageCard = () => {
                   width: "90%",
                   borderColor: "none",
                   padding: "none",
+                  flex: "1 0 auto",
                 }}
               >
                 <Image src={item.image} alt="Prof Kasun De Zoysa" />
               </Segment>
 
-              <CardContent>
-                <CardHeader>{item.title}</CardHeader>
-                <CardMeta>{`Author ${item.author}`}</CardMeta>
-                <CardMeta>{`Publish on ${item.date}`}</CardMeta>
+              <CardContent
+                style={{
+                  borderTop: "none",
+                }}
+              >
+                <CardHeader
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  {item.title}
+                </CardHeader>
+                <CardMeta
+                  style={{
+                    color: "white",
+                  }}
+                >{`Author ${item.author}`}</CardMeta>
+                <CardMeta
+                  style={{
+                    color: "white",
+                  }}
+                >{`Publish on ${item.date}`}</CardMeta>
               </CardContent>
               <CardContent extra>
                 <a
@@ -96,24 +115,30 @@ const CardExampleImageCard = () => {
           </Grid.Column>
         ))}
         <Grid.Column
-          q
           style={{
             alignItems: "center",
           }}
         >
           <Card
             style={{
+              height: "100%",
               width: "100%",
               textAlign: "center",
-              paddingTop: "10%",
+              paddingTop: "15%",
               display: "flex",
-              border: "3px , solid ,#F4C700",
+              flexDirection: "column",
+              border: "3px solid #F4C700",
               color: "black",
-              // backgroundColor: "#F4C700",
-              // opacity: "0.6",
+              backgroundColor: "rgba(244, 199, 0, 0.2)", // Adjusted for opacity
             }}
           >
-            <Segment>
+            <Segment
+              style={{
+                background: "none", // Adjusted for opacity
+                boxShadow: "none",
+                border: "none",
+              }}
+            >
               <CardDescription>
                 Subscribe to our mailing list to keep updated with latest on
                 cyber security
@@ -122,15 +147,17 @@ const CardExampleImageCard = () => {
               <Input
                 iconPosition="left"
                 placeholder="Email"
-                style={{ width: "100%", marginBottom: "10px" }}
+                style={{ width: "100%", marginTop: "20%" }}
               >
                 <Icon name="at" />
                 <input />
               </Input>
-              <Button color="yellow" style={{ color: "Black", width: "100%" }}>
+              <Button
+                color="yellow"
+                style={{ color: "Black", width: "100%", marginTop: "10%" }}
+              >
                 Subscribe
               </Button>
-              <br /> <br />
             </Segment>
           </Card>
         </Grid.Column>
@@ -139,4 +166,4 @@ const CardExampleImageCard = () => {
   );
 };
 
-export default CardExampleImageCard;
+export default BlogPage;
