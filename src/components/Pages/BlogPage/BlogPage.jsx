@@ -130,7 +130,7 @@ const BlogPage = () => {
               flexDirection: "column",
               border: "3px solid #F4C700",
               color: "black",
-              backgroundColor: "rgba(244, 199, 0, 0.2)",
+              backgroundColor: "rgba(244, 199, 0, 0.5)",
             }}
           >
             <Segment
