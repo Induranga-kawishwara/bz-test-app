@@ -69,7 +69,7 @@
   box-shadow: none !important;
   border: none !important;
   color: white !important;
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
 .input {
