@@ -130,6 +130,8 @@ const DesktopContainer = ({ children, activeSection }) => {
                     margin: "0%",
                     backgroundColor: "transparent",
                     borderRadius: "0%",
+                    border: "none",
+                    // padding: "0.7em 1em",
                   }}
                 >
                   Bug Zero
