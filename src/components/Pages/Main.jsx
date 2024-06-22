@@ -11,6 +11,7 @@ import WhyJoin from "./WhyJoin/WhyJoin";
 import EarnMoney from "./EarnMoney/EarnMoney";
 import BugZeroUnique from "./BugZeroUnique/BugZeroUnique";
 import BlogPage from "./BlogPage/BlogPage";
+import GetStartedPage from "./GetStartedPage/GetStartedPage";
 import style from "./Main.module.css";
 import "./style.css";
 
@@ -99,6 +100,10 @@ const Main = ({ setActiveSection }) => {
       </section>
       <section id="blog-page">
         <BlogPage />
+      </section>
+
+      <section id="getStarted-page">
+        <GetStartedPage />
       </section>
 
       <div
