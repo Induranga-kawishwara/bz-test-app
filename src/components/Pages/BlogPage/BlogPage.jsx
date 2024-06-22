@@ -99,12 +99,17 @@ const BlogPage = () => {
                   }}
                 >{`Publish on ${item.date}`}</CardMeta>
 
-                <CardMeta>
+                <CardMeta
+                  style={{
+                    marginTop: "5%",
+                  }}
+                >
                   <a
                     href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en"
                     target="blank"
                     style={{
                       color: "white",
+                      textDecoration: "underline",
                     }}
                   >
                     Read more
