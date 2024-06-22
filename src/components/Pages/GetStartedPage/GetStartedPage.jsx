@@ -21,11 +21,11 @@ const GetStartedPage = () => {
             </Grid.Column>
             <Grid.Column width={7}>
               <Button size="huge" color="yellow" style={{ color: "Black" }}>
-                Get Started
                 <Icon name="right arrow" />
+                Join with us
               </Button>
               <Button size="huge" color="yellow" inverted>
-                Learn More
+                Contact Us
               </Button>
             </Grid.Column>
           </Grid.Row>
