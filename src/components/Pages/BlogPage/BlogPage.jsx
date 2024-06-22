@@ -132,7 +132,13 @@ const BlogPage = () => {
               backgroundColor: "rgba(244, 199, 0, 0.2)", // Adjusted for opacity
             }}
           >
-            <Segment>
+            <Segment
+              style={{
+                background: "none", // Adjusted for opacity
+                boxShadow: "none",
+                border: "none",
+              }}
+            >
               <CardDescription>
                 Subscribe to our mailing list to keep updated with latest on
                 cyber security
