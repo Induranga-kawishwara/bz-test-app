@@ -43,7 +43,7 @@ const BlogPage = () => {
     >
       <Container text>
         <Header style={{ fontSize: "2.5em", color: "#F4C700" }}>
-          Expore Our Knowledge Base
+          Explore Our Knowledge Base
         </Header>
         <br></br>
       </Container>
@@ -57,15 +57,15 @@ const BlogPage = () => {
           >
             <Card
               style={{
-                width: "100%",
+                height: "400px", // Set the desired height
+                width: "100%", // Set the desired width
                 textAlign: "center",
                 paddingTop: "10%",
                 display: "flex",
+                flexDirection: "column", // Ensure the content is stacked vertically
                 alignItems: "center",
-                border: "3px , solid ,#F4C700",
-                color: "white",
-                // backgroundColor: "#F4C700",
-                // opacity: "0.6",
+                border: "3px solid #F4C700",
+                backgroundColor: "#F4C700",
               }}
             >
               <Segment
@@ -73,15 +73,34 @@ const BlogPage = () => {
                   width: "90%",
                   borderColor: "none",
                   padding: "none",
+                  flex: "1 0 auto", // Make the segment take available space
                 }}
               >
                 <Image src={item.image} alt="Prof Kasun De Zoysa" />
               </Segment>
 
-              <CardContent>
-                <CardHeader>{item.title}</CardHeader>
-                <CardMeta>{`Author ${item.author}`}</CardMeta>
-                <CardMeta>{`Publish on ${item.date}`}</CardMeta>
+              <CardContent
+                style={{
+                  borderTop: "none",
+                }}
+              >
+                <CardHeader
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  {item.title}
+                </CardHeader>
+                <CardMeta
+                  style={{
+                    color: "white",
+                  }}
+                >{`Author ${item.author}`}</CardMeta>
+                <CardMeta
+                  style={{
+                    color: "white",
+                  }}
+                >{`Publish on ${item.date}`}</CardMeta>
               </CardContent>
               <CardContent extra>
                 <a
@@ -96,21 +115,21 @@ const BlogPage = () => {
           </Grid.Column>
         ))}
         <Grid.Column
-          q
           style={{
             alignItems: "center",
           }}
         >
           <Card
             style={{
-              width: "100%",
+              height: "400px", // Set the desired height
+              width: "100%", // Set the desired width
               textAlign: "center",
               paddingTop: "15%",
               display: "flex",
-              border: "3px , solid ,#F4C700",
+              flexDirection: "column",
+              border: "3px solid #F4C700",
               color: "black",
-              // backgroundColor: "#F4C700",
-              // opacity: "0.6",
+              backgroundColor: "#212121",
             }}
           >
             <Segment>
