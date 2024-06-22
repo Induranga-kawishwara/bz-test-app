@@ -17,7 +17,7 @@ const SecureOrganization = () => {
     <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
       <Container text>
         <Header style={{ fontSize: "2.5em" }}>
-          <h3 className="glow">Secure your organization 24/7</h3>
+          Secure your organization 24/7
         </Header>
         <p className="mb-4" style={{ fontSize: "1.33em" }}>
           For organizations, Bug Zero provides
