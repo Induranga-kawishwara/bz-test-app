@@ -15,6 +15,7 @@ import {
   Input,
 } from "semantic-ui-react";
 import testimge from "../../../Assets/logo/bhasha.png";
+import styles from "./BlogPage.module.css";
 
 const BlogPage = () => {
   const test = [
@@ -38,79 +39,35 @@ const BlogPage = () => {
     },
   ];
   return (
-    <Segment
-      style={{ padding: "6em 0em", border: "none", backgroundColor: "#212121" }}
-    >
+    <Segment className={styles.segment}>
       <Container text>
-        <Header style={{ fontSize: "2.5em", color: "#F4C700" }}>
-          Explore Our Knowledge Base
-        </Header>
-        <br></br>
+        <Header className={styles.header}>Explore Our Knowledge Base</Header>
+        <br />
       </Container>
       <Grid container doubling columns={4}>
         {test.map((item, index) => (
           <Grid.Column key={index}>
-            <Card
-              style={{
-                height: "100%",
-                width: "100%",
-                textAlign: "start",
-                paddingTop: "10%",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                border: "3px solid #F4C700",
-                backgroundColor: "rgba(244, 199, 0, 0.2)",
-              }}
-            >
-              <Segment
-                style={{
-                  width: "90%",
-                  borderColor: "none",
-                  padding: "0%",
-                  flex: "1 0 auto",
-                }}
-              >
+            <Card className={styles.card}>
+              <Segment className={styles["segment-content"]}>
                 <Image src={item.image} alt="Prof Kasun De Zoysa" />
               </Segment>
 
-              <CardContent
-                style={{
-                  borderTop: "none",
-                  width: "100%",
-                  textAlign: "none",
-                }}
-              >
-                <CardHeader
-                  style={{
-                    color: "white",
-                  }}
-                >
+              <CardContent className={styles["card-content"]}>
+                <CardHeader className={styles["card-header"]}>
                   {item.title}
                 </CardHeader>
-                <CardMeta
-                  style={{
-                    color: "white",
-                  }}
-                >{`Author ${item.author}`}</CardMeta>
-                <CardMeta
-                  style={{
-                    color: "white",
-                  }}
-                >{`Publish on ${item.date}`}</CardMeta>
+                <CardMeta className={styles["card-meta"]}>
+                  {`Author ${item.author}`}
+                </CardMeta>
+                <CardMeta className={styles["card-meta"]}>
+                  {`Publish on ${item.date}`}
+                </CardMeta>
 
-                <CardMeta
-                  style={{
-                    marginTop: "5%",
-                  }}
-                >
+                <CardMeta style={{ marginTop: "5%" }}>
                   <a
                     href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en"
                     target="blank"
-                    style={{
-                      color: "white",
-                      textDecoration: "underline",
-                    }}
+                    className={styles["read-more"]}
                   >
                     Read more
                   </a>
@@ -120,27 +77,8 @@ const BlogPage = () => {
           </Grid.Column>
         ))}
         <Grid.Column>
-          <Card
-            style={{
-              height: "100%",
-              width: "100%",
-              textAlign: "start",
-              paddingTop: "15%",
-              display: "flex",
-              flexDirection: "column",
-              border: "3px solid #F4C700",
-              color: "black",
-              backgroundColor: "rgba(244, 199, 0, 0.5)",
-            }}
-          >
-            <Segment
-              style={{
-                background: "none",
-                boxShadow: "none",
-                border: "none",
-                color: "white",
-              }}
-            >
+          <Card className={styles["subscribe-card"]}>
+            <Segment className={styles["subscribe-segment"]}>
               <CardDescription>
                 Subscribe to our mailing list to keep updated with latest on
                 cyber security
@@ -149,15 +87,12 @@ const BlogPage = () => {
               <Input
                 iconPosition="left"
                 placeholder="Email"
-                style={{ width: "100%", marginTop: "20%" }}
+                className={styles.input}
               >
                 <Icon name="at" />
                 <input />
               </Input>
-              <Button
-                color="yellow"
-                style={{ color: "Black", width: "100%", marginTop: "10%" }}
-              >
+              <Button color="yellow" className={styles.button}>
                 Subscribe
               </Button>
             </Segment>
