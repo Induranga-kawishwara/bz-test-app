@@ -8,7 +8,6 @@ const Partners = () => {
         Protecting Sri Lanka's Most Valuable Platforms
       </Header>
       <br />
-      {/* ---------------------------------------------Partners Logo Bar--------------------------------------------- */}
       <Grid columns="equal" stackable>
         <Grid.Column width={1}></Grid.Column>
         <Grid.Column textAlign="center" className="logoColour">
