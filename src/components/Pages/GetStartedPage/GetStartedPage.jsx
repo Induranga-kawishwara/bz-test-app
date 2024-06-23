@@ -27,12 +27,23 @@ const GetStartedPage = () => {
               <Button
                 size="huge"
                 color="yellow"
-                style={{ color: "Black", margin: "0% 2% 5% 0%" }}
+                style={{
+                  color: "Black",
+                  margin: "0% 2% 5% 0%",
+                  borderRadius: "25px",
+                }}
               >
                 <Icon name="right arrow" />
                 <span style={{ marginLeft: "10px" }}>Join with us</span>
               </Button>
-              <Button size="huge" color="yellow" inverted>
+              <Button
+                size="huge"
+                color="yellow"
+                style={{
+                  borderRadius: "25px",
+                }}
+                inverted
+              >
                 Contact Us
               </Button>
             </Grid.Column>
