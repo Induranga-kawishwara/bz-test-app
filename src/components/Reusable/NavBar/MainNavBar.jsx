@@ -67,6 +67,7 @@ const DesktopContainer = ({ children, activeSection }) => {
             width: "100%",
             backgroundColor: "transparent",
             zIndex: "10",
+            boxShadow: "none",
           }}
         >
           <Menu
@@ -117,6 +118,7 @@ const DesktopContainer = ({ children, activeSection }) => {
                 border: "none",
                 backgroundColor: isScrolled ? " #212121" : "transparent",
                 borderRadius: "0%",
+                boxShadow: "none",
               }}
             >
               {!isScrolled && (
@@ -131,6 +133,7 @@ const DesktopContainer = ({ children, activeSection }) => {
                     backgroundColor: "transparent",
                     borderRadius: "0%",
                     border: "none",
+                    boxShadow: "none",
                     // padding: "0.7em 1em",
                   }}
                 >
