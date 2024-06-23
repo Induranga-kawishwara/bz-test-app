@@ -23,10 +23,14 @@ const GetStartedPage = () => {
               </p>
               <br />
             </Grid.Column>
-            <Grid.Column width={7}>
-              <Button size="huge" color="yellow" style={{ color: "Black" }}>
+            <Grid.Column width={7} style={{ paddingTop: "3%" }}>
+              <Button
+                size="huge"
+                color="yellow"
+                style={{ color: "Black", margin: "0% 2% 5% 0%" }}
+              >
                 <Icon name="right arrow" />
-                Join with us
+                <span style={{ marginLeft: "10px" }}>Join with us</span>
               </Button>
               <Button size="huge" color="yellow" inverted>
                 Contact Us
