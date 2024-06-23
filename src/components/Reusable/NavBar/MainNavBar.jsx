@@ -29,7 +29,6 @@ const menuItems = [
 ];
 
 const DesktopContainer = ({ children, activeSection }) => {
-  console.log(activeSection);
   const [activeItem, setActiveItem] = useState();
   const [isScrolled, setIsScrolled] = useState(false);
 
