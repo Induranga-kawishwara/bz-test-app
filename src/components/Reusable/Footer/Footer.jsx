@@ -39,7 +39,7 @@ const Footer = () => {
               <Button circular color="facebook" icon="facebook" />
               <Button circular color="twitter" icon="twitter" />
               <Button circular color="linkedin" icon="linkedin" />
-              <Button circular color="google plus" icon="google plus" />
+              <Button circular color="youtube" icon="youtube" />
             </Grid.Column>
           </Grid.Row>
         </Grid>
