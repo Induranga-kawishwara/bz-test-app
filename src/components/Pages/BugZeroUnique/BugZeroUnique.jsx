@@ -12,7 +12,7 @@ import range from "../../../Assets/range.png";
 const Step = ({ img, title, desc }) => (
   <GridColumn>
     <div class="ui steps" style={{ display: "block", margin: "auto" }}>
-      <div class="step" style={{ padding: "2em 1em" }}>
+      <div class="step" style={{ padding: "2em 1.3em" }}>
         <Image src={img} alt="BigCo Inc. logo" size="tiny" />
         <div class="content">
           <div class="title">{title}</div>

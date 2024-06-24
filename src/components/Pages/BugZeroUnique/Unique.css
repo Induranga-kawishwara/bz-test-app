@@ -11,8 +11,8 @@
   .title,
   .description {
     text-align: left;
-    margin-left: 10px;
-    font-size: 20px !important;
+    margin-left: 12px;
+    font-size: 18px !important;
   }
 }
 
@@ -26,6 +26,9 @@
     margin-left: 10px;
     font-size: larger;
   }
+  .title {
+    margin-top: 5px !important;
+  }
 }
 .step {
   padding: 2em 1em;
@@ -33,6 +36,5 @@
 }
 
 .step:hover {
-  transform: translateY(-5px); /* Example: Move the element 5px up on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 #00000015, 0 6px 20px 0 #00000015 !important;
 }
