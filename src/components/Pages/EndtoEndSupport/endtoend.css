@@ -1,0 +1,8 @@
+.step-card {
+  height: 202px;
+}
+@media (width <= 1199px) {
+  .step-card {
+    height: 215px;
+  }
+}
