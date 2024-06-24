@@ -20,13 +20,13 @@
   border: 3px solid #f4c700 !important;
   background-color: rgba(244, 199, 0, 0.2) !important;
   box-shadow: none !important;
-  transition: transform 0.3s, box-shadow 0.3s;
+  /* transition: transform 0.3s, box-shadow 0.3s; */
 }
 
-.card:hover {
+/* .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .segment-content {
   width: 90% !important;

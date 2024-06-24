@@ -23,7 +23,10 @@ const GetStartedPage = () => {
               </p>
               <br />
             </Grid.Column>
-            <Grid.Column width={7} style={{ paddingTop: "3%" }}>
+            <Grid.Column
+              width={7}
+              style={{ paddingTop: "3%", borderTop: "none" }}
+            >
               <Button
                 size="huge"
                 color="yellow"
