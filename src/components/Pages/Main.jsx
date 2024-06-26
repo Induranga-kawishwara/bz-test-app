@@ -91,7 +91,14 @@ const Main = ({ setActiveSection }) => {
         <EndtoEndSupport />
       </section>
 
-      <section id="bugzerounique">
+      <section
+        id="bugzerounique"
+        style={{
+          backgroundColor: "black",
+          padding: "6em 0em",
+          border: "none",
+        }}
+      >
         <BugZeroUnique />
       </section>
 
