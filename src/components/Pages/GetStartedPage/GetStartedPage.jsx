@@ -21,7 +21,6 @@ const GetStartedPage = () => {
                 Hackers aren't waiting. So why would you? See how Nug Zero can
                 help you.
               </p>
-              <br />
             </Grid.Column>
             <Grid.Column
               width={7}
