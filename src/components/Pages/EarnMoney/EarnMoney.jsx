@@ -16,10 +16,10 @@ const EarnMoney = () => {
   return (
     <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
       <Container text>
-        <Header as="h3" style={{ fontSize: "2.5em" }}>
+        <Header as="h3" style={{ fontSize: "2.5em", color: "#f4c700" }}>
           Earn Money By Doing What You Love!
         </Header>
-        <p className="mb-4" style={{ fontSize: "1.33em" }}>
+        <p className="mb-4" style={{ fontSize: "1.33em", color: "white" }}>
           For individuals, Bug Zero provides
         </p>
         <br></br>
@@ -29,31 +29,50 @@ const EarnMoney = () => {
         <Grid.Column textAlign="center" className="clipArt">
           {/* card */}
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image src={imgmoney} alt="BigCo Inc. logo" size="tiny" />
-              <h3>An opportunity to learn about security from scratch</h3>
+              <h3 style={{ color: "white" }}>
+                An opportunity to learn about security from scratch
+              </h3>
             </Card.Content>
           </Card>
         </Grid.Column>
         <Grid.Column className="clipArt">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image src={imgbudget} alt="BigCo Inc. logo" size="tiny" />
-              <h3>Complete Anonymity for Anyone Who Asks For Privacy</h3>
+              <h3 style={{ color: "white" }}>
+                Complete Anonymity for Anyone Who Asks For Privacy
+              </h3>
             </Card.Content>
           </Card>
         </Grid.Column>
         <Grid.Column className="clipArt">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image src={imgnetwork} alt="BigCo Inc. logo" size="tiny" />
-              <h3>
+              <h3 style={{ color: "white" }}>
                 Increased Visibility in the Makret which could lead to lucrative
                 job opportunites
               </h3>
@@ -62,11 +81,18 @@ const EarnMoney = () => {
         </Grid.Column>
         <Grid.Column className="clipArt">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image src={imgeyescan} alt="BigCo Inc. logo" size="tiny" />
-              <h3>Be a part of the ethical force against malicious actors</h3>
+              <h3 style={{ color: "white" }}>
+                Be a part of the ethical force against malicious actors
+              </h3>
             </Card.Content>
           </Card>
         </Grid.Column>

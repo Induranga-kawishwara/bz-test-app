@@ -31,10 +31,24 @@
   }
 }
 .step {
+  border: 1.5px solid #f4c700 !important;
+
+  background-color: rgba(244, 199, 0, 0.164) !important;
+  box-shadow: none !important;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step {
   padding: 2em 1em;
   transition: transform 0.3s ease; /* Smooth transition for the transform property */
 }
 
 .step:hover {
   box-shadow: 0 4px 8px 0 #00000015, 0 6px 20px 0 #00000015 !important;
+}
+.title {
+  font-size: 26px !important;
+}
+.description {
+  margin-top: 20px !important;
 }

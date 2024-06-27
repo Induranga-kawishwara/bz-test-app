@@ -15,8 +15,12 @@ const Step = ({ img, title, desc }) => (
       <div class="step" style={{ padding: "2em 1.3em" }}>
         <Image src={img} alt="BigCo Inc. logo" size="tiny" />
         <div class="content">
-          <div class="title">{title}</div>
-          <div class="description">{desc}</div>
+          <div class="title" style={{ color: "white" }}>
+            {title}
+          </div>
+          <div class="description" style={{ color: "white" }}>
+            {desc}
+          </div>
         </div>
       </div>
     </div>
@@ -26,8 +30,8 @@ const Step = ({ img, title, desc }) => (
 const BugZeroUnique = () => (
   <div style={{ margin: "80px 0" }}>
     <Container text>
-      <Header as="h3" style={{ fontSize: "2.5em" }}>
-        What Makes Bug Zero Unique
+      <Header as="h3" style={{ fontSize: "2.5em", color: "#f4c700" }}>
+        What Makes Bug Zero Unique?
       </Header>
       <br></br>
     </Container>
