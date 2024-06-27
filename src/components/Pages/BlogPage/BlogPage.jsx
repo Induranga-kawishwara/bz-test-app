@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import {
@@ -16,37 +16,18 @@ import {
   Button,
   Input,
 } from "semantic-ui-react";
-import testimge from "../../../Assets/logo/bhasha.png";
 import styles from "./BlogPage.module.css";
 
 const BlogPage = () => {
-  const test = [
-    {
-      image: testimge,
-      title: "testing cat ",
-      author: "induranga",
-      date: "2024/05/15",
-    },
-    {
-      image: testimge,
-      title: "testing cat ",
-      author: "induranga",
-      date: "2024/05/15",
-    },
-    {
-      image: testimge,
-      title: "testing cat ",
-      author: "induranga",
-      date: "2024/05/15",
-    },
-  ];
+  const [blogs, setBlogs] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const bloodResult = await axios.get(
+        const blogDetails = await axios.get(
           "http://localhost:3001/fetch-medium-feed"
         );
-        console.log(bloodResult.data);
+        setBlogs(blogDetails.data);
       } catch (error) {
         console.error("Failed to fetch data:", error);
       }
@@ -62,22 +43,24 @@ const BlogPage = () => {
         <br />
       </Container>
       <Grid container doubling columns={4}>
-        {test.map((item, index) => (
+        {blogs.map((item, index) => (
           <Grid.Column key={index}>
             <Card className={styles.card}>
-              <Segment className={styles["segment-content"]}>
-                <Image src={item.image} alt="Prof Kasun De Zoysa" />
-              </Segment>
+              <Image
+                src={item.imgUrl}
+                alt="image"
+                className={styles["card-image"]}
+              />
 
               <CardContent className={styles["card-content"]}>
                 <CardHeader className={styles["card-header"]}>
-                  {item.title}
+                  {item.topicName}
                 </CardHeader>
                 <CardMeta className={styles["card-meta"]}>
-                  {`Author ${item.author}`}
+                  {`Author ${item.creator}`}
                 </CardMeta>
                 <CardMeta className={styles["card-meta"]}>
-                  {`Publish on ${item.date}`}
+                  {`Publish on ${item.publishDate}`}
                 </CardMeta>
 
                 <CardMeta style={{ marginTop: "5%" }}>
