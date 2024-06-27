@@ -60,15 +60,30 @@ const Main = ({ setActiveSection }) => {
         <HomePage />
       </section>
 
-      <section id="Partners">
+      <section
+        id="Partners"
+        style={{
+          backgroundColor: "#121212",
+        }}
+      >
         <Partners />
       </section>
 
-      <section id="why-join-us">
+      <section
+        id="why-join-us"
+        style={{
+          backgroundColor: "#121212",
+        }}
+      >
         <WhyJoin />
       </section>
 
-      <section id="SecureOrganization">
+      <section
+        id="SecureOrganization"
+        style={{
+          backgroundColor: "#121212",
+        }}
+      >
         <SecureOrganization />
       </section>
 
@@ -76,16 +91,19 @@ const Main = ({ setActiveSection }) => {
         <BugBountyStats />
       </section>
 
-      <section id="EarnMoney">
+      <section
+        id="EarnMoney"
+        style={{
+          backgroundColor: "#121212",
+        }}
+      >
         <EarnMoney />
       </section>
 
       <section
         id="EndtoEndSupport"
         style={{
-          backgroundColor: "#f0f0f0",
-          padding: "6em 0em",
-          border: "none",
+          backgroundColor: "#121212",
         }}
       >
         <EndtoEndSupport />
@@ -94,15 +112,22 @@ const Main = ({ setActiveSection }) => {
       <section
         id="bugzerounique"
         style={{
-          backgroundColor: "black",
+          backgroundColor: "#121212",
           padding: "6em 0em",
-          border: "none",
+          border: "none:",
         }}
       >
         <BugZeroUnique />
       </section>
 
-      <section id="the-team">
+      <section
+        id="the-team"
+        style={{
+          backgroundColor: "#121212",
+          padding: "6em 0em",
+          border: "none:",
+        }}
+      >
         <Team />
       </section>
       <section id="blog-page">

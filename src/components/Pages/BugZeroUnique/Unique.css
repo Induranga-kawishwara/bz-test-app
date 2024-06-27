@@ -32,6 +32,7 @@
 }
 .step {
   border: 1.5px solid #f4c700 !important;
+
   background-color: rgba(244, 199, 0, 0.164) !important;
   box-shadow: none !important;
   transition: transform 0.3s, box-shadow 0.3s;

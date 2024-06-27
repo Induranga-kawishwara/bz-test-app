@@ -31,7 +31,7 @@ const BugZeroUnique = () => (
   <div style={{ margin: "80px 0" }}>
     <Container text>
       <Header as="h3" style={{ fontSize: "2.5em", color: "#f4c700" }}>
-        What Makes Bug Zero Unique
+        What Makes Bug Zero Unique?
       </Header>
       <br></br>
     </Container>

@@ -4,7 +4,7 @@ const Partners = () => {
   return (
     <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
       {/* Logo bar */}
-      <Header as="h3" style={{ fontSize: "2.5em" }}>
+      <Header as="h3" style={{ fontSize: "2.5em", color: "#f4c700" }}>
         Protecting Sri Lanka's Most Valuable Platforms
       </Header>
       <br />
@@ -12,20 +12,32 @@ const Partners = () => {
         <Grid.Column width={1}></Grid.Column>
         <Grid.Column textAlign="center" className="logoColour">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image
                 src={require("../../../Assets/logo/bhasha.png")}
                 alt="Bhasha Logo"
                 size="tiny"
+                border="3px solid"
+                border-radius="8px"
               />
             </Card.Content>
           </Card>
         </Grid.Column>
         <Grid.Column className="logoColour">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image
@@ -38,7 +50,12 @@ const Partners = () => {
         </Grid.Column>
         <Grid.Column className="logoColour">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image
@@ -51,7 +68,12 @@ const Partners = () => {
         </Grid.Column>
         <Grid.Column className="logoColour">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image
@@ -64,7 +86,12 @@ const Partners = () => {
         </Grid.Column>
         <Grid.Column className="logoColour">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image
@@ -77,7 +104,12 @@ const Partners = () => {
         </Grid.Column>
         <Grid.Column className="logoColour">
           <Card
-            style={{ boxShadow: "none", width: "100%", textAlign: "center" }}
+            style={{
+              boxShadow: "none",
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: "#121212",
+            }}
           >
             <Card.Content>
               <Image
