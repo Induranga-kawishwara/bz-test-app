@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import {
@@ -20,6 +20,7 @@ import testimge from "../../../Assets/logo/bhasha.png";
 import styles from "./BlogPage.module.css";
 
 const BlogPage = () => {
+  const [blogs, setBlogs] = useState("");
   const test = [
     {
       image: testimge,
