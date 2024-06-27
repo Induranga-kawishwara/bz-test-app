@@ -72,7 +72,8 @@ const DesktopContainer = ({ children, activeSection }) => {
           <Menu
             style={{
               border: "none",
-              backgroundColor: " #212121",
+              backgroundColor: "#121212",
+              // backgroundColor: " #212121",
               margin: "0%",
               borderRadius: "0%",
             }}
@@ -94,14 +95,14 @@ const DesktopContainer = ({ children, activeSection }) => {
                 </Menu.Item>
               ))}
               <Menu.Item position="right">
-                <Button as="a" inverted color="yellow" basic>
+                <Button as="a" inverted color="yellow" style={{borderRadius: "25px"}} basic>
                   Log in
                 </Button>
                 <Button
                   as="a"
                   inverted
                   color="yellow"
-                  style={{ marginLeft: "0.5em" }}
+                  style={{ marginLeft: "0.5em", borderRadius: "25px"}}
                 >
                   Sign Up
                 </Button>
@@ -115,7 +116,7 @@ const DesktopContainer = ({ children, activeSection }) => {
                 height: "0%",
                 padding: "0%",
                 border: "none",
-                backgroundColor: isScrolled ? " #212121" : "transparent",
+                backgroundColor: isScrolled ? " #121212" : "transparent",
                 borderRadius: "0%",
                 boxShadow: "none",
               }}
@@ -202,7 +203,7 @@ const MobileContainer = ({ children, activeSection }) => {
           onHide={handleSidebarHide}
           vertical
           visible={sidebarOpened}
-          style={{ backgroundColor: "#212121" }}
+          style={{ backgroundColor: "#121212" }}
         >
           <Menu.Item onClick={handleSidebarHide}>
             <Icon name="x" style={{ color: "red" }} />
@@ -239,7 +240,7 @@ const MobileContainer = ({ children, activeSection }) => {
               margin: 0,
               padding: 0,
               textAlign: "center",
-              backgroundColor: "#212121",
+              backgroundColor: "#121212",
             }}
           >
             <Menu pointing secondary size="large">

@@ -1,35 +1,56 @@
 .cardheader {
   font-family: "Poppins Regular", sans-serif;
-  font-size: large;
 }
 
 .ui.steps .step {
   justify-content: flex-start !important;
 }
 
-@media (width >= 991px) {
-  .title,
-  .description {
-    text-align: left;
-    margin-left: 12px;
-    font-size: 18px !important;
-  }
-}
-
-@media (767px <= width <= 991px) {
+@media (width <= 768px) {
   .ui.steps .step {
     justify-content: space-between;
   }
-  .title,
+
+  .step .title,
   .description {
-    text-align: left;
     margin-left: 10px;
     font-size: larger;
+    line-height: 18px;
+    
   }
-  .title {
-    margin-top: 5px !important;
+  .step .title {
+    margin-top: 20px !important;
   }
 }
+
+
+@media ( width > 1200px) {
+  .ui.steps .title, .ui.steps 
+  .description {
+    text-align: left;
+    margin-left: 30px!important;
+    /* font-size: 18px !important; */
+  }
+}
+
+@media (768px < width < 1200px) {
+  .ui.steps .title, .ui.steps 
+  .description {
+    text-align: left;
+    margin-left: 10px!important;
+    /* font-size: 18px !important; */
+  }
+}
+
+
+.step {
+  border: 1.5px solid #f4c700 !important;
+
+  background-color: rgba(244, 199, 0, 0.164) !important;
+  box-shadow: none !important;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .step {
   padding: 2em 1em;
   transition: transform 0.3s ease; /* Smooth transition for the transform property */
@@ -37,4 +58,17 @@
 
 .step:hover {
   box-shadow: 0 4px 8px 0 #00000015, 0 6px 20px 0 #00000015 !important;
+}
+
+.content{
+  
+}
+.step .title {
+  font-size: 23px !important;
+  line-height: 23px;
+
+}
+.step .description {
+  font-size: 18px !important;
+
 }

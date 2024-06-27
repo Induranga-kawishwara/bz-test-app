@@ -12,11 +12,15 @@ import range from "../../../Assets/range.png";
 const Step = ({ img, title, desc }) => (
   <GridColumn>
     <div class="ui steps" style={{ display: "block", margin: "auto" }}>
-      <div class="step" style={{ padding: "2em 1.3em" }}>
+      <div class="step" style={{ padding: "2em" }}>
         <Image src={img} alt="BigCo Inc. logo" size="tiny" />
         <div class="content">
-          <div class="title">{title}</div>
-          <div class="description">{desc}</div>
+          <div class="title" style={{ color: "white"}}>
+            {title}
+          </div>
+          <div class="description" style={{ color: "white" }}>
+            {desc}
+          </div>
         </div>
       </div>
     </div>
@@ -26,13 +30,13 @@ const Step = ({ img, title, desc }) => (
 const BugZeroUnique = () => (
   <div style={{ margin: "80px 0" }}>
     <Container text>
-      <Header as="h3" style={{ fontSize: "2.5em" }}>
-        What Makes Bug Zero Unique
+      <Header as="h3" style={{ fontSize: "2.5em", color: "#f4c700" }}>
+        What Makes Bug Zero Unique?
       </Header>
       <br></br>
     </Container>
-    <Grid container stackable columns={3}>
-      <Step img={clock} title="Fast..." desc="Result" />
+    <Grid container doubling columns={3}>
+      <Step img={clock} title="Fast" desc="Result" />
       <Step img={equalizer} title="Flexible" desc="Programs" />
       <Step img={iteration} title="Agile" desc="Teams" />
       <Step img={guru} title="Expert" desc="Hackers" />
