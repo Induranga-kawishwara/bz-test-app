@@ -12,9 +12,18 @@ import {
 
 const Team = () => {
   return (
-    <Segment style={{ padding: "6em 0em", border: "none" }} id="grey">
+    <Segment
+      style={{
+        padding: "6em 0em",
+        border: "none",
+        backgroundColor: "transparent",
+      }}
+      id="grey"
+    >
       <Container text>
-        <Header style={{ fontSize: "2.5em" }}>The Bug Zero Team</Header>
+        <Header style={{ fontSize: "2.5em", color: "#f4c700" }}>
+          The Bug Zero Team
+        </Header>
         <br></br>
       </Container>
       <Grid container doubling columns={5}>

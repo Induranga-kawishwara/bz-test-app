@@ -130,7 +130,12 @@ const Main = ({ setActiveSection }) => {
       >
         <Team />
       </section>
-      <section id="blog-page">
+      <section
+        id="blog-page"
+        style={{
+          backgroundColor: "#121212",
+        }}
+      >
         <BlogPage />
       </section>
 
