@@ -1,22 +1,12 @@
 .cardheader {
   font-family: "Poppins Regular", sans-serif;
-  font-size: large;
 }
 
 .ui.steps .step {
   justify-content: flex-start !important;
 }
 
-@media (width >= 991px) {
-  .ui.steps .title, .ui.steps 
-  .description {
-    text-align: left;
-    margin-left: 30px;
-    /* font-size: 18px !important; */
-  }
-}
-
-@media (width <= 991px) {
+@media (width <= 768px) {
   .ui.steps .step {
     justify-content: space-between;
   }
@@ -26,13 +16,33 @@
     margin-left: 10px;
     font-size: larger;
     line-height: 18px;
+    
   }
-  .title {
+  .step .title {
     margin-top: 20px !important;
-    line-height: 23px;
-    margin-bottom: 10px!important;
   }
 }
+
+
+@media ( width > 1200px) {
+  .ui.steps .title, .ui.steps 
+  .description {
+    text-align: left;
+    margin-left: 30px!important;
+    /* font-size: 18px !important; */
+  }
+}
+
+@media (768px < width < 1200px) {
+  .ui.steps .title, .ui.steps 
+  .description {
+    text-align: left;
+    margin-left: 10px!important;
+    /* font-size: 18px !important; */
+  }
+}
+
+
 .step {
   border: 1.5px solid #f4c700 !important;
 
