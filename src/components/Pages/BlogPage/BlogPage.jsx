@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
+
 import {
   CardMeta,
   CardHeader,
@@ -38,6 +40,21 @@ const BlogPage = () => {
       date: "2024/05/15",
     },
   ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const bloodResult = await axios.get(
+          "http://localhost:3001/fetch-medium-feed"
+        );
+        console.log(bloodResult.data);
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Segment className={styles.segment}>
       <Container text>
