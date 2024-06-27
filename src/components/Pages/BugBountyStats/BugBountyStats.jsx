@@ -9,9 +9,11 @@ const BugBountyStats = () => {
         </Header>
       </Container>
       <Container>
+
         <Grid
-          columns="equal"
-          stackable
+          container
+          columns={4}
+          doubling
           style={{
             display: "flex",
             justifyContent: "center",
@@ -46,7 +48,7 @@ const BugBountyStats = () => {
           <Grid.Column>
             <Card style={{ width: "100%" }} className="stats-card">
               <Card.Content>
-                <Card.Header>750 Plus</Card.Header>
+                <Card.Header>750+</Card.Header>
                 <Card.Description>Bug Hunters</Card.Description>
               </Card.Content>
             </Card>

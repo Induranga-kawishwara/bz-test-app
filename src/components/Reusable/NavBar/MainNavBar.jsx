@@ -95,14 +95,14 @@ const DesktopContainer = ({ children, activeSection }) => {
                 </Menu.Item>
               ))}
               <Menu.Item position="right">
-                <Button as="a" inverted color="yellow" basic>
+                <Button as="a" inverted color="yellow" style={{borderRadius: "25px"}} basic>
                   Log in
                 </Button>
                 <Button
                   as="a"
                   inverted
                   color="yellow"
-                  style={{ marginLeft: "0.5em" }}
+                  style={{ marginLeft: "0.5em", borderRadius: "25px"}}
                 >
                   Sign Up
                 </Button>
