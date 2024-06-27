@@ -2,6 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const { parseStringPromise } = require("xml2js");
+
 const app = express();
 const port = 3001;
 
@@ -13,14 +14,31 @@ const removeHtmlTags = (text) => {
 
 app.get("/fetch-medium-feed", async (req, res) => {
   try {
-    const response = await axios.get(
-      "https://medium.com/feed/@indurangakawishwara2003"
-    );
-    const xml = response.data;
+    const urls = [
+      "https://medium.com/feed/@indurangakawishwara2003",
+      "https://medium.com/feed/@bugzero",
+      "https://medium.com/feed/@m.m.n.c.marasinghe04",
+      "https://medium.com/feed/@kawyabcs",
+      "https://medium.com/feed/@akilamaithripala",
+      "https://medium.com/feed/@janukadharmapriya",
+    ];
 
-    const result = await parseStringPromise(xml);
-    const items = result.rss.channel[0].item;
-    const feedData = items.map((item) => {
+    const requests = urls.map((url) => axios.get(url));
+    const results = await Promise.all(requests);
+
+    const xmlData = results.map((result) => result.data);
+
+    let allItems = [];
+    for (const xml of xmlData) {
+      const parsedResult = await parseStringPromise(xml);
+
+      const channels = parsedResult.rss.channel;
+      channels.forEach((channel) => {
+        allItems = allItems.concat(channel.item);
+      });
+    }
+
+    const feedData = allItems.map((item) => {
       const publishDate = new Date(item.pubDate[0]);
       const publishDateOnly = publishDate.toISOString().split("T")[0];
       const topicName = removeHtmlTags(item.title[0]);
@@ -40,6 +58,7 @@ app.get("/fetch-medium-feed", async (req, res) => {
 
     res.json(latestFeedData);
   } catch (error) {
+    console.error("Error fetching data:", error);
     res.status(500).send("Failed to fetch data");
   }
 });
