@@ -1,7 +1,7 @@
 .segment {
   padding: 6em 0em !important;
   border: none !important;
-  background-color: #212121 !important;
+  background-color: transparent !important;
 }
 
 .header {
@@ -21,6 +21,11 @@
   background-color: rgba(244, 199, 0, 0.2) !important;
   box-shadow: none !important;
   /* transition: transform 0.3s, box-shadow 0.3s; */
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 /* .card:hover {
