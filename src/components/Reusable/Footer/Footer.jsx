@@ -36,10 +36,34 @@ const Footer = () => {
               <p>Securing Your Organization, One Cyberspace at a Time.</p>
             </Grid.Column>
             <Grid.Column width={3}>
-              <Button circular color="facebook" icon="facebook" />
-              <Button circular color="twitter" icon="twitter" />
-              <Button circular color="linkedin" icon="linkedin" />
-              <Button circular color="youtube" icon="youtube" />
+              <Button
+                circular
+                color="facebook"
+                icon="facebook"
+                href="https://www.facebook.com/bugzero.io/"
+                target="_blank"
+              />
+              <Button
+                circular
+                color="twitter"
+                icon="twitter"
+                href="https://x.com/BugZero_io"
+                target="_blank"
+              />
+              <Button
+                circular
+                color="linkedin"
+                icon="linkedin"
+                href="https://www.linkedin.com/company/bug-zero-io/"
+                target="_blank"
+              />
+              <Button
+                circular
+                color="youtube"
+                icon="youtube"
+                href="https://www.youtube.com/@bugzero"
+                target="_blank"
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
