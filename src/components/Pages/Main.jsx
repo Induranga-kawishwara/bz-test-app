@@ -63,7 +63,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="Partners"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
         }}
       >
         <Partners />
@@ -72,7 +72,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="why-join-us"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
         }}
       >
         <WhyJoin />
@@ -81,7 +81,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="SecureOrganization"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
         }}
       >
         <SecureOrganization />
@@ -94,7 +94,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="EarnMoney"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
         }}
       >
         <EarnMoney />
@@ -103,7 +103,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="EndtoEndSupport"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
         }}
       >
         <EndtoEndSupport />
@@ -112,7 +112,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="bugzerounique"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
           padding: "6em 0em",
           border: "none:",
         }}
@@ -123,7 +123,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="the-team"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
           padding: "6em 0em",
           border: "none:",
         }}
@@ -133,7 +133,7 @@ const Main = ({ setActiveSection }) => {
       <section
         id="blog-page"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#212121",
         }}
       >
         <BlogPage />
