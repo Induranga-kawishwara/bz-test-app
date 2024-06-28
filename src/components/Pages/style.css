@@ -99,14 +99,19 @@
 
 .stats-card {
   background-color: #f4c700 !important;
-  /* background-color: #212121 !important;  */
   color: white !important;
   text-align: center !important;
   padding: 2em !important;
   border: none !important;
   box-shadow: none !important;
   margin-bottom: 1rem !important;
+
+  background: linear-gradient(90deg, #ffd311, #f4c700, #c7a200)!important;
+  background-size: 200% 100%!important;
+  background-position: 100% 0!important;
+  transition: background-position .5s!important;
 }
+
 
 .stats-card .header {
   font-size: 2rem !important;
@@ -131,13 +136,11 @@
 .ui.card {
   transition: all 300ms;
   border-radius: 0.5em;
-  box-shadow: none!important;
+  /* box-shadow: none!important; */
   color: #fff!important;
 }
 
-.ui.card:hover {
-  box-shadow: 0 0px 2px 0 #f4c70050, 0 0px 16px 0 #f4c70050!important;
-}
+
 
 .clipArt {
   border-radius: 0.5em;
@@ -163,4 +166,9 @@
   100% {
     transform: scale(1, 1);
   }
+}
+
+
+.stats-card:hover{
+  background-position: 0 0!important;
 }

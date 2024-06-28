@@ -36,7 +36,7 @@ const BugZeroUnique = () => (
       <br></br>
     </Container>
     <Grid container doubling columns={3}>
-      <Step img={clock} title="Fast" desc="Result" />
+      <Step img={clock} title="Fast" desc="Results" />
       <Step img={equalizer} title="Flexible" desc="Programs" />
       <Step img={iteration} title="Agile" desc="Teams" />
       <Step img={guru} title="Expert" desc="Hackers" />
