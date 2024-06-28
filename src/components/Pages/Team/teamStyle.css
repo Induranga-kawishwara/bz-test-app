@@ -1,0 +1,31 @@
+.bzTeam .ui.card{
+    background-color: #443D24!important;
+    border: 1.5px solid #f4c700 !important;
+}
+
+.bzTeam .header, .bzTeam a{
+    color: #fff!important;
+    font-weight: 700!important;
+}
+
+.bzTeam a{
+    font-weight: 500!important;
+}
+
+.bzTeam a:hover{
+    text-decoration: underline;
+}
+
+.bzTeam .content{
+    border-top:none!important;
+
+}
+
+.bzTeam .ui.image{
+    border-radius: 50%!important;
+
+}
+
+
+
+

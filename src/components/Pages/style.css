@@ -130,10 +130,13 @@
 
 .ui.card {
   transition: all 300ms;
+  border-radius: 0.5em;
+  box-shadow: none!important;
+  color: #fff!important;
 }
 
 .ui.card:hover {
-  box-shadow: 0 4px 8px 0 #00000015, 0 6px 20px 0 #00000015;
+  box-shadow: 0 0px 2px 0 #f4c70050, 0 0px 16px 0 #f4c70050!important;
 }
 
 .clipArt {

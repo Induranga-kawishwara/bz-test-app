@@ -10,6 +10,8 @@ import {
   Segment,
 } from "semantic-ui-react";
 
+import "./teamStyle.css";
+
 const Team = () => {
   return (
     <Segment
@@ -26,11 +28,11 @@ const Team = () => {
         </Header>
         <br></br>
       </Container>
-      <Grid container doubling columns={5}>
+      <Grid container doubling columns={5}  className="bzTeam" >
         {/* -----------------Kasun */}
-        <Grid.Column>
+        <Grid.Column >
           {/* card */}
-          <Card style={{ width: "100%", textAlign: "center" }}>
+          <div class="ui card" style={{ width: "100%", textAlign: "center" }}>
             <Image
               src={require("../../../Assets/team/kasun.jpg")}
               alt="Prof Kasun De Zoysa"
@@ -51,7 +53,7 @@ const Team = () => {
                 Profile
               </a>
             </CardContent>
-          </Card>
+          </div>
         </Grid.Column>
         {/* -----------------Primal */}
         <Grid.Column>
