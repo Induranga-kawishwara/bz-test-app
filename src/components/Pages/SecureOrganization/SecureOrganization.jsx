@@ -33,7 +33,7 @@ const SecureOrganization = () => {
                 boxShadow: "none",
                 width: "100%",
                 textAlign: "center",
-                backgroundColor: "#121212",
+                backgroundColor: "#212121",
               }}
             >
               <Card.Content>
@@ -50,7 +50,7 @@ const SecureOrganization = () => {
                 boxShadow: "none",
                 width: "100%",
                 textAlign: "center",
-                backgroundColor: "#121212",
+                backgroundColor: "#212121",
               }}
             >
               <Card.Content>
@@ -67,7 +67,7 @@ const SecureOrganization = () => {
                 boxShadow: "none",
                 width: "100%",
                 textAlign: "center",
-                backgroundColor: "#121212",
+                backgroundColor: "#212121",
               }}
             >
               <Card.Content>
@@ -84,7 +84,7 @@ const SecureOrganization = () => {
                 boxShadow: "none",
                 width: "100%",
                 textAlign: "center",
-                backgroundColor: "#121212",
+                backgroundColor: "#212121",
               }}
             >
               <Card.Content>
