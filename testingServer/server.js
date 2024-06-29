@@ -49,7 +49,15 @@ app.get("/fetch-medium-feed", async (req, res) => {
         /<img[^>]+src="([^">]+)"/
       );
       const imgUrl = imgMatch ? imgMatch[1] : null;
-      return { publishDate: publishDateOnly, topicName, creator, imgUrl };
+      const guidLink = item.guid[0]._ ? item.guid[0]._ : item.guid[0]; // Extract the guid link
+
+      return {
+        publishDate: publishDateOnly,
+        topicName,
+        creator,
+        imgUrl,
+        guidLink,
+      };
     });
 
     const latestFeedData = feedData
