@@ -65,7 +65,7 @@ const BlogPage = () => {
 
                 <CardMeta style={{ marginTop: "5%" }}>
                   <a
-                    href="https://scholar.google.com/citations?user=fXFgCdsAAAAJ&hl=en"
+                    href={item.guidLink}
                     target="blank"
                     className={styles["read-more"]}
                   >
@@ -96,6 +96,7 @@ const BlogPage = () => {
                 Subscribe
               </Button>
             </Segment>
+            {/* <br /> <br /> */}
           </Card>
         </Grid.Column>
       </Grid>

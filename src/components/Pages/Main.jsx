@@ -12,6 +12,7 @@ import EarnMoney from "./EarnMoney/EarnMoney";
 import BugZeroUnique from "./BugZeroUnique/BugZeroUnique";
 import BlogPage from "./BlogPage/BlogPage";
 import GetStartedPage from "./GetStartedPage/GetStartedPage";
+// import Stepper from "./testing/testing";
 import style from "./Main.module.css";
 import "./style.css";
 
@@ -142,6 +143,10 @@ const Main = ({ setActiveSection }) => {
       <section id="getStarted-page">
         <GetStartedPage />
       </section>
+
+      {/* <section id="steperpage">
+        <Stepper />
+      </section> */}
 
       <div
         onClick={scrollToTop}

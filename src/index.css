@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Poppins Regular', sans-serif;;
+  font-family: "Poppins Regular", sans-serif;
 }
 
 code {
-  font-family: 'Poppins Regular', sans-serif;
+  font-family: "Poppins Regular", sans-serif;
 }
 
 /* Poppins Font */
@@ -33,5 +33,5 @@ code {
 }
 
 * {
-  font-family: 'Poppins Regular', sans-serif;
+  font-family: "Poppins Regular", sans-serif;
 }
