@@ -20,18 +20,12 @@
   border: 3px solid #f4c700 !important;
   background-color: rgba(244, 199, 0, 0.2) !important;
   box-shadow: none !important;
-  /* transition: transform 0.3s, box-shadow 0.3s; */
   transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
   transform: scale(1.05);
 }
-
-/* .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-} */
 
 .card-image {
   width: 90% !important;
@@ -41,15 +35,108 @@
   flex: 1 0 auto !important;
 }
 
-/* .card-image {
-  max-width: 100% !important;
-  height: auto !important;
-} */
-
 .card-content {
   border-top: none !important;
   width: 100% !important;
   text-align: none !important;
+  .segment {
+    padding: 6em 0em !important;
+    border: none !important;
+    background-color: transparent !important;
+  }
+
+  .header {
+    font-size: 2.5em !important;
+    color: #f4c700 !important;
+  }
+
+  .card {
+    height: 100% !important;
+    width: 100% !important;
+    text-align: start !important;
+    padding-top: 10% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    border: 3px solid #f4c700 !important;
+    background-color: rgba(244, 199, 0, 0.2) !important;
+    box-shadow: none !important;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card-image {
+    width: 90% !important;
+    height: 150px !important;
+    border: none !important;
+    padding: 0% !important;
+    flex: 1 0 auto !important;
+  }
+
+  .card-content {
+    border-top: none !important;
+    width: 100% !important;
+    text-align: none !important;
+  }
+
+  .card-header,
+  .card-meta {
+    color: white !important;
+  }
+
+  .read-more {
+    color: white !important;
+    text-decoration: underline !important;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  }
+
+  .read-more:hover {
+    color: #f4c700 !important;
+    text-decoration: none !important;
+  }
+
+  .subscribe-card {
+    height: 100% !important;
+    width: 100% !important;
+    text-align: start !important;
+    padding-top: 15% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border: 3px solid #f4c700 !important;
+    color: black !important;
+    background-color: rgba(244, 199, 0, 0.5) !important;
+    box-shadow: none !important;
+  }
+
+  .subscribe-segment {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold;
+  }
+
+  .input {
+    width: 100% !important;
+    margin-top: 10% !important;
+    height: 20% !important;
+  }
+
+  .input input {
+    border-radius: 100px !important;
+  }
+
+  .button {
+    color: black !important;
+    height: 20% !important;
+    width: 100% !important;
+    margin-top: 10% !important;
+    margin-bottom: 30% !important;
+    border-radius: 100px !important;
+  }
 }
 
 .card-header,
