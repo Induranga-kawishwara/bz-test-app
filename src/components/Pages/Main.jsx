@@ -114,8 +114,6 @@ const Main = ({ setActiveSection }) => {
         id="bugzerounique"
         style={{
           backgroundColor: "#212121",
-          padding: "6em 0em",
-          border: "none:",
         }}
       >
         <BugZeroUnique />
@@ -125,8 +123,6 @@ const Main = ({ setActiveSection }) => {
         id="the-team"
         style={{
           backgroundColor: "#212121",
-          padding: "6em 0em",
-          border: "none:",
         }}
       >
         <Team />
