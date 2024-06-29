@@ -1,0 +1,41 @@
+.bzTeam .ui.card{
+    background: linear-gradient(120deg, #f4c7002a, #f4c70054)!important;
+    border: 1.5px solid #f4c700 !important;
+    background-size: 200% 100%!important;
+  background-position: 100% 0!important;
+  transition: background-position .5s!important;
+  box-shadow: none!important;
+
+}
+
+.bzTeam .ui.card:hover {
+    background-position: 0 0!important;
+    box-shadow: 0 0px 16px 0 #f4c70050!important;
+  }
+
+.bzTeam .header, .bzTeam a{
+    color: #fff!important;
+    font-weight: 700!important;
+}
+
+.bzTeam a{
+    font-weight: 500!important;
+}
+
+.bzTeam a:hover{
+    text-decoration: underline;
+}
+
+.bzTeam .content{
+    border-top:none!important;
+
+}
+
+.bzTeam .ui.image{
+    border-radius: 50%!important;
+
+}
+
+
+
+

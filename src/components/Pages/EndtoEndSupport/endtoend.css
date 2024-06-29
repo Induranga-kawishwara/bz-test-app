@@ -6,3 +6,6 @@
     height: 215px;
   }
 }
+.title-margin {
+  margin: 0 !important;
+}
