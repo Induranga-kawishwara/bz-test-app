@@ -7,14 +7,14 @@ import {
   Segment,
 } from "semantic-ui-react";
 
-import imgmoney from "../../../Assets/money.png";
-import imgbudget from "../../../Assets/budget.png";
-import imgeyescan from "../../../Assets/eye-scanner.png";
-import imgnetwork from "../../../Assets/networking.png";
+import imgknowledge from "../../../Assets/knowledge.png";
+import imganonymous from "../../../Assets/anonymous.png";
+import imgsuitcase from "../../../Assets/suitcase.png";
+import imgswords from "../../../Assets/swords.png";
 
 const EarnMoney = () => {
   return (
-    <Segment  style={{ padding: "6em 0em", border: "none" }} vertical>
+    <Segment style={{ padding: "6em 0em", border: "none" }} vertical>
       <Container text>
         <Header as="h3" style={{ fontSize: "2.5em", color: "#f4c700" }}>
           Earn Money By Doing What You Love!
@@ -27,7 +27,7 @@ const EarnMoney = () => {
         </p>
       </Container>
       <Container>
-      <Grid container doubling columns={4}>
+        <Grid container doubling columns={4}>
           <Grid.Column textAlign="center" className="clipArt">
             {/* card */}
             <Card
@@ -39,7 +39,7 @@ const EarnMoney = () => {
               }}
             >
               <Card.Content>
-                <Image src={imgmoney} alt="BigCo Inc. logo" size="tiny" />
+                <Image src={imgknowledge} alt="BigCo Inc. logo" size="tiny" />
                 <h3 style={{ color: "white" }}>
                   An opportunity to learn about security from scratch
                 </h3>
@@ -56,7 +56,7 @@ const EarnMoney = () => {
               }}
             >
               <Card.Content>
-                <Image src={imgbudget} alt="BigCo Inc. logo" size="tiny" />
+                <Image src={imganonymous} alt="BigCo Inc. logo" size="tiny" />
                 <h3 style={{ color: "white" }}>
                   Complete Anonymity for Anyone Who Asks For Privacy
                 </h3>
@@ -73,10 +73,10 @@ const EarnMoney = () => {
               }}
             >
               <Card.Content>
-                <Image src={imgnetwork} alt="BigCo Inc. logo" size="tiny" />
+                <Image src={imgsuitcase} alt="BigCo Inc. logo" size="tiny" />
                 <h3 style={{ color: "white" }}>
-                  Increased Visibility in the Makret which could lead to lucrative
-                  job opportunites
+                  Increased Visibility in the Makret which could lead to
+                  lucrative job opportunites
                 </h3>
               </Card.Content>
             </Card>
@@ -91,7 +91,7 @@ const EarnMoney = () => {
               }}
             >
               <Card.Content>
-                <Image src={imgeyescan} alt="BigCo Inc. logo" size="tiny" />
+                <Image src={imgswords} alt="BigCo Inc. logo" size="tiny" />
                 <h3 style={{ color: "white" }}>
                   Be a part of the ethical force against malicious actors
                 </h3>

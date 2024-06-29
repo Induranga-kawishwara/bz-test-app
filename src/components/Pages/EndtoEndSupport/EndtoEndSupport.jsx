@@ -12,16 +12,21 @@ const Step = ({ img, title }) => (
     <div class="ui steps" style={{ display: "block", margin: "auto" }}>
       <div
         class="step step-card"
-        style={{ padding: "2em 1em", flexDirection: "column" }}
+        style={{ padding: "2em 1em", justifyContent: "center" }}
       >
-        <Image src={img} alt="BigCo Inc. logo" size="tiny" />
-        <div class="content">
+        <Image
+          src={img}
+          alt="BigCo Inc. logo"
+          size="tiny"
+          style={{ margin: "auto" }}
+        />
+        <div class="content" style={{ margin: "auto" }}>
           <div
-            class="title"
+            class="title title-margin"
             style={{
-              margin: "15px 0 7px 0px",
               textAlign: "center",
               lineHeight: "22px",
+              fontSize: "1em",
             }}
           >
             {title}

@@ -24,8 +24,9 @@ const Partners = () => {
                 src={require("../../../Assets/logo/bhasha.png")}
                 alt="Bhasha Logo"
                 size="tiny"
-                border="3px solid"
-                border-radius="8px"
+                style={{
+                  borderRadius: "8px",
+                }}
               />
             </Card.Content>
           </Card>
@@ -44,6 +45,9 @@ const Partners = () => {
                 src={require("../../../Assets/logo/citadel.jpg")}
                 alt="Citadel Logo"
                 size="tiny"
+                style={{
+                  borderRadius: "8px",
+                }}
               />
             </Card.Content>
           </Card>
@@ -62,6 +66,9 @@ const Partners = () => {
                 src={require("../../../Assets/logo/helakuru.png")}
                 alt="Helakuru Logo"
                 size="tiny"
+                style={{
+                  borderRadius: "8px",
+                }}
               />
             </Card.Content>
           </Card>
@@ -80,6 +87,9 @@ const Partners = () => {
                 src={require("../../../Assets/logo/janashakthi.jpg")}
                 alt="Janashakthi Logo"
                 size="tiny"
+                style={{
+                  borderRadius: "8px",
+                }}
               />
             </Card.Content>
           </Card>
@@ -98,6 +108,9 @@ const Partners = () => {
                 src={require("../../../Assets/logo/payhere.png")}
                 alt="Payhere Logo"
                 size="tiny"
+                style={{
+                  borderRadius: "8px",
+                }}
               />
             </Card.Content>
           </Card>
@@ -116,6 +129,9 @@ const Partners = () => {
                 src={require("../../../Assets/logo/webt.jpg")}
                 alt="Web Telescope Logo"
                 size="tiny"
+                style={{
+                  borderRadius: "8px",
+                }}
               />
             </Card.Content>
           </Card>
