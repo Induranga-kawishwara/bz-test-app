@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import BugBountyStats from "./BugBountyStats/BugBountyStats";
-import EndtoEndSupport from "./EndtoEndSupport/EndtoEndSupport";
-import Partners from "./Partners/Partners";
-import HomePage from "./BannerPage/BannerPage";
-import SecureOrganization from "./SecureOrganization/SecureOrganization";
-import Team from "./Team/Team";
-import WhyJoin from "./WhyJoin/WhyJoin";
-import EarnMoney from "./EarnMoney/EarnMoney";
-import BugZeroUnique from "./BugZeroUnique/BugZeroUnique";
-import BlogPage from "./BlogPage/BlogPage";
-import GetStartedPage from "./GetStartedPage/GetStartedPage";
-// import Stepper from "./testing/testing";
+import BugBountyStats from "../BugBountyStats/BugBountyStats";
+import EndtoEndSupport from "../EndtoEndSupport/EndtoEndSupport";
+import Partners from "../Partners/Partners";
+import HomePage from "../BannerPage/BannerPage";
+import SecureOrganization from "../SecureOrganization/SecureOrganization";
+import Team from "../Team/Team";
+import WhyJoin from "../WhyJoin/WhyJoin";
+import EarnMoney from "../EarnMoney/EarnMoney";
+import BugZeroUnique from "../BugZeroUnique/BugZeroUnique";
+import BlogPage from "../BlogPage/BlogPage";
+import GetStartedPage from "../GetStartedPage/GetStartedPage";
 import style from "./Main.module.css";
 
 const Main = ({ setActiveSection }) => {
@@ -138,10 +137,6 @@ const Main = ({ setActiveSection }) => {
       <section id="getStarted-page">
         <GetStartedPage />
       </section>
-
-      {/* <section id="steperpage">
-        <Stepper />
-      </section> */}
 
       <div
         onClick={scrollToTop}

@@ -1,4 +1,4 @@
-import HomepageLayout from "./components/Pages/Main";
+import HomepageLayout from "./components/Pages/PageController/Main";
 import Footer from "./components/Reusable/Footer/Footer";
 import NavBar from "./components/Reusable/NavBar/MainNavBar";
 import React, { useState, useEffect } from "react";
