@@ -1,11 +1,52 @@
-.step-card {
-  height: 202px;
+#RFS-LabelContainer {
+  font-size: 22px;
 }
-@media (width <= 1199px) {
-  .step-card {
-    height: 215px;
+
+#RFS-StepButton {
+  background-color: #f4c700;
+  box-shadow: 0 0 50px #f4c700;
+  position: relative;
+  overflow: hidden;
+}
+
+#RFS-StepButton span {
+  color: #000;
+  font-weight: 1000;
+}
+
+#RFS-Connector {
+  border-color: #f4c700;
+}
+
+#RFS-StepButton::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.37);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#RFS-StepButton:hover::before {
+  opacity: 1;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    top: -50%;
+    left: -50%;
   }
-}
-.title-margin {
-  margin: 0 !important;
+  50% {
+    top: 150%;
+    left: 150%;
+  }
+  100% {
+    top: -50%;
+    left: -50%;
+  }
 }
