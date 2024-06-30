@@ -14,7 +14,6 @@ import BlogPage from "./BlogPage/BlogPage";
 import GetStartedPage from "./GetStartedPage/GetStartedPage";
 // import Stepper from "./testing/testing";
 import style from "./Main.module.css";
-import "./style.css";
 
 const Main = ({ setActiveSection }) => {
   const [goUp, setGoUp] = useState(false);
