@@ -197,7 +197,6 @@ DesktopContainer.propTypes = {
   children: PropTypes.node,
   activeSection: PropTypes.string,
 };
-
 const MobileContainer = ({ children, activeSection }) => {
   const [sidebarOpened, setSidebarOpened] = useState(false);
 
@@ -235,6 +234,7 @@ const MobileContainer = ({ children, activeSection }) => {
                   as="a"
                   style={{ color: "#F8F8F8" }}
                   href={`/#${item.name}`}
+                  onClick={handleSidebarHide}
                 >
                   {item.label}
                 </Menu.Item>
@@ -249,10 +249,11 @@ const MobileContainer = ({ children, activeSection }) => {
             { name: "", label: "Programs" },
           ].map((item) => (
             <Menu.Item
-              key={item}
+              key={item.name}
               as="a"
               style={{ color: "White" }}
               href={`/#${item.name}`}
+              onClick={handleSidebarHide}
             >
               {item.label}
             </Menu.Item>
