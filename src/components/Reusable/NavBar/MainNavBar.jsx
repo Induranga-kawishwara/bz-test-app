@@ -221,7 +221,10 @@ const MobileContainer = ({ children, activeSection }) => {
           visible={sidebarOpened}
           style={{ backgroundColor: "#121212" }}
         >
-          <Menu.Item onClick={handleSidebarHide}>
+          <Menu.Item
+            onClick={handleSidebarHide}
+            style={{ width: "fit-content", marginInlineStart: "auto" }}
+          >
             <Icon name="x" style={{ color: "red" }} />
           </Menu.Item>
 
