@@ -43,7 +43,7 @@ const GetStartedPage = () => {
                 color="yellow"
                 style={{
                   borderRadius: "25px",
-                  color: "#212121"
+                  color: "#212121",
                 }}
                 inverted
               >

@@ -28,11 +28,14 @@ const Team = () => {
         </Header>
         <br></br>
       </Container>
-      <Grid container doubling columns={5}  className="bzTeam" >
+      <Grid container doubling columns={5} className="bzTeam">
         {/* -----------------Kasun */}
-        <Grid.Column >
+        <Grid.Column>
           {/* card */}
-          <div class="ui card" style={{ width: "100%", textAlign: "center" }}>
+          <div
+            className="ui card"
+            style={{ width: "100%", textAlign: "center" }}
+          >
             <Image
               src={require("../../../Assets/team/kasun.jpg")}
               alt="Prof Kasun De Zoysa"
