@@ -1,6 +1,7 @@
 import React from "react";
 import { Segment, Container, Header } from "semantic-ui-react";
 import { Stepper } from "react-form-stepper";
+import "./endtoend.css";
 
 const EndtoEndSupport = () => {
   return (
@@ -19,6 +20,10 @@ const EndtoEndSupport = () => {
       </Container>
 
       <Stepper
+        style={{
+          color: "white",
+          fontSize: "1.5em",
+        }}
         steps={[
           { label: "Define policy Scope and Rewards" },
           { label: "Define Right Tester" },
