@@ -22,10 +22,12 @@ const { MediaContextProvider, Media } = createMedia({
 
 const menuItems = [
   { name: "home", label: "Home" },
+  { name: "Partners", label: "Partners" },
   { name: "why-join-us", label: "Why Join Us?" },
-  { name: "features", label: "Features" },
-  { name: "our-scope", label: "Our Scope" },
+  { name: "SecureOrganization", label: "Secure Organization" },
+  { name: "EndtoEndSupport", label: "Support" },
   { name: "the-team", label: "The Team" },
+  { name: "getStarted-page", label: "Join With Us" },
 ];
 
 const DesktopContainer = ({ children, activeSection }) => {
@@ -89,20 +91,35 @@ const DesktopContainer = ({ children, activeSection }) => {
               >
                 Bug Zero
               </Menu.Item>
-              {["Blog", "ZeroFeed", "Programs"].map((item) => (
-                <Menu.Item key={item} as="a" style={{ color: "White" }}>
-                  {item}
+              {[
+                { name: "blog-page", label: "Blog" },
+                { name: "", label: "ZeroFeed" },
+                { name: "", label: "Programs" },
+              ].map((item) => (
+                <Menu.Item
+                  key={item}
+                  as="a"
+                  style={{ color: "White" }}
+                  href={`/#${item.name}`}
+                >
+                  {item.label}
                 </Menu.Item>
               ))}
               <Menu.Item position="right">
-                <Button as="a" inverted color="yellow" style={{borderRadius: "25px"}} basic>
+                <Button
+                  as="a"
+                  inverted
+                  color="yellow"
+                  style={{ borderRadius: "25px" }}
+                  basic
+                >
                   Log in
                 </Button>
                 <Button
                   as="a"
                   inverted
                   color="yellow"
-                  style={{ marginLeft: "0.5em", borderRadius: "25px"}}
+                  style={{ marginLeft: "0.5em", borderRadius: "25px" }}
                 >
                   Sign Up
                 </Button>
@@ -226,9 +243,18 @@ const MobileContainer = ({ children, activeSection }) => {
             </>
           )}
 
-          {["Home", "Blog", "ZeroFeed", "Careers"].map((item) => (
-            <Menu.Item key={item} as="a" style={{ color: "#F8F8F8" }}>
-              {item}
+          {[
+            { name: "blog-page", label: "Blog" },
+            { name: "", label: "ZeroFeed" },
+            { name: "", label: "Programs" },
+          ].map((item) => (
+            <Menu.Item
+              key={item}
+              as="a"
+              style={{ color: "White" }}
+              href={`/#${item.name}`}
+            >
+              {item.label}
             </Menu.Item>
           ))}
         </Sidebar>
