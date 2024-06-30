@@ -1,7 +1,7 @@
 import React from "react";
 import { Segment, Container, Header } from "semantic-ui-react";
 import { Stepper } from "react-form-stepper";
-import "./endtoend.css";
+import "./EndtoEndSuppor.css";
 
 const EndtoEndSupport = () => {
   return (
