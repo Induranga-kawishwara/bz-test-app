@@ -105,7 +105,7 @@ const EarnMoney = () => {
         <Grid.Row>
           <Grid.Column>
             <button
-              class="big ui yellow button"
+              className="big ui yellow button"
               style={{ color: "Black", fontSize: "20px", borderRadius: "25px" }}
               size="huge"
             >

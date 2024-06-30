@@ -95,9 +95,9 @@ const DesktopContainer = ({ children, activeSection }) => {
                 { name: "blog-page", label: "Blog" },
                 { name: "", label: "ZeroFeed" },
                 { name: "", label: "Programs" },
-              ].map((item) => (
+              ].map((item, index) => (
                 <Menu.Item
-                  key={item}
+                  key={index}
                   as="a"
                   style={{ color: "White" }}
                   href={`/#${item.name}`}
@@ -170,9 +170,9 @@ const DesktopContainer = ({ children, activeSection }) => {
                 pointing
                 secondary
               >
-                {menuItems.map((item) => (
+                {menuItems.map((item, index) => (
                   <Menu.Item
-                    key={item.name}
+                    key={index}
                     name={item.name}
                     active={activeItem === item.name}
                     onClick={handleItemClick}
@@ -230,9 +230,9 @@ const MobileContainer = ({ children, activeSection }) => {
 
           {activeSection && (
             <>
-              {menuItems.map((item) => (
+              {menuItems.map((item, index) => (
                 <Menu.Item
-                  key={item.name}
+                  key={index}
                   name={item.name}
                   as="a"
                   style={{ color: "#F8F8F8" }}
@@ -250,9 +250,9 @@ const MobileContainer = ({ children, activeSection }) => {
             { name: "blog-page", label: "Blog" },
             { name: "", label: "ZeroFeed" },
             { name: "", label: "Programs" },
-          ].map((item) => (
+          ].map((item, index) => (
             <Menu.Item
-              key={item.name}
+              key={index}
               as="a"
               style={{ color: "White" }}
               href={`/#${item.name}`}

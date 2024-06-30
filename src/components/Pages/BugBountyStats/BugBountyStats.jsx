@@ -9,7 +9,6 @@ const BugBountyStats = () => {
         </Header>
       </Container>
       <Container>
-
         <Grid
           container
           columns={4}
