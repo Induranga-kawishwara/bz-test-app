@@ -30,7 +30,6 @@ const EndtoEndSupport = () => {
           { label: "Validate and prioratize vulnalabilities" },
           { label: "Verify and Intergrate" },
         ]}
-        activeStep={4}
       />
     </Segment>
   );
