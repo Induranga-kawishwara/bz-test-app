@@ -19,6 +19,7 @@ const EndtoEndSupport = () => {
       </Container>
 
       <Stepper
+        style={{ color: "white", fontSize: "1.5em" }}
         steps={[
           { label: "Define policy Scope and Rewards" },
           { label: "Define Right Tester" },
