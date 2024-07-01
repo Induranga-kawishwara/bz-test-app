@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
 import {
-  CardMeta,
-  CardHeader,
-  Grid,
-  CardContent,
   Card,
+  CardContent,
+  CardHeader,
+  CardMeta,
+  Container,
+  Grid,
+  Header,
   Icon,
   Image,
   Segment,
-  Container,
-  Header,
-  CardDescription,
   Button,
   Input,
 } from "semantic-ui-react";
@@ -79,10 +77,10 @@ const BlogPage = () => {
         <Grid.Column>
           <Card className={styles["subscribe-card"]}>
             <Segment className={styles["subscribe-segment"]}>
-              <CardDescription>
+              <Card.Description>
                 Subscribe to our mailing list to keep updated with latest on
                 cyber security
-              </CardDescription>
+              </Card.Description>
               <br /> <br />
               <Input
                 iconPosition="left"

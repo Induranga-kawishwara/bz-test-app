@@ -30,23 +30,19 @@ const menuItems = [
   { name: "getStarted-page", label: "Join With Us" },
 ];
 
-const DesktopContainer = ({ children, activeSection }) => {
-  const [activeItem, setActiveItem] = useState();
+const DesktopContainer = ({ children, activeSection = "home" }) => {
+  const [activeItem, setActiveItem] = useState(activeSection);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   useEffect(() => {
-    setActiveItem(activeSection == null ? "home" : activeSection);
+    setActiveItem(activeSection);
   }, [activeSection]);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setIsScrolled(false);
-      } else {
-        setIsScrolled(true);
-      }
+      setIsScrolled(window.scrollY !== 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -75,7 +71,6 @@ const DesktopContainer = ({ children, activeSection }) => {
             style={{
               border: "none",
               backgroundColor: "#121212",
-              // backgroundColor: " #212121",
               margin: "0%",
               borderRadius: "0%",
             }}
@@ -151,7 +146,6 @@ const DesktopContainer = ({ children, activeSection }) => {
                     borderRadius: "0%",
                     border: "none",
                     boxShadow: "none",
-                    // padding: "0.7em 1em",
                   }}
                 >
                   Bug Zero
@@ -197,6 +191,7 @@ DesktopContainer.propTypes = {
   children: PropTypes.node,
   activeSection: PropTypes.string,
 };
+
 const MobileContainer = ({ children, activeSection }) => {
   const [sidebarOpened, setSidebarOpened] = useState(false);
 
