@@ -22,12 +22,10 @@ const { MediaContextProvider, Media } = createMedia({
 
 const menuItems = [
   { name: "home", label: "Home" },
-  { name: "Partners", label: "Partners" },
   { name: "why-join-us", label: "Why Join Us?" },
   { name: "SecureOrganization", label: "Secure Organization" },
   { name: "EndtoEndSupport", label: "Support" },
   { name: "the-team", label: "The Team" },
-  { name: "getStarted-page", label: "Join With Us" },
 ];
 
 const DesktopContainer = ({ children, activeSection = "home" }) => {
