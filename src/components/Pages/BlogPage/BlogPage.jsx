@@ -18,6 +18,21 @@ import styles from "./BlogPage.module.css";
 
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  // Update screenWidth state on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +55,12 @@ const BlogPage = () => {
         <Header className={styles.header}>Explore Our Knowledge Base</Header>
         <br />
       </Container>
-      <Grid container doubling columns={4}>
+      <Grid
+        container
+        doubling={screenWidth >= 530}
+        columns={screenWidth <= 530 ? "equal" : 4}
+        stackable={screenWidth <= 530}
+      >
         {blogs.map((item, index) => (
           <Grid.Column key={index}>
             <Card className={styles.card}>
