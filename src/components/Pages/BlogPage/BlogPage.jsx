@@ -23,7 +23,7 @@ const BlogPage = () => {
     const fetchData = async () => {
       try {
         const blogDetails = await axios.get(
-          "http://localhost:3001/fetch-medium-feed"
+          "https://testing-server-ifio.vercel.app/"
         );
         setBlogs(blogDetails.data);
       } catch (error) {
