@@ -28,7 +28,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* <NavBar activeSection={activeSection} /> */}
+      <NavBar activeSection={activeSection} />
       <Routes>
         <Route
           path="/bz-test-app"
@@ -36,7 +36,7 @@ function App() {
         />
         <Route path="/bz-test-app/signin" element={<SignIn />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 }
