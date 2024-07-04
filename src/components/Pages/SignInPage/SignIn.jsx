@@ -3,37 +3,37 @@ import "./SignIn.css";
 
 const SignIn = () => (
   <div
-    class="ui middle aligned center aligned grid"
+    className="ui middle aligned center aligned grid"
     style={{ width: "30%", margin: "20px auto " }}
   >
-    <div class="column">
+    <div className="column">
       <form
         action="https://s.codepen.io/voltron2112/debug/PqrEPM?"
         method="get"
-        class="ui large form"
+        className="ui large form"
       >
         <div
-          class="ui stacked secondary  segment"
+          className="ui stacked secondary  segment"
           style={{ backgroundColor: "transparent", padding: "30px 15px " }}
         >
-          <h2 class="ui image header">
-            <div class="content">Log-in to your account</div>
+          <h2 className="ui image header">
+            <div className="content">Log-in to your account</div>
           </h2>
-          <div class="field">
-            <div class="ui left icon input">
-              <i class="user icon"></i>
+          <div className="field">
+            <div className="ui left icon input">
+              <i className="user icon"></i>
               <input type="text" name="email" placeholder="E-mail address" />
             </div>
           </div>
-          <div class="field">
-            <div class="ui left icon input">
-              <i class="lock icon"></i>
+          <div className="field">
+            <div className="ui left icon input">
+              <i className="lock icon"></i>
               <input type="password" name="password" placeholder="Password" />
             </div>
           </div>
           <a href="#">Forget Password ?</a>
           <div
-            class="ui fluid large teal submit button"
+            className="ui fluid large teal submit button"
             style={{ marginTop: "10px", backgroundColor: "#f4c700" }}
           >
             Login
@@ -41,7 +41,7 @@ const SignIn = () => (
         </div>
       </form>
 
-      <div class="ui message" style={{ backgroundColor: "transparent" }}>
+      <div className="ui message" style={{ backgroundColor: "transparent" }}>
         New to us? <a href="#">Register</a>
       </div>
     </div>

@@ -3,7 +3,7 @@ import Footer from "./components/Reusable/Footer/Footer";
 import NavBar from "./components/Reusable/NavBar/MainNavBar";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import SignIn from "./components/Pages/SignInPage/SignIn";
+import SignIn from "./components/Pages/SignInPage/SignIn";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -28,15 +28,15 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar activeSection={activeSection} />
+      {/* <NavBar activeSection={activeSection} /> */}
       <Routes>
         <Route
           path="/bz-test-app"
           element={<HomepageLayout setActiveSection={setActiveSection} />}
         />
-        {/* <Route path="/bz-test-app/signin" element={<SignIn />} /> */}
+        <Route path="/bz-test-app/signin" element={<SignIn />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
