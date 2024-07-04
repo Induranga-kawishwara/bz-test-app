@@ -18,19 +18,20 @@ const EndtoEndSupport = () => {
         </Header>
         <br></br>
       </Container>
-
-      <Stepper
-        style={{
-          color: "white",
-          fontSize: "1.5em",
-        }}
-        steps={[
-          { label: "Define policy Scope and Rewards" },
-          { label: "Define Right Tester" },
-          { label: "Validate and prioratize vulnalabilities" },
-          { label: "Verify and Intergrate" },
-        ]}
-      />
+      <Container>
+        <Stepper
+          style={{
+            color: "white",
+            fontSize: "1.5em",
+          }}
+          steps={[
+            { label: "Define policy Scope and Rewards" },
+            { label: "Define Right Tester" },
+            { label: "Validate and prioratize vulnalabilities" },
+            { label: "Verify and Intergrate" },
+          ]}
+        />
+      </Container>
     </Segment>
   );
 };
