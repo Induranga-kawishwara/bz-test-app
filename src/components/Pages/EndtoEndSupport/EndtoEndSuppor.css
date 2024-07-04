@@ -50,3 +50,9 @@
     left: -50%;
   }
 }
+
+@media (max-width: 620px) {
+  #RFS-ConnectorContainer {
+    visibility: hidden;
+  }
+}
