@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/Induranga-kawishwara/bz-test-app",
+  "homepage": "https://Induranga-kawishwara.github.io/bz-test-app",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -22,6 +22,7 @@
     "react-scroll-trigger": "^0.6.14",
     "react-timeline-animation": "^1.2.3",
     "semantic-ui-css": "^2.5.0",
+    "semantic-ui-icon": "^2.5.0",
     "semantic-ui-less": "^2.5.0",
     "semantic-ui-react": "^2.1.5",
     "styled-components": "^6.1.11",

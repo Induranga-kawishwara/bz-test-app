@@ -22,12 +22,10 @@ const { MediaContextProvider, Media } = createMedia({
 
 const menuItems = [
   { name: "home", label: "Home" },
-  { name: "Partners", label: "Partners" },
   { name: "why-join-us", label: "Why Join Us?" },
   { name: "SecureOrganization", label: "Secure Organization" },
   { name: "EndtoEndSupport", label: "Support" },
   { name: "the-team", label: "The Team" },
-  { name: "getStarted-page", label: "Join With Us" },
 ];
 
 const DesktopContainer = ({ children, activeSection = "home" }) => {
@@ -95,7 +93,7 @@ const DesktopContainer = ({ children, activeSection = "home" }) => {
                   key={index}
                   as="a"
                   style={{ color: "White" }}
-                  href={`/#${item.name}`}
+                  href={`${process.env.PUBLIC_URL}/#${item.name}`}
                 >
                   {item.label}
                 </Menu.Item>
@@ -171,7 +169,7 @@ const DesktopContainer = ({ children, activeSection = "home" }) => {
                     active={activeItem === item.name}
                     onClick={handleItemClick}
                     as="a"
-                    href={`/#${item.name}`}
+                    href={`${process.env.PUBLIC_URL}/#${item.name}`}
                   >
                     {item.label}
                   </Menu.Item>
@@ -231,7 +229,7 @@ const MobileContainer = ({ children, activeSection }) => {
                   name={item.name}
                   as="a"
                   style={{ color: "#F8F8F8" }}
-                  href={`/#${item.name}`}
+                  href={`${process.env.PUBLIC_URL}/#${item.name}`}
                   onClick={handleSidebarHide}
                 >
                   {item.label}
@@ -250,7 +248,7 @@ const MobileContainer = ({ children, activeSection }) => {
               key={index}
               as="a"
               style={{ color: "White" }}
-              href={`/#${item.name}`}
+              href={`${process.env.PUBLIC_URL}/#${item.name}`}
               onClick={handleSidebarHide}
             >
               {item.label}
