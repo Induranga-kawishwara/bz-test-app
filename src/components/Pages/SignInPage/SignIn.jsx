@@ -17,33 +17,43 @@ const SignIn = () => (
           style={{ backgroundColor: "transparent", padding: "30px 15px " }}
         >
           <h2 className="ui image header">
-            <div className="content">Log-in to your account</div>
+            <div>
+              <div className="content">Sign In</div>
+            </div>
           </h2>
           <div className="field">
             <div className="ui left icon input">
-              <i className="user icon"></i>
+              {/* <i className="user icon"></i> */}
+              <label for="email" style={{ display: "block" }}>
+                Email:
+              </label>
+              <br></br>
               <input type="text" name="email" placeholder="E-mail address" />
             </div>
           </div>
           <div className="field">
             <div className="ui left icon input">
-              <i className="lock icon"></i>
+              {/* <i className="lock icon"></i> */}
+              <label for="password">Password:</label>
               <input type="password" name="password" placeholder="Password" />
             </div>
           </div>
           <a href="#">Forget Password ?</a>
           <div
             className="ui fluid large teal submit button"
-            style={{ marginTop: "10px", backgroundColor: "#f4c700" }}
+            style={{
+              marginTop: "10px",
+              backgroundColor: "#f4c700",
+              borderRadius: "5px",
+              height: "40px",
+              marginBottom: "20px",
+            }}
           >
             Login
           </div>
+          New to Bug Zero? <a href="#">Create an account</a>
         </div>
       </form>
-
-      <div className="ui message" style={{ backgroundColor: "transparent" }}>
-        New to us? <a href="#">Register</a>
-      </div>
     </div>
   </div>
 );
