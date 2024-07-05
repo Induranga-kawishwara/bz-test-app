@@ -28,7 +28,7 @@ const menuItems = [
   { name: "the-team", label: "The Team" },
 ];
 
-const DesktopContainer = ({ children, activeSection = "home" }) => {
+const DesktopContainer = ({ children, activeSection }) => {
   const [activeItem, setActiveItem] = useState(activeSection);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -179,7 +179,6 @@ const DesktopContainer = ({ children, activeSection = "home" }) => {
           )}
         </Segment>
       </InView>
-
       {children}
     </Media>
   );
@@ -285,7 +284,6 @@ const MobileContainer = ({ children, activeSection }) => {
               </Menu.Item>
             </Menu>
           </Segment>
-
           {children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>
@@ -298,14 +296,42 @@ MobileContainer.propTypes = {
   activeSection: PropTypes.string,
 };
 
-const MainNavBar = ({ children, activeSection }) => (
-  <MediaContextProvider>
-    <DesktopContainer activeSection={activeSection}>
-      {children}
-    </DesktopContainer>
-    <MobileContainer activeSection={activeSection}>{children}</MobileContainer>
-  </MediaContextProvider>
-);
+const MainNavBar = ({ children }) => {
+  const [activeSectionState, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const onPageScroll = () => {
+      if (window.scrollY === 0) {
+        setActiveSection("home");
+        return;
+      }
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", onPageScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onPageScroll);
+    };
+  }, []);
+
+  return (
+    <MediaContextProvider>
+      <DesktopContainer activeSection={activeSectionState}>
+        {children}
+      </DesktopContainer>
+      <MobileContainer activeSection={activeSectionState}>
+        {children}
+      </MobileContainer>
+    </MediaContextProvider>
+  );
+};
 
 MainNavBar.propTypes = {
   children: PropTypes.node,
