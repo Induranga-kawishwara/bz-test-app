@@ -14,7 +14,7 @@ import BlogPage from "../BlogPage/BlogPage";
 import GetStartedPage from "../GetStartedPage/GetStartedPage";
 import style from "./Main.module.css";
 
-const Main = ({ setActiveSection }) => {
+const Main = () => {
   const [goUp, setGoUp] = useState(false);
 
   const scrollToTop = () => {
@@ -31,19 +31,6 @@ const Main = ({ setActiveSection }) => {
   useEffect(() => {
     const onPageScroll = () => {
       setGoUp(window.scrollY > 200);
-
-      if (window.scrollY === 0) {
-        setActiveSection("home");
-        return;
-      }
-
-      const sections = document.querySelectorAll("section");
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-          setActiveSection(section.id);
-        }
-      });
     };
 
     window.addEventListener("scroll", onPageScroll);
@@ -51,7 +38,7 @@ const Main = ({ setActiveSection }) => {
     return () => {
       window.removeEventListener("scroll", onPageScroll);
     };
-  }, [setActiveSection]);
+  }, []);
 
   return (
     <div>
@@ -59,30 +46,15 @@ const Main = ({ setActiveSection }) => {
         <HomePage />
       </section>
 
-      <section
-        id="Partners"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+      <section id="Partners" className={style.darkSection}>
         <Partners />
       </section>
 
-      <section
-        id="why-join-us"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+      <section id="why-join-us" className={style.darkSection}>
         <WhyJoin />
       </section>
 
-      <section
-        id="SecureOrganization"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+      <section id="SecureOrganization" className={style.darkSection}>
         <SecureOrganization />
       </section>
 
@@ -90,47 +62,23 @@ const Main = ({ setActiveSection }) => {
         <BugBountyStats />
       </section>
 
-      <section
-        id="EarnMoney"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+      <section id="EarnMoney" className={style.darkSection}>
         <EarnMoney />
       </section>
 
-      <section
-        id="EndtoEndSupport"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+      <section id="EndtoEndSupport" className={style.darkSection}>
         <EndtoEndSupport />
       </section>
 
-      <section
-        id="bugzerounique"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+      <section id="bugzerounique" className={style.darkSection}>
         <BugZeroUnique />
       </section>
 
-      <section
-        id="the-team"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+      <section id="the-team" className={style.darkSection}>
         <Team />
       </section>
-      <section
-        id="blog-page"
-        style={{
-          backgroundColor: "#212121",
-        }}
-      >
+
+      <section id="blog-page" className={style.darkSection}>
         <BlogPage />
       </section>
 
