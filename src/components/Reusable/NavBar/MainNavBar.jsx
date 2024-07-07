@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
+import { useLocation } from 'react-router-dom'
 import PropTypes from "prop-types";
 import { createMedia } from "@artsy/fresnel";
 import { InView } from "react-intersection-observer";
+
 import {
   Button,
   Container,
@@ -34,6 +36,9 @@ const DesktopContainer = ({ children, activeSection }) => {
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
+  const location = useLocation();
+  const { hash, pathname, search } = location;
+
   useEffect(() => {
     setActiveItem(activeSection);
   }, [activeSection]);
@@ -52,6 +57,7 @@ const DesktopContainer = ({ children, activeSection }) => {
 
   return (
     <Media greaterThan="mobile">
+      
       <InView>
         <Segment
           fixed="top"
@@ -134,7 +140,7 @@ const DesktopContainer = ({ children, activeSection }) => {
               {!isScrolled && (
                 <Segment
                   style={{
-                    display: "flex",
+                    display: pathname == "/bz-test-app" ? "flex" : pathname == "/bz-test-app/" ? "flex" : "none", 
                     justifyContent: "center",
                     color: "#f4c700 ",
                     fontFamily: " Edo",

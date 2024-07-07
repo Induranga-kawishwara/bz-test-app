@@ -12,12 +12,13 @@ import {
 } from "semantic-ui-react";
 
 const JoinwithUs = () => (
-  <div
+<div> <div 
     style={{
       display: "flex",
       alignItems: "center",
       justifyContent: "space-evenly",
       position: "relative",
+    
     }}
   >
     <Card style={{ marginTop: "20px", marginBottom: "0" }}>
@@ -52,7 +53,11 @@ const JoinwithUs = () => (
         </div>
       </CardContent>
     </Card>
+
   </div>
+  <div style={{marginTop:"80px"}}>
+  Already have an account? <a>Sign In</a>
+  </div></div>
 );
 
 export default JoinwithUs;
