@@ -1,9 +1,54 @@
-import React from "react";
-import { Segment, Container, Header } from "semantic-ui-react";
+import React, { useState, useEffect } from "react";
+import {
+  Segment,
+  Container,
+  Header,
+  Grid,
+  GridColumn,
+} from "semantic-ui-react";
 import { Stepper } from "react-form-stepper";
 import "./EndtoEndSuppor.css";
 
+const Step = ({ num, title }) => (
+  <GridColumn>
+    <div className="ui steps" style={{ display: "block", margin: "auto" }}>
+      <div
+        className="step step-card"
+        style={{ padding: "2em 1em", justifyContent: "center" }}
+      >
+        <h1 className="step_num">{num}</h1>
+        <div className="content" style={{ margin: "auto" }}>
+          <div
+            className="title title-margin"
+            style={{ textAlign: "center", lineHeight: "22px", fontSize: "1em" }}
+          >
+            {title}
+          </div>
+        </div>
+      </div>
+    </div>
+  </GridColumn>
+);
+
 const EndtoEndSupport = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  const steps = [
+    "Define policy Scope and Rewards",
+    "Define Right Tester",
+    "Validate and prioratize vulnalabilities",
+    "Verify and Intergrate",
+  ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 700);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Segment
       style={{
@@ -16,21 +61,21 @@ const EndtoEndSupport = () => {
         <Header as="h3" style={{ fontSize: "2.5em", color: "#f4c700" }}>
           Providing end to end support to every bug bounty program
         </Header>
-        <br></br>
+        <br />
       </Container>
       <Container>
-        <Stepper
-          style={{
-            color: "white",
-            fontSize: "1.5em",
-          }}
-          steps={[
-            { label: "Define policy Scope and Rewards" },
-            { label: "Define Right Tester" },
-            { label: "Validate and prioratize vulnalabilities" },
-            { label: "Verify and Intergrate" },
-          ]}
-        />
+        {isMobile ? (
+          <Grid container stackable>
+            {steps.map((text, index) => (
+              <Step key={index} num={index + 1} title={text} />
+            ))}
+          </Grid>
+        ) : (
+          <Stepper
+            style={{ color: "white", fontSize: "1.5em" }}
+            steps={steps.map((text) => ({ label: text }))}
+          />
+        )}
       </Container>
     </Segment>
   );
