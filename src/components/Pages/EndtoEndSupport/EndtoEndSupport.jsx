@@ -16,7 +16,7 @@ const Step = ({ num, title }) => (
         className="step step-card"
         style={{ padding: "2em 1em", justifyContent: "center" }}
       >
-        <h1>{num}</h1>
+        <h1 className="step_num">{num}</h1>
         <div className="content" style={{ margin: "auto" }}>
           <div
             className="title title-margin"
@@ -65,7 +65,7 @@ const EndtoEndSupport = () => {
       </Container>
       <Container>
         {isMobile ? (
-          <Grid container stackable columns={4}>
+          <Grid container stackable>
             {steps.map((text, index) => (
               <Step key={index} num={index + 1} title={text} />
             ))}
