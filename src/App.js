@@ -15,6 +15,7 @@ function App() {
         <Route path="/bz-test-app/signin" element={<SignIn />} />
         <Route path="/bz-test-app/joinwithus" element={<JoinwithUs />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

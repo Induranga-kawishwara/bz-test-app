@@ -199,7 +199,7 @@ const MobileContainer = ({ children, activeSection }) => {
     <Media at="mobile">
       <Sidebar.Pushable
         style={{
-          height: "100vh",
+          height: "fit-content",
           width: "100%",
           position: "fixed",
           zIndex: 11,
@@ -229,7 +229,6 @@ const MobileContainer = ({ children, activeSection }) => {
                   as="a"
                   style={{ color: "#F8F8F8" }}
                   href={`${process.env.PUBLIC_URL}/#${item.name}`}
-                  onClick={handleSidebarHide}
                 >
                   {item.label}
                 </Menu.Item>
@@ -248,14 +247,16 @@ const MobileContainer = ({ children, activeSection }) => {
               as="a"
               style={{ color: "White" }}
               href={`${process.env.PUBLIC_URL}/#${item.name}`}
-              onClick={handleSidebarHide}
             >
               {item.label}
             </Menu.Item>
           ))}
         </Sidebar>
 
-        <Sidebar.Pusher dimmed={sidebarOpened} style={{ height: "100vh" }}>
+        <Sidebar.Pusher
+          dimmed={sidebarOpened}
+          style={{ height: sidebarOpened ? "100vh" : "auto" }}
+        >
           <Segment
             vertical
             style={{
