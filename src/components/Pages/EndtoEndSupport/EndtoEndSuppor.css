@@ -50,9 +50,14 @@
     left: -50%;
   }
 }
-
-@media (max-width: 620px) {
-  #RFS-ConnectorContainer {
-    visibility: hidden;
+.step-card {
+  height: 202px;
+}
+@media (width <= 1199px) {
+  .step-card {
+    height: 215px;
   }
+}
+.title-margin {
+  margin: 0 !important;
 }
