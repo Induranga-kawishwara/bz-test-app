@@ -54,17 +54,17 @@ const Main = () => {
         <WhyJoin />
       </section>
 
-      {/* <section id="SecureOrganization" className={style.darkSection}>
+      <section id="SecureOrganization" className={style.darkSection}>
         <SecureOrganization />
-      </section> */}
+      </section>
 
       <section id="BugBountyStats">
         <BugBountyStats />
       </section>
 
-      {/* <section id="EarnMoney" className={style.darkSection}>
+      <section id="EarnMoney" className={style.darkSection}>
         <EarnMoney />
-      </section> */}
+      </section>
 
       <section id="EndtoEndSupport" className={style.darkSection}>
         <EndtoEndSupport />
