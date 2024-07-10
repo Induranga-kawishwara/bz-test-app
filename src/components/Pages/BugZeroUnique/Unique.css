@@ -27,7 +27,6 @@
   .ui.steps .description {
     text-align: left;
     margin-left: 30px;
-    /* font-size: 18px !important; */
   }
 }
 
@@ -36,7 +35,6 @@
   .ui.steps .description {
     text-align: left;
     margin-left: 10px;
-    /* font-size: 18px !important; */
   }
 }
 
@@ -51,7 +49,7 @@
 
 .step {
   padding: 2em 1em;
-  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+  transition: transform 0.3s ease;
 }
 
 .step:hover {
