@@ -7,26 +7,21 @@ import {
   Segment,
 } from "semantic-ui-react";
 
-import imgknowledge from "../../../Assets/knowledge.png";
-import imganonymous from "../../../Assets/anonymous.png";
-import imgsuitcase from "../../../Assets/suitcase.png";
-import imgswords from "../../../Assets/swords.png";
-
 const cardData = [
   {
-    img: imgknowledge,
+    img: require("../../../Assets/knowledge.png"),
     text: "An opportunity to learn about security from scratch",
   },
   {
-    img: imganonymous,
+    img: require("../../../Assets/anonymous.png"),
     text: "Complete Anonymity for Anyone Who Asks For Privacy",
   },
   {
-    img: imgsuitcase,
+    img: require("../../../Assets/suitcase.png"),
     text: "Increased Visibility in the Market which could lead to lucrative job opportunities",
   },
   {
-    img: imgswords,
+    img: require("../../../Assets/swords.png"),
     text: "Be a part of the ethical force against malicious actors",
   },
 ];
