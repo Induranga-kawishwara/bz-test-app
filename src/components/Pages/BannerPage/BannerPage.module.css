@@ -9,10 +9,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; */
-  background: linear-gradient(-10deg,  #212121,black,#f4c700); 
+  background: linear-gradient(50deg,  #f4c700,#212121,#212121, #f4c700); 
     /* background: linear-gradient(-10deg,  #212121,black,#FFFF33);  */
 	background-size: 400% 400%;
-	animation: gradient 7s ease infinite;
+	animation: gradient 15s ease infinite;
 
   height: 100vh;
 }
@@ -26,7 +26,7 @@
   padding: 5% 0% 5% 0;
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
 }
 
