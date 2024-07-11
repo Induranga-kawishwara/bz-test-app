@@ -12,15 +12,16 @@ import {
 } from "semantic-ui-react";
 
 const JoinwithUs = () => (
-  <div
+<div> <div 
     style={{
       display: "flex",
       alignItems: "center",
       justifyContent: "space-evenly",
       position: "relative",
+    
     }}
   >
-    <Card style={{ marginTop: "20px", marginBottom: "0" }}>
+    <Card style={{ marginTop: "150px", marginBottom: "0" }}>
       <img src={Hacker} style={{ height: "225px" }} />
       <CardContent>
         <CardHeader>Join as a Hacker</CardHeader>
@@ -37,7 +38,7 @@ const JoinwithUs = () => (
     </Card>
 
     <Divider vertical>Or</Divider>
-    <Card style={{ marginTop: "20px" }}>
+    <Card style={{ marginTop: "150px" }}>
       <img src={Organization} style={{ height: "225px" }} />
       <CardContent>
         <CardHeader>Create a Program</CardHeader>
@@ -52,7 +53,11 @@ const JoinwithUs = () => (
         </div>
       </CardContent>
     </Card>
+
   </div>
+  <div style={{marginTop:"50px"}}>
+  Already have an account? <a>Sign In</a>
+  </div></div>
 );
 
 export default JoinwithUs;
