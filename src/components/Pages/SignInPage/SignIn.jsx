@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const SignIn = () => (
   <div
     className="ui middle aligned center aligned grid"
