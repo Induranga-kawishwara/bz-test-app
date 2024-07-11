@@ -15,8 +15,8 @@
 }
 
 .step_num {
-  color: white;
-  background-color: #000000a2;
+  color: #000;
+  background-color: #f4c700c1;
   padding: 3% 5%;
   border-radius: 100%;
 }
