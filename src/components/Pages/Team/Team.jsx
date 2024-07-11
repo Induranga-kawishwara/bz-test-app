@@ -45,6 +45,23 @@ const teamData = [
 
 const cardStyle = { width: "100%", textAlign: "center" };
 
+// to add a break before the last name for better card handling
+const ImprovedCardHeader = ({ member }) => {
+  const { name } = member;
+  const nameParts = name.split(' ');
+
+  // Join all parts except the last one, adding spaces
+  const firstName = nameParts.slice(0, -1).join(' ');
+
+  return (
+    <Card.Header>
+      {firstName} {/* First and middle names */}
+      <br />
+      {nameParts[nameParts.length - 1]} {/* Last name */}
+    </Card.Header>
+  );
+};
+
 const Team = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -87,12 +104,7 @@ const Team = () => {
               <Image src={member.image} alt={member.name} />
               <Card.Content>
                 <Card.Header>
-                  {member.name.split(" ").map((name, i) => (
-                    <React.Fragment key={i}>
-                      {name}
-                      <br />
-                    </React.Fragment>
-                  ))}
+                  <ImprovedCardHeader member={member} />
                 </Card.Header>
               </Card.Content>
               <Card.Content extra>
