@@ -7,10 +7,24 @@ import {
   Segment,
 } from "semantic-ui-react";
 
-import imgknowledge from "../../../Assets/knowledge.png";
-import imganonymous from "../../../Assets/anonymous.png";
-import imgsuitcase from "../../../Assets/suitcase.png";
-import imgswords from "../../../Assets/swords.png";
+const cardData = [
+  {
+    img: require("../../../Assets/knowledge.png"),
+    text: "An opportunity to learn about security from scratch",
+  },
+  {
+    img: require("../../../Assets/anonymous.png"),
+    text: "Complete Anonymity for Anyone Who Asks For Privacy",
+  },
+  {
+    img: require("../../../Assets/suitcase.png"),
+    text: "Increased Visibility in the Market which could lead to lucrative job opportunities",
+  },
+  {
+    img: require("../../../Assets/swords.png"),
+    text: "Be a part of the ethical force against malicious actors",
+  },
+];
 
 const EarnMoney = () => {
   return (
@@ -28,92 +42,35 @@ const EarnMoney = () => {
       </Container>
       <Container>
         <Grid container doubling columns={4}>
-          <Grid.Column textAlign="center" className="clipArt">
-            {/* card */}
-            <Card
-              style={{
-                boxShadow: "none",
-                width: "100%",
-                // textAlign: "center",
-                backgroundColor: "#212121",
-              }}
-            >
-              <Card.Content>
-                <Image src={imgknowledge} alt="BigCo Inc. logo" size="tiny" />
-                <h3 style={{ color: "white" }}>
-                  An opportunity to learn about security from scratch
-                </h3>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column className="clipArt">
-            <Card
-              style={{
-                boxShadow: "none",
-                width: "100%",
-                textAlign: "center",
-                backgroundColor: "#212121",
-              }}
-            >
-              <Card.Content>
-                <Image src={imganonymous} alt="BigCo Inc. logo" size="tiny" />
-                <h3 style={{ color: "white" }}>
-                  Complete Anonymity for Anyone Who Asks For Privacy
-                </h3>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column className="clipArt">
-            <Card
-              style={{
-                boxShadow: "none",
-                width: "100%",
-                textAlign: "center",
-                backgroundColor: "#212121",
-              }}
-            >
-              <Card.Content>
-                <Image src={imgsuitcase} alt="BigCo Inc. logo" size="tiny" />
-                <h3 style={{ color: "white" }}>
-                  Increased Visibility in the Makret which could lead to
-                  lucrative job opportunites
-                </h3>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column className="clipArt">
-            <Card
-              style={{
-                boxShadow: "none",
-                width: "100%",
-                textAlign: "center",
-                backgroundColor: "#212121",
-              }}
-            >
-              <Card.Content>
-                <Image src={imgswords} alt="BigCo Inc. logo" size="tiny" />
-                <h3 style={{ color: "white" }}>
-                  Be a part of the ethical force against malicious actors
-                </h3>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
+          {cardData.map((card, index) => (
+            <Grid.Column key={index} textAlign="center" className="clipArt">
+              <Card
+                style={{
+                  boxShadow: "none",
+                  width: "100%",
+                  textAlign: "center",
+                  backgroundColor: "#212121",
+                }}
+              >
+                <Card.Content>
+                  <Image src={card.img} alt="BigCo Inc. logo" size="tiny" />
+                  <h3 style={{ color: "white" }}>{card.text}</h3>
+                </Card.Content>
+              </Card>
+            </Grid.Column>
+          ))}
         </Grid>
       </Container>
-      {/*-------------- Button --------------*/}
-      <Grid style={{ marginTop: "2rem", padding: "2rem" }}>
-        <Grid.Row>
-          <Grid.Column>
-            <button
-              className="big ui yellow button"
-              style={{ color: "Black", fontSize: "20px", borderRadius: "25px" }}
-              size="huge"
-            >
-              Register as an individual
-            </button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+
+      <Container style={{ marginTop: "2rem", padding: "2rem" }}>
+        <button
+          className="big ui yellow button"
+          style={{ color: "black", fontSize: "20px", borderRadius: "25px" }}
+          size="huge"
+        >
+          Register as an individual
+        </button>
+      </Container>
     </Segment>
   );
 };

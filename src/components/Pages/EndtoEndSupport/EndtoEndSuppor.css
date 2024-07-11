@@ -14,6 +14,13 @@
   font-weight: 1000;
 }
 
+.step_num {
+  color: white;
+  background-color: #000000a2;
+  padding: 3% 5%;
+  border-radius: 100%;
+}
+
 #RFS-Connector {
   border-color: #f4c700;
 }
@@ -51,8 +58,16 @@
   }
 }
 
-@media (max-width: 620px) {
-  #RFS-ConnectorContainer {
-    visibility: hidden;
+.step-card {
+  height: 202px;
+}
+
+@media (max-width: 1199px) {
+  .step-card {
+    height: 215px;
   }
+}
+
+.title-margin {
+  margin: 0 !important;
 }

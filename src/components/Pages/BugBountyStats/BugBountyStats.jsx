@@ -1,5 +1,24 @@
 import { Card, Container, Grid, Header, Segment } from "semantic-ui-react";
 
+const statsData = [
+  {
+    header: "1M+ LKR",
+    description: "Bounties Granted",
+  },
+  {
+    header: "75K LKR",
+    description: "Maximum Bounty",
+  },
+  {
+    header: "25K LKR",
+    description: "Average Bounty",
+  },
+  {
+    header: "750+",
+    description: "Bug Hunters",
+  },
+];
+
 const BugBountyStats = () => {
   return (
     <Segment vertical style={{ padding: "6em 0em", border: "none" }} id="grey">
@@ -20,38 +39,16 @@ const BugBountyStats = () => {
             width: "100%",
           }}
         >
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>1M+ LKR</Card.Header>
-                <Card.Description>Bounties Granted</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>75K LKR</Card.Header>
-                <Card.Description>Maximum Bounty</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>25K LKR</Card.Header>
-                <Card.Description>Average Bounty</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column>
-            <Card style={{ width: "100%" }} className="stats-card">
-              <Card.Content>
-                <Card.Header>750+</Card.Header>
-                <Card.Description>Bug Hunters</Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
+          {statsData.map((stat, index) => (
+            <Grid.Column key={index}>
+              <Card style={{ width: "100%" }} className="stats-card">
+                <Card.Content>
+                  <Card.Header>{stat.header}</Card.Header>
+                  <Card.Description>{stat.description}</Card.Description>
+                </Card.Content>
+              </Card>
+            </Grid.Column>
+          ))}
         </Grid>
       </Container>
     </Segment>
