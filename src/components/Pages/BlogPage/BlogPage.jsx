@@ -72,10 +72,14 @@ const BlogPage = () => {
 
               <CardContent className={styles["card-content"]}>
                 <CardHeader className={styles["card-header"]}>
-                  {item.topicName}
+                  {/* Truncate topic name and add "..." */}
+                  {item.topicName.length > 50
+                    ? `${item.topicName.slice(0, 50)}...`
+                    : item.topicName}
                 </CardHeader>
+                <hr />
                 <CardMeta className={styles["card-meta"]}>
-                  {`Author ${item.creator}`}
+                  {`By ${item.creator}`}
                 </CardMeta>
                 <CardMeta className={styles["card-meta"]}>
                   {`Publish on ${item.publishDate}`}
