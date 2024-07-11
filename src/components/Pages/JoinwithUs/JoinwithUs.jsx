@@ -21,7 +21,7 @@ const JoinwithUs = () => (
     
     }}
   >
-    <Card style={{ marginTop: "20px", marginBottom: "0" }}>
+    <Card style={{ marginTop: "150px", marginBottom: "0" }}>
       <img src={Hacker} style={{ height: "225px" }} />
       <CardContent>
         <CardHeader>Join as a Hacker</CardHeader>
@@ -38,7 +38,7 @@ const JoinwithUs = () => (
     </Card>
 
     <Divider vertical>Or</Divider>
-    <Card style={{ marginTop: "20px" }}>
+    <Card style={{ marginTop: "150px" }}>
       <img src={Organization} style={{ height: "225px" }} />
       <CardContent>
         <CardHeader>Create a Program</CardHeader>
@@ -55,7 +55,7 @@ const JoinwithUs = () => (
     </Card>
 
   </div>
-  <div style={{marginTop:"80px"}}>
+  <div style={{marginTop:"50px"}}>
   Already have an account? <a>Sign In</a>
   </div></div>
 );

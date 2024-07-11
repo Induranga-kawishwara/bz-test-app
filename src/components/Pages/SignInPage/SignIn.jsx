@@ -1,5 +1,5 @@
 import React from "react";
-import "./SignIn.css";
+
 
 const SignIn = () => (
   <div
@@ -23,7 +23,7 @@ const SignIn = () => (
           </h2>
           <div className="field">
             <div className="ui left icon input" style={{flexDirection:"column"}}>
-              {/* <i className="user icon"></i> */}
+              <i className="user icon"></i> 
               <label for="email" style={{ textAlign:"left" }}>
                 Email:
               </label>
@@ -32,7 +32,7 @@ const SignIn = () => (
           </div>
           <div className="field">
             <div className="ui left icon input" style={{flexDirection:"column"}}>
-              {/* <i className="lock icon"></i> */}
+               <i className="lock icon"></i> 
               <label for="password" style={{ textAlign:"left" }}>Password:</label>
               <input type="password" name="password" placeholder="Password" />
             </div>
