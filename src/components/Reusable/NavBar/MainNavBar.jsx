@@ -1,5 +1,5 @@
-import React, { useState, useEffect} from "react";
-import { useLocation } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { createMedia } from "@artsy/fresnel";
 import { InView } from "react-intersection-observer";
@@ -57,7 +57,6 @@ const DesktopContainer = ({ children, activeSection }) => {
 
   return (
     <Media greaterThan="mobile">
-      
       <InView>
         <Segment
           fixed="top"
@@ -111,7 +110,8 @@ const DesktopContainer = ({ children, activeSection }) => {
                   color="yellow"
                   style={{ borderRadius: "25px" }}
                   basic
-                ><a href="http://localhost:3000/bz-test-app/signin"></a>
+                >
+                  <a href="http://localhost:3000/bz-test-app/signin"></a>
                   Log in
                 </Button>
                 <Button
@@ -140,7 +140,12 @@ const DesktopContainer = ({ children, activeSection }) => {
               {!isScrolled && (
                 <Segment
                   style={{
-                    display: pathname == "/bz-test-app" ? "flex" : pathname == "/bz-test-app/" ? "flex" : "none", 
+                    display:
+                      pathname == "/bz-test-app"
+                        ? "flex"
+                        : pathname == "/bz-test-app/"
+                        ? "flex"
+                        : "none",
                     justifyContent: "center",
                     color: "#f4c700 ",
                     fontFamily: " Edo",
@@ -158,8 +163,14 @@ const DesktopContainer = ({ children, activeSection }) => {
 
               <Menu
                 style={{
+                  display:
+                    pathname == "/bz-test-app"
+                      ? "flex"
+                      : pathname == "/bz-test-app/"
+                      ? "flex"
+                      : "none",
                   border: "none",
-                  display: "flex",
+                  // display: "flex",
                   justifyContent: "center",
                   margin: "0%",
                   paddingBottom: "1%",
