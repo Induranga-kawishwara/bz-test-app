@@ -37,7 +37,7 @@ const DesktopContainer = ({ children, activeSection }) => {
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   const location = useLocation();
-  const { hash, pathname, search } = location;
+  const { pathname } = location;
 
   useEffect(() => {
     setActiveItem(activeSection);
@@ -86,6 +86,7 @@ const DesktopContainer = ({ children, activeSection }) => {
                   fontFamily: "Edo",
                   fontSize: "2em",
                 }}
+                href="/bz-test-app"
               >
                 Bug Zero
               </Menu.Item>
@@ -142,9 +143,9 @@ const DesktopContainer = ({ children, activeSection }) => {
                 <Segment
                   style={{
                     display:
-                      pathname == "/bz-test-app"
+                      pathname === "/bz-test-app"
                         ? "flex"
-                        : pathname == "/bz-test-app/"
+                        : pathname === "/bz-test-app/"
                         ? "flex"
                         : "none",
                     justifyContent: "center",
@@ -165,9 +166,9 @@ const DesktopContainer = ({ children, activeSection }) => {
               <Menu
                 style={{
                   display:
-                    pathname == "/bz-test-app"
+                    pathname === "/bz-test-app"
                       ? "flex"
-                      : pathname == "/bz-test-app/"
+                      : pathname === "/bz-test-app/"
                       ? "flex"
                       : "none",
                   border: "none",
