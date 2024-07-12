@@ -45,7 +45,16 @@ const Footer = () => (
               BugzeroTest@gmail.com
             </a>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column
+            width={3}
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "4px",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
             <Button
               circular
               color="facebook"
