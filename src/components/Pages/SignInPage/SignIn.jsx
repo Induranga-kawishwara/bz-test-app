@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "semantic-ui-react";
 
 const SignIn = () => (
   <div
@@ -37,18 +38,13 @@ const SignIn = () => (
             </div>
           </div>
           <a href="#">Forget Password ?</a>
-          <div
-            className="ui fluid large teal submit button"
-            style={{
-              marginTop: "10px",
-              backgroundColor: "#f4c700",
-              borderRadius: "5px",
-              height: "40px",
-              marginBottom: "20px",
-            }}
+          <Button
+             className="big ui yellow button"
+             style={{ color: "black", fontSize: "15px", borderRadius: "25px",width:"325px", margin: "3% 2% 5% 0%"
+               }}
           >
             Login
-          </div>
+          </Button>
           New to Bug Zero? <a href="#">Create an account</a>
         </div>
       </form>
