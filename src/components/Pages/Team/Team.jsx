@@ -43,21 +43,17 @@ const teamData = [
   },
 ];
 
-const cardStyle = { width: "100%", textAlign: "center" };
-
-// to add a break before the last name for better card handling
 const ImprovedCardHeader = ({ member }) => {
   const { name } = member;
-  const nameParts = name.split(' ');
+  const nameParts = name.split(" ");
 
-  // Join all parts except the last one, adding spaces
-  const firstName = nameParts.slice(0, -1).join(' ');
+  const firstName = nameParts.slice(0, -1).join(" ");
 
   return (
     <Card.Header>
-      {firstName} {/* First and middle names */}
+      {firstName}
       <br />
-      {nameParts[nameParts.length - 1]} {/* Last name */}
+      {nameParts[nameParts.length - 1]}
     </Card.Header>
   );
 };
@@ -96,19 +92,23 @@ const Team = () => {
         doubling={screenWidth >= 530}
         columns={screenWidth <= 530 ? "equal" : 5}
         stackable={screenWidth <= 530}
+        centered
         className="bzTeam"
+        style={{ textAlign: "center" }}
       >
         {teamData.map((member, index) => (
-          <Grid.Column key={index}>
-            <Card style={cardStyle}>
+          <Grid.Column key={index} style={{ maxWidth: 300 }}>
+            <Card centered>
               <Image src={member.image} alt={member.name} />
               <Card.Content>
-                <Card.Header>
-                  <ImprovedCardHeader member={member} />
-                </Card.Header>
+                <ImprovedCardHeader member={member} />
               </Card.Content>
               <Card.Content extra>
-                <a href={member.profileLink} target="blank">
+                <a
+                  href={member.profileLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon name={member.icon} />
                   Profile
                 </a>
