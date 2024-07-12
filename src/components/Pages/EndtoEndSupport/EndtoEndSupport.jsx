@@ -20,7 +20,7 @@ const Step = ({ num, title }) => (
         <div className="content" style={{ margin: "auto" }}>
           <div
             className="title title-margin"
-            style={{ textAlign: "center", lineHeight: "22px", fontSize: "1em" }}
+            style={{ textAlign: "center", lineHeight: "22px", fontSize: "1em", color:"#fff" }}
           >
             {title}
           </div>

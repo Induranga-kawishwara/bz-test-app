@@ -17,14 +17,15 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  border: 3px solid #f4c700 !important;
+  border: 1px solid #f4c700 !important;
   background-color: rgba(244, 199, 0, 0.2) !important;
   box-shadow: none !important;
   transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  background-position: 0 0 !important;
+  box-shadow: 0 0px 2px 0 #f4c70050, 0 0px 16px 0 #f4c70050 !important;
 }
 
 .card-image {
@@ -39,18 +40,25 @@
   border-top: none !important;
   width: 100% !important;
   text-align: none !important;
-  .segment {
+}
+.card-content .segment {
     padding: 6em 0em !important;
     border: none !important;
     background-color: transparent !important;
   }
 
-  .header {
+  .card-content  hr{
+    opacity: 0.1;
+    width: 95%;
+    float: left;
+  }
+
+  .card-content   .header {
     font-size: 2.5em !important;
     color: #f4c700 !important;
   }
 
-  .card {
+  .card-content  .card {
     height: 100% !important;
     width: 100% !important;
     text-align: start !important;
@@ -58,17 +66,17 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    border: 3px solid #f4c700 !important;
+    border: 1px solid #f4c700 !important;
     background-color: rgba(244, 199, 0, 0.2) !important;
     box-shadow: none !important;
     transition: transform 0.2s ease-in-out;
   }
 
-  .card:hover {
+  .card-content   .card:hover {
     transform: scale(1.05);
   }
 
-  .card-image {
+  .card-content  .card-image {
     width: 90% !important;
     height: 150px !important;
     border: none !important;
@@ -82,32 +90,35 @@
     text-align: none !important;
   }
 
-  .card-header,
-  .card-meta {
-    color: white !important;
+  .card-content  .card-header,
+  .card-content .card-meta {
+    color: #fff !important;
   }
 
-  .read-more {
+  .card-content  .read-more {
     color: white !important;
     text-decoration: underline !important;
+    position: absolute;
+    bottom: 10px;
+    font-weight: 500!important;
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
   }
 
-  .read-more:hover {
+  .card-content  .read-more:hover {
     color: #f4c700 !important;
-    text-decoration: none !important;
+    text-decoration: none!important;
   }
 
-  .subscribe-card {
+  .card-content .subscribe-card {
     height: 100% !important;
     width: 100% !important;
     text-align: start !important;
     padding-top: 15% !important;
     display: flex !important;
     flex-direction: column !important;
-    border: 3px solid #f4c700 !important;
+    border: 1px solid #f4c700 !important;
     color: black !important;
-    background-color: rgba(244, 199, 0, 0.5) !important;
+    background: linear-gradient(120deg, #f4c7002a, #f4c70054) !important;
     box-shadow: none !important;
   }
 
@@ -136,8 +147,10 @@
     margin-top: 10% !important;
     margin-bottom: 30% !important;
     border-radius: 100px !important;
+    font-size: 18px!important;
+
   }
-}
+
 
 .card-header,
 .card-meta {

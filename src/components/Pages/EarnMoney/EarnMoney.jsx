@@ -48,7 +48,7 @@ const EarnMoney = () => {
                 style={{
                   boxShadow: "none",
                   width: "100%",
-                  textAlign: "center",
+                  textAlign: "left",
                   backgroundColor: "#212121",
                 }}
               >

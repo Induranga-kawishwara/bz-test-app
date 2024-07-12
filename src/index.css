@@ -152,7 +152,17 @@ code {
 .clipArt {
   border-radius: 0.5em;
   transition: all 300ms;
+  
 }
+.clipArt .ui .img{
+  display: inline!important;
+  vertical-align: left!important;
+  left: 0px;
+}
+.clipArt h3{
+  text-align: left;
+}
+
 .clipArt:hover {
   box-shadow: 0 0px 2px 0 #f4c70050, 0 0px 16px 0 #f4c70050;
 }

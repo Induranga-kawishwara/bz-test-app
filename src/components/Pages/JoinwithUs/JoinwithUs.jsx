@@ -8,51 +8,58 @@ import {
   CardHeader,
   CardContent,
   Card,
-  Icon,
+  Button
 } from "semantic-ui-react";
 
 const JoinwithUs = () => (
-  <div
+<div> <div 
     style={{
       display: "flex",
       alignItems: "center",
       justifyContent: "space-evenly",
       position: "relative",
+    
     }}
   >
-    <Card style={{ marginTop: "20px", marginBottom: "0" }}>
+    <Card style={{ marginTop: "150px", marginBottom: "0" }}>
       <img src={Hacker} style={{ height: "225px" }} />
       <CardContent>
         <CardHeader>Join as a Hacker</CardHeader>
         <CardMeta>Put your tech skills to good use.</CardMeta>
       </CardContent>
       <CardContent extra>
-        <div
-          className="ui fluid large teal submit button"
-          style={{ marginTop: "10px", backgroundColor: "#f4c700" }}
+        <Button 
+          className="big ui yellow button"
+          style={{ color: "black", fontSize: "15px", borderRadius: "25px",width:"260px", margin: "3% 2% 5% 0%"
+            }}
         >
           Sign Up
-        </div>
+        </Button>
       </CardContent>
     </Card>
 
     <Divider vertical>Or</Divider>
-    <Card style={{ marginTop: "20px" }}>
+    <Card style={{ marginTop: "150px" }}>
       <img src={Organization} style={{ height: "225px" }} />
       <CardContent>
         <CardHeader>Create a Program</CardHeader>
         <CardMeta>Make your organisation safe</CardMeta>
       </CardContent>
       <CardContent extra>
-        <div
-          className="ui fluid large teal submit button"
-          style={{ marginTop: "10px", backgroundColor: "#f4c700" }}
+        <Button 
+          className="big ui yellow button"
+          style={{ color: "black", fontSize: "15px", borderRadius: "25px",width:"260px", margin: "3% 2% 5% 0%"
+            }}
         >
           Sign Up
-        </div>
+        </Button>
       </CardContent>
     </Card>
+
   </div>
+  <div style={{marginTop:"50px"}}>
+  Already have an account? <a>Sign In</a>
+  </div></div>
 );
 
 export default JoinwithUs;
