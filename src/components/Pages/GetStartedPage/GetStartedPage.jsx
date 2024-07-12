@@ -18,7 +18,7 @@ const GetStartedPage = () => {
                 Get Started With Bug Zero
               </Header>
               <p style={{ fontSize: "1.5em" }}>
-                Hackers aren't waiting. So why would you? See how Nug Zero can
+                Hackers aren't waiting. So why would you? See how Bug Zero can
                 help you.
               </p>
             </Grid.Column>
@@ -36,7 +36,7 @@ const GetStartedPage = () => {
                 }}
               >
                 <Icon name="right arrow" />
-                <span style={{ marginLeft: "10px" }}>Join with us</span>
+                <span style={{ marginLeft: "10px" }}> <a href="http://localhost:3000/bz-test-app/joinwithus">Join with us</a></span>
               </Button>
               <Button
                 size="huge"

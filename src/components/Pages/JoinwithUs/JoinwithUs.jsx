@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardContent,
   Card,
-  Icon,
+  Button
 } from "semantic-ui-react";
 
 const JoinwithUs = () => (
@@ -28,12 +28,13 @@ const JoinwithUs = () => (
         <CardMeta>Put your tech skills to good use.</CardMeta>
       </CardContent>
       <CardContent extra>
-        <div
-          className="ui fluid large teal submit button"
-          style={{ marginTop: "10px", backgroundColor: "#f4c700" }}
+        <Button 
+          className="big ui yellow button"
+          style={{ color: "black", fontSize: "15px", borderRadius: "25px",width:"260px", margin: "3% 2% 5% 0%"
+            }}
         >
           Sign Up
-        </div>
+        </Button>
       </CardContent>
     </Card>
 
@@ -45,12 +46,13 @@ const JoinwithUs = () => (
         <CardMeta>Make your organisation safe</CardMeta>
       </CardContent>
       <CardContent extra>
-        <div
-          className="ui fluid large teal submit button"
-          style={{ marginTop: "10px", backgroundColor: "#f4c700" }}
+        <Button 
+          className="big ui yellow button"
+          style={{ color: "black", fontSize: "15px", borderRadius: "25px",width:"260px", margin: "3% 2% 5% 0%"
+            }}
         >
           Sign Up
-        </div>
+        </Button>
       </CardContent>
     </Card>
 
