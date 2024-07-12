@@ -70,7 +70,7 @@ const EndtoEndSupport = () => {
       </Container>
       <Container>
         {isMobile ? (
-          <Grid container centered stackable>
+          <Grid container centered doubling columns={2}>
             {steps.map((text, index) => (
               <Step key={index} num={index + 1} title={text} />
             ))}
