@@ -110,8 +110,9 @@ const DesktopContainer = ({ children, activeSection }) => {
                   color="yellow"
                   style={{ borderRadius: "25px" }}
                   basic
+                  href={`${process.env.PUBLIC_URL}/signin`}
                 >
-                  <a href="http://localhost:3000/bz-test-app/signin"></a>
+                  {/* <a href="http://localhost:3000/bz-test-app/signin"></a> */}
                   Log in
                 </Button>
                 <Button

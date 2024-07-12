@@ -36,7 +36,12 @@ const GetStartedPage = () => {
                 }}
               >
                 <Icon name="right arrow" />
-                <span style={{ marginLeft: "10px" }}> <a href="http://localhost:3000/bz-test-app/joinwithus">Join with us</a></span>
+                <span style={{ marginLeft: "10px" }}>
+                  {" "}
+                  <a href={`${process.env.PUBLIC_URL}/joinwithus`}>
+                    Join with us
+                  </a>
+                </span>
               </Button>
               <Button
                 size="huge"
