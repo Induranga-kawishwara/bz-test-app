@@ -10,7 +10,7 @@ import { Stepper } from "react-form-stepper";
 import "./EndtoEndSuppor.css";
 
 const Step = ({ num, title }) => (
-  <GridColumn>
+  <GridColumn style={{ maxWidth: 300, marginBottom: "1em" }}>
     <div className="ui steps" style={{ display: "block", margin: "auto" }}>
       <div
         className="step step-card"
@@ -20,7 +20,12 @@ const Step = ({ num, title }) => (
         <div className="content" style={{ margin: "auto" }}>
           <div
             className="title title-margin"
-            style={{ textAlign: "center", lineHeight: "22px", fontSize: "1em", color:"#fff" }}
+            style={{
+              textAlign: "center",
+              lineHeight: "22px",
+              fontSize: "1em",
+              color: "#fff",
+            }}
           >
             {title}
           </div>
@@ -65,7 +70,7 @@ const EndtoEndSupport = () => {
       </Container>
       <Container>
         {isMobile ? (
-          <Grid container stackable>
+          <Grid container centered stackable>
             {steps.map((text, index) => (
               <Step key={index} num={index + 1} title={text} />
             ))}

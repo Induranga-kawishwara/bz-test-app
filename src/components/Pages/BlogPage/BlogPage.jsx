@@ -57,22 +57,21 @@ const BlogPage = () => {
       </Container>
       <Grid
         container
+        centered
         doubling={screenWidth >= 530}
-        columns={screenWidth <= 530 ? "equal" : 4}
         stackable={screenWidth <= 530}
+        columns={screenWidth <= 530 ? 1 : 4}
       >
         {blogs.map((item, index) => (
-          <Grid.Column key={index}>
-            <Card className={styles.card}>
+          <Grid.Column key={index} style={{ maxWidth: 300 }}>
+            <Card centered className={styles.card}>
               <Image
                 src={item.imgUrl}
                 alt="image"
                 className={styles["card-image"]}
               />
-
               <CardContent className={styles["card-content"]}>
                 <CardHeader className={styles["card-header"]}>
-                  {/* Truncate topic name and add "..." */}
                   {item.topicName.length > 50
                     ? `${item.topicName.slice(0, 50)}...`
                     : item.topicName}
@@ -84,11 +83,11 @@ const BlogPage = () => {
                 <CardMeta className={styles["card-meta"]}>
                   {`Publish on ${item.publishDate}`}
                 </CardMeta>
-
                 <CardMeta style={{ marginTop: "5%" }}>
                   <a
                     href={item.guidLink}
-                    target="blank"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles["read-more"]}
                   >
                     Read more
@@ -98,14 +97,15 @@ const BlogPage = () => {
             </Card>
           </Grid.Column>
         ))}
-        <Grid.Column>
-          <Card className={styles["subscribe-card"]}>
+        <Grid.Column style={{ maxWidth: 300 }}>
+          <Card centered className={styles["subscribe-card"]}>
             <Segment className={styles["subscribe-segment"]}>
               <Card.Description>
                 Subscribe to our mailing list to keep updated with latest on
                 cyber security
               </Card.Description>
-              <br /> <br />
+              <br />
+              <br />
               <Input
                 iconPosition="left"
                 placeholder="Email"
@@ -118,7 +118,6 @@ const BlogPage = () => {
                 Subscribe
               </Button>
             </Segment>
-            {/* <br /> <br /> */}
           </Card>
         </Grid.Column>
       </Grid>
