@@ -8,70 +8,57 @@ import {
   CardHeader,
   CardContent,
   Card,
-  Button,
 } from "semantic-ui-react";
 
-const JoinwithUs = () => (
-  <div>
-    {" "}
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-evenly",
-        position: "relative",
-        height: "100vh",
-      }}
-    >
-      <Card style={{ marginTop: "150px", marginBottom: "0" }}>
-        <img src={Hacker} style={{ height: "225px" }} />
-        <CardContent>
-          <CardHeader>Join as a Hacker</CardHeader>
-          <CardMeta>Put your tech skills to good use.</CardMeta>
-        </CardContent>
-        <CardContent extra>
-          <Button
-            className="big ui yellow button"
-            style={{
-              color: "black",
-              fontSize: "15px",
-              borderRadius: "25px",
-              width: "260px",
-              margin: "3% 2% 5% 0%",
-            }}
-          >
-            Sign Up
-          </Button>
-        </CardContent>
-      </Card>
+const JoinwithUs = () => {
+  const handleCardClick = (url) => {
+    window.location.href = url;
+  };
 
-      <Divider vertical>Or</Divider>
-      <Card style={{ marginTop: "150px" }}>
-        <img src={Organization} style={{ height: "225px" }} />
-        <CardContent>
-          <CardHeader>Create a Program</CardHeader>
-          <CardMeta>Make your organisation safe</CardMeta>
-        </CardContent>
-        <CardContent extra>
-          <Button
-            className="big ui yellow button"
-            style={{
-              color: "black",
-              fontSize: "15px",
-              borderRadius: "25px",
-              width: "260px",
-              margin: "3% 2% 5% 0%",
-            }}
-          >
-            Sign Up
-          </Button>
-        </CardContent>
-      </Card>
+  return (
+    <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+          position: "relative",
+          height: "100vh",
+        }}
+      >
+        <Card
+          onClick={() => handleCardClick("")}
+          style={{ marginTop: "150px", marginBottom: "0", cursor: "pointer" }}
+        >
+          <img src={Hacker} style={{ height: "225px" }} alt="Join as a Hacker" />
+          <CardContent>
+            <CardHeader>Join as a Hacker</CardHeader>
+            <CardMeta>Put your tech skills to good use.</CardMeta>
+          </CardContent>
+        </Card>
+
+        <Divider vertical>Or</Divider>
+
+        <Card
+          onClick={() => handleCardClick("")}
+          style={{ marginTop: "150px", cursor: "pointer" }}
+        >
+          <img
+            src={Organization}
+            style={{ height: "225px" }}
+            alt="Create a Program"
+          />
+          <CardContent>
+            <CardHeader>Create a Program</CardHeader>
+            <CardMeta>Make your organisation safe</CardMeta>
+          </CardContent>
+        </Card>
+      </div>
+      <div style={{ marginBottom: "300px" }}>
+        Already have an account? <a href="/signin">Sign In</a>
+      </div>
     </div>
-    <div style={{ marginTop: "50px" }}>
-      Already have an account? <a>Sign In</a>
-    </div>
-  </div>
-);
+  );
+};
 
 export default JoinwithUs;
