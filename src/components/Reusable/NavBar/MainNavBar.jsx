@@ -114,13 +114,15 @@ const DesktopContainer = ({ children, activeSection }) => {
                   href={`${process.env.PUBLIC_URL}/signin`}
                 >
                   {/* <a href="http://localhost:3000/bz-test-app/signin"></a> */}
-                  Log in
+                  Sign In
                 </Button>
                 <Button
                   as="a"
                   inverted
                   color="yellow"
                   style={{ marginLeft: "0.5em", borderRadius: "25px" }}
+                  basic
+                  href={`${process.env.PUBLIC_URL}/joinwithus`}
                 >
                   Sign Up
                 </Button>
