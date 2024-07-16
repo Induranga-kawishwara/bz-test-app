@@ -16,21 +16,26 @@ const JoinwithUs = () => {
   };
 
   return (
-    <div>
+    <div style={{ transform: "translateY(120px)" }}>
+      <h1>Welcome to Bug Zero!</h1>
+      <h2 style={{ color: "gray" }}>Let's get started</h2>
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-evenly",
           position: "relative",
-          height: "100vh",
         }}
       >
         <Card
           onClick={() => handleCardClick("")}
-          style={{ marginTop: "150px", marginBottom: "0", cursor: "pointer" }}
+          style={{ marginBottom: "0", cursor: "pointer" }}
         >
-          <img src={Hacker} style={{ height: "225px" }} alt="Join as a Hacker" />
+          <img
+            src={Hacker}
+            style={{ height: "240px" }}
+            alt="Join as a Hacker"
+          />
           <CardContent>
             <CardHeader>Join as a Hacker</CardHeader>
             <CardMeta>Put your tech skills to good use.</CardMeta>
@@ -39,13 +44,10 @@ const JoinwithUs = () => {
 
         <Divider vertical>Or</Divider>
 
-        <Card
-          onClick={() => handleCardClick("")}
-          style={{ marginTop: "150px", cursor: "pointer" }}
-        >
+        <Card onClick={() => handleCardClick("")} style={{ cursor: "pointer" }}>
           <img
             src={Organization}
-            style={{ height: "225px" }}
+            style={{ height: "240px" }}
             alt="Create a Program"
           />
           <CardContent>
@@ -54,11 +56,10 @@ const JoinwithUs = () => {
           </CardContent>
         </Card>
       </div>
-      <div style={{ marginBottom: "300px" }}>
+      <div style={{ marginBottom: "145px", marginTop: "20px" }}>
         Already have an account? <a href="/signin">Sign In</a>
       </div>
     </div>
   );
 };
-
 export default JoinwithUs;
