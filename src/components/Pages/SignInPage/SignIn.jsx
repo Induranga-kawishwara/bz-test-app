@@ -10,7 +10,11 @@ import {
 } from "semantic-ui-react";
 
 const SignIn = () => (
-  <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
+  <Grid
+    textAlign="center"
+    style={{ height: "100vh", marginTop: "0%" }}
+    verticalAlign="middle"
+  >
     <Grid.Column style={{ maxWidth: 450 }}>
       <Header as="h2" color="#f4c700" textAlign="center">
         Bug Zero
