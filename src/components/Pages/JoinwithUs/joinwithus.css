@@ -1,0 +1,7 @@
+@media (width <= 750px) {
+  .joinWithUs-outer {
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
