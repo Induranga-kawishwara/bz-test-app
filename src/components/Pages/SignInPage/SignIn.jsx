@@ -1,54 +1,38 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
+import {
+  Button,
+  Form,
+  Grid,
+  Header,
+  Image,
+  Message,
+  Segment,
+} from "semantic-ui-react";
 
 const SignIn = () => (
-  <div
-    className="ui middle aligned center aligned grid"
-    style={{ width: "30%", margin: "0 auto ", height: "100vh" }}
-  >
-    <div className="column">
-      <form
-        action="https://s.codepen.io/voltron2112/debug/PqrEPM?"
-        method="get"
-        className="ui large form"
-      >
-        <div
-          className="ui stacked secondary  segment"
-          style={{
-            backgroundColor: "transparent",
-            padding: "30px 15px",
-            marginTop: "85px",
-          }}
-        >
-          <h2 className="ui image header">
-            <div>
-              <div className="content">Sign In</div>
-            </div>
-          </h2>
-          <div className="field">
-            <div
-              className="ui left icon input"
-              style={{ flexDirection: "column" }}
-            >
-              <i className="user icon"></i>
-              <label for="email" style={{ textAlign: "left" }}>
-                Email:
-              </label>
-              <input type="text" name="email" placeholder="E-mail address" />
-            </div>
-          </div>
-          <div className="field">
-            <div
-              className="ui left icon input"
-              style={{ flexDirection: "column" }}
-            >
-              <i className="lock icon"></i>
-              <label for="password" style={{ textAlign: "left" }}>
-                Password:
-              </label>
-              <input type="password" name="password" placeholder="Password" />
-            </div>
-          </div>
+  <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
+    <Grid.Column style={{ maxWidth: 450 }}>
+      <Header as="h2" color="#f4c700" textAlign="center">
+        Bug Zero
+      </Header>
+      <Form size="large">
+        <Segment stacked>
+          <h3>Sign In</h3>
+          <h5 style={{ textAlign: "left" }}>Email Address</h5>
+          <Form.Input
+            fluid
+            icon="user"
+            iconPosition="left"
+            placeholder="E-mail address"
+          />
+          <h5 style={{ textAlign: "left" }}>Password</h5>
+          <Form.Input
+            fluid
+            icon="lock"
+            iconPosition="left"
+            placeholder="Password"
+            type="password"
+          />
           <a href="#">Forget Password ?</a>
           <Button
             className="big ui yellow button"
@@ -57,15 +41,16 @@ const SignIn = () => (
               fontSize: "15px",
               borderRadius: "25px",
               width: "325px",
-              margin: "3% 2% 5% 0%",
+              margin: "3% 2% 3% 0%",
             }}
           >
-            Login
+            Sign In
           </Button>
-          New to Bug Zero? <a href="#">Create an account</a>
-        </div>
-      </form>
-    </div>
-  </div>
+          <br /> New to Bug Zero? <a href="#">Create an account</a>
+        </Segment>
+      </Form>
+    </Grid.Column>
+  </Grid>
 );
+
 export default SignIn;

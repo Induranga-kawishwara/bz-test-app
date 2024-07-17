@@ -22,8 +22,16 @@ const BannerPage = () => {
               color="yellow"
               style={{ color: "Black", borderRadius: "25px" }}
             >
-              Get Started
-              <Icon name="right arrow" />
+            <Icon name="right arrow" />
+             <span style={{ marginLeft: "10px" }}>
+                  {" "}
+                  <a
+                    href={`${process.env.PUBLIC_URL}/joinwithus`}
+                    style={{ color: "white" }}
+                  >
+                    Get Started
+                  </a>
+                </span>
             </Button>
             <Button
               size="huge"
@@ -31,7 +39,9 @@ const BannerPage = () => {
               style={{ borderRadius: "25px" }}
               inverted
             >
+              <a href ="https://blog.bugzero.io/bug-bounties-in-sri-lanka-650f34bd162e" style={{color:"white"}}>
               Learn More
+            </a>
             </Button>
           </div>
         </div>
