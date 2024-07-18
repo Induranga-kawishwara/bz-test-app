@@ -15,14 +15,10 @@ const JoinwithUs = () => {
   const handleCardClick = (url) => {
     window.location.href = url;
   };
-  const [alignment, setAlignment] = useState("");
+  const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 750) {
-        setAlignment("vertical");
-      } else {
-        setAlignment("horizontal");
-      }
+      setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -31,8 +27,8 @@ const JoinwithUs = () => {
   }, []);
 
   return (
-    <div style={{ transform: "translateY(120px)" }}>
-      <h1>Welcome to Bug Zero! {alignment}</h1>
+    <div style={{ minHeight: "100vh", paddingTop: "20vh" }}>
+      <h1>Welcome to Bug Zero!</h1>
       <h2 style={{ color: "gray" }}>Let's get started</h2>
       <div
         className="joinWithUs-outer"
@@ -59,7 +55,11 @@ const JoinwithUs = () => {
           </CardContent>
         </Card>
 
-        <Divider>Or</Divider>
+        {width > 750 ? (
+          <Divider vertical>or</Divider>
+        ) : (
+          <Divider horizontal>or</Divider>
+        )}
 
         <Card
           onClick={() => handleCardClick("")}
