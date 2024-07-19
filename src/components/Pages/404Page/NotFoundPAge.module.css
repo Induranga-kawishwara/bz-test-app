@@ -82,25 +82,25 @@
   left: 60%;
   filter: blur(7px);
 }
-main {
+.mainSection {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: cursive;
 }
-main h1 {
+.mainSection h1 {
   font-weight: normal;
 }
-main h1 {
+.mainSection h1 {
   text-align: center;
   text-shadow: 0 0 5px #c3d168a2;
 }
-main div {
+.mainSection div {
   margin-top: 2rem;
   text-align: center;
 }
-main div span {
+.mainSection div span {
   font-size: 5rem;
   line-height: 6rem;
   text-shadow: 0 0 7px #c3d168a2;
@@ -157,12 +157,12 @@ main div span {
     transform: translate(-2.5rem, 0) rotate(360deg);
   }
 }
-main p {
+.mainSection p {
   margin-top: 3rem;
   text-align: center;
   text-shadow: 0 0 5px #c3d168a2;
 }
-main button {
+.mainSection button {
   padding: 0.55rem 1.2rem;
   border: none;
   outline: none;
@@ -172,6 +172,6 @@ main button {
   color: #fafafa;
   box-shadow: 0 0 4px #e1f17859;
 }
-main button:hover {
+.mainSection button:hover {
   cursor: pointer;
 }
