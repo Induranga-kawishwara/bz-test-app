@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "semantic-ui-css/semantic.min.css";
 import Hacker from "../../../Assets/Hacker.jpg";
 import Organization from "../../../Assets/Organization.jpg";
+import "./joinwithus.css";
 import {
   Divider,
   CardMeta,
@@ -14,14 +15,26 @@ const JoinwithUs = () => {
   const handleCardClick = (url) => {
     window.location.href = url;
   };
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <div style={{ transform: "translateY(120px)" }}>
+    <div style={{ minHeight: "100vh", paddingTop: "20vh" }}>
       <h1>Welcome to Bug Zero!</h1>
       <h2 style={{ color: "gray" }}>Let's get started</h2>
       <div
+        className="joinWithUs-outer"
         style={{
           display: "flex",
+
           alignItems: "center",
           justifyContent: "space-evenly",
           position: "relative",
@@ -42,9 +55,16 @@ const JoinwithUs = () => {
           </CardContent>
         </Card>
 
-        <Divider vertical>Or</Divider>
+        {width > 750 ? (
+          <Divider vertical>or</Divider>
+        ) : (
+          <Divider horizontal>or</Divider>
+        )}
 
-        <Card onClick={() => handleCardClick("")} style={{ cursor: "pointer" }}>
+        <Card
+          onClick={() => handleCardClick("")}
+          style={{ cursor: "pointer", marginTop: "0" }}
+        >
           <img
             src={Organization}
             style={{ height: "240px" }}
