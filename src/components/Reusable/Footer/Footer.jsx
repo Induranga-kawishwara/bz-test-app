@@ -38,11 +38,11 @@ const Footer = () => (
               Email:
             </Header>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=BugzeroTest@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=support@bugzero.io"
               target="_blank"
               rel="noopener noreferrer"
             >
-              BugzeroTest@gmail.com
+              support@bugzero.io
             </a>
           </Grid.Column>
           <Grid.Column
