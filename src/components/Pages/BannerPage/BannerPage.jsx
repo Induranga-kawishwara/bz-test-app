@@ -13,7 +13,11 @@ const BannerPage = () => {
             <Button
               size="huge"
               color="yellow"
-              style={{ color: "Black", borderRadius: "25px", backgroundColor: "#f4c700" }}
+              style={{
+                color: "Black",
+                borderRadius: "25px",
+                backgroundColor: "#f4c700",
+              }}
             >
               <span style={{ marginLeft: "10px" }}>
                 {" "}
@@ -33,10 +37,8 @@ const BannerPage = () => {
               className={style.learnmorebtn}
               inverted
             >
-              <a
-                href="https://blog.bugzero.io/bug-bounties-in-sri-lanka-650f34bd162e"
-              >
-               <span className={style.learnmorebtn}>Learn More</span> 
+              <a href="https://blog.bugzero.io/bug-bounties-in-sri-lanka-650f34bd162e">
+                <span className={style.learnmorebtn}>Learn More</span>
               </a>
             </Button>
           </div>
