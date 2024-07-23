@@ -15,15 +15,7 @@ const GetStartedPage = () => {
           <Grid.Row>
             <Grid.Column width={9}>
               <Header as="h3" style={{ fontSize: "2.5em" }}>
-                Get Started With{" "}
-                <span
-                  style={{
-                    color: "#f4c700",
-                    fontFamily: "Edo",
-                  }}
-                >
-                  Bug Zero
-                </span>
+                Get Started With Bug Zero
               </Header>
               <p style={{ fontSize: "1.5em" }}>
                 Hackers aren't waiting. So why would you? See how Bug Zero can
@@ -43,16 +35,18 @@ const GetStartedPage = () => {
                   borderRadius: "25px",
                 }}
               >
-                <Icon name="right arrow" />
+                
                 <span style={{ marginLeft: "10px" }}>
                   {" "}
                   <a
                     href={`${process.env.PUBLIC_URL}/joinwithus`}
-                    style={{ color: "white" }}
+                    style={{ color: "black" }}
                   >
                     Join with us
                   </a>
+
                 </span>
+                <Icon name="right arrow" />
               </Button>
               <Button
                 size="huge"
@@ -60,6 +54,7 @@ const GetStartedPage = () => {
                 style={{
                   borderRadius: "25px",
                   color: "#212121",
+                  backgroundColor: "#f4c700"
                 }}
                 inverted
               >

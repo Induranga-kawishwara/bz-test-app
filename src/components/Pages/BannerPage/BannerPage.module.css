@@ -18,6 +18,16 @@
   gap: 1rem;
 }
 
+
+.learnmorebtn{
+  color: #fff!important;
+  border-color: #f4c700!important;
+}
+.learnmorebtn:hover{
+  color: #212121!important;
+  background-color: #f4c700!important;
+}
+
 .text_title {
   padding: 5% 0% 5% 0;
   color: white;

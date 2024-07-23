@@ -188,3 +188,10 @@ code {
 .stats-card:hover {
   background-position: 0 0 !important;
 }
+
+.learnmorebtn{
+  color: #fff!important;
+}
+.learnmorebtn:hover{
+  color: #212121!important;
+}
