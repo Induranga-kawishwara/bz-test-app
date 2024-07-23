@@ -25,11 +25,11 @@ const NotFoundPage = () => {
             <br />
             you're looking for.
           </p>
-          <div className={styles.buttonContainer}>
+          {/* <div className={styles.buttonContainer}>
             <button type="button" onClick={handleClick}>
               Back to Home Page
             </button>
-          </div>
+          </div> */}
         </section>
       </main>
     </div>

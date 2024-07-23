@@ -90,7 +90,7 @@
   font-family: cursive;
 }
 .mainSection h1 {
-  font-weight: normal;
+  font-size: 3rem;
 }
 .mainSection h1 {
   text-align: center;
@@ -101,7 +101,7 @@
   text-align: center;
 }
 .mainSection div span {
-  font-size: 5rem;
+  font-size: 7rem;
   line-height: 6rem;
   text-shadow: 0 0 7px #c3d168a2;
 }
@@ -112,8 +112,8 @@
   -webkit-user-select: none;
   display: inline-block;
   position: relative;
-  width: 6rem;
-  height: 6rem;
+  width: 7rem;
+  height: 7rem;
   text-shadow: none;
   background: #e6f1a3 radial-gradient(#f9ffd2, #ecff70);
   color: rgba(0, 0, 0, 0);
@@ -127,8 +127,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
-  width: 10rem;
-  height: 4rem;
+  width: 9rem;
+  height: 5rem;
   border-radius: 50%;
   border: 2px solid #fafafa;
   border-top: 0px solid #fafafa;
@@ -143,8 +143,8 @@
   left: 50%;
   background: #121212;
   border-radius: 50%;
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   transform-origin: 2.5rem 0;
   transform: translate(-2.5rem, 0) rotate(0deg);
   animation: circle-around 5s infinite linear;
@@ -158,20 +158,21 @@
   }
 }
 .mainSection p {
-  margin-top: 3rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
   text-align: center;
   text-shadow: 0 0 5px #c3d168a2;
 }
-.mainSection button {
+/* .mainSection button {
   padding: 0.55rem 1.2rem;
   border: none;
   outline: none;
   appearance: none;
   border-radius: 1rem;
-  background: rgb(17, 141, 44);
+  background: rgb(44, 44, 28);
   color: #fafafa;
   box-shadow: 0 0 4px #e1f17859;
 }
 .mainSection button:hover {
   cursor: pointer;
-}
+} */
