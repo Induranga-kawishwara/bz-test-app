@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "./NotFoundPAge.module.css";
+import { useNavigate } from "react-router-dom";
 
 const NotFoundPage = () => {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/bz-test-app");
+  }
+
   return (
     <div className={styles.test}>
       <div id="particles" className={styles.particles}></div>
@@ -19,7 +26,9 @@ const NotFoundPage = () => {
             you're looking for.
           </p>
           <div className={styles.buttonContainer}>
-            <button>Back to Home Page</button>
+            <button type="button" onClick={handleClick}>
+              Back to Home Page
+            </button>
           </div>
         </section>
       </main>
