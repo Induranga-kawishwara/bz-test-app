@@ -216,11 +216,17 @@ const MobileContainer = ({ children, activeSection }) => {
   const handleToggle = () => setSidebarOpened(!sidebarOpened);
   const handleSidebarHide = () => setSidebarOpened(false);
 
+  const menuItems = [
+    { name: "home", label: "Home" },
+    { name: "about", label: "About" },
+    { name: "contact", label: "Contact" },
+  ];
+
   return (
     <Media at="mobile">
       <Sidebar.Pushable
         style={{
-          height: "fit-content",
+          height: "100%",
           width: "100%",
           position: "fixed",
           zIndex: 11,
@@ -276,7 +282,10 @@ const MobileContainer = ({ children, activeSection }) => {
 
         <Sidebar.Pusher
           dimmed={sidebarOpened}
-          style={{ height: sidebarOpened ? "100vh" : "auto" }}
+          style={{
+            height: "100%",
+            overflowY: sidebarOpened ? "hidden" : "auto",
+          }}
         >
           <Segment
             vertical

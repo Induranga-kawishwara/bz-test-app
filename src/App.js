@@ -15,7 +15,7 @@ function App() {
         <Route path="/bz-test-app" element={<HomepageLayout />} />
         <Route path="/bz-test-app/signin" element={<SignIn />} />
         <Route path="/bz-test-app/joinwithus" element={<JoinwithUs />} />
-        <Route path="*" element={<NotFoundPAge />} />
+        <Route path="/bz-test-app/*" element={<NotFoundPAge />} />
       </Routes>
       <Footer />
     </BrowserRouter>
