@@ -43,12 +43,11 @@ const EarnMoney = () => {
       <Container>
         <Grid container doubling columns={4}>
           {cardData.map((card, index) => (
-            <Grid.Column key={index} textAlign="center" className="clipArt">
+            <Grid.Column key={index} className="clipArt">
               <Card
                 style={{
                   boxShadow: "none",
                   width: "100%",
-                  textAlign: "left",
                   backgroundColor: "#212121",
                 }}
               >

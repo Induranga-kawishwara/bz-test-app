@@ -152,15 +152,14 @@ code {
 .clipArt {
   border-radius: 0.5em;
   transition: all 300ms;
-  
 }
-.clipArt .ui .img{
-  display: inline!important;
-  vertical-align: left!important;
+.clipArt .ui .img {
+  display: inline !important;
+  vertical-align: left !important;
   left: 0px;
 }
-.clipArt h3{
-  text-align: left;
+.clipArt h3 {
+  text-align: center;
 }
 
 .clipArt:hover {
@@ -189,9 +188,9 @@ code {
   background-position: 0 0 !important;
 }
 
-.learnmorebtn{
-  color: #fff!important;
+.learnmorebtn {
+  color: #fff !important;
 }
-.learnmorebtn:hover{
-  color: #212121!important;
+.learnmorebtn:hover {
+  color: #212121 !important;
 }
