@@ -74,9 +74,9 @@ const Main = () => {
         <BugZeroUnique />
       </section>
 
-      <section id="the-team" className={style.darkSection}>
+      {/* <section id="the-team" className={style.darkSection}>
         <Team />
-      </section>
+      </section> */}
 
       <section id="blog-page" className={style.darkSection}>
         <BlogPage />
