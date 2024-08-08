@@ -119,10 +119,14 @@ const DesktopContainer = ({ children, activeSection }) => {
               <Menu.Item position="right">
                 <Button
                   as="a"
-                  inverted
                   color="yellow"
-                  style={{ borderRadius: "25px" }}
-                  basic
+                  inverted
+                  style={{
+                    borderRadius: "25px",
+                    border: "none",
+                    color: "#212121",
+                    backgroundColor: "#f4c700",
+                  }}
                   href={`${process.env.PUBLIC_URL}/signin`}
                 >
                   {/* <a href="http://localhost:3000/bz-test-app/signin"></a> */}
@@ -149,12 +153,12 @@ const DesktopContainer = ({ children, activeSection }) => {
                 padding: "0%",
                 border: "none",
                 backgroundColor:
-                  isScrolled || windowHeight < 825 ? " #121212" : "transparent",
+                  isScrolled || windowHeight < 830 ? " #121212" : "transparent",
                 borderRadius: "0%",
                 boxShadow: "none",
               }}
             >
-              {!isScrolled && windowHeight > 825 && (
+              {!isScrolled && windowHeight >= 830 && (
                 <Segment
                   style={{
                     display:

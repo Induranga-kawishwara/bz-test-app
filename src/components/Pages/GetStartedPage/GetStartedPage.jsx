@@ -35,7 +35,6 @@ const GetStartedPage = () => {
                   borderRadius: "25px",
                 }}
               >
-                
                 <span style={{ marginLeft: "10px" }}>
                   {" "}
                   <a
@@ -44,7 +43,6 @@ const GetStartedPage = () => {
                   >
                     Join with us
                   </a>
-
                 </span>
                 <Icon name="right arrow" />
               </Button>
@@ -54,7 +52,7 @@ const GetStartedPage = () => {
                 style={{
                   borderRadius: "25px",
                   color: "#212121",
-                  backgroundColor: "#f4c700"
+                  backgroundColor: "#f4c700",
                 }}
                 inverted
               >
