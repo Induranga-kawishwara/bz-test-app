@@ -33,6 +33,7 @@ const menuItems = [
 const DesktopContainer = ({ children, activeSection }) => {
   const [activeItem, setActiveItem] = useState(activeSection);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
@@ -55,6 +56,17 @@ const DesktopContainer = ({ children, activeSection }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <Media greaterThan="mobile">
       <InView>
@@ -136,23 +148,23 @@ const DesktopContainer = ({ children, activeSection }) => {
                 height: "0%",
                 padding: "0%",
                 border: "none",
-                backgroundColor: isScrolled ? " #121212" : "transparent",
+                backgroundColor:
+                  isScrolled || windowHeight < 825 ? " #121212" : "transparent",
                 borderRadius: "0%",
                 boxShadow: "none",
               }}
             >
-              {!isScrolled && (
+              {!isScrolled && windowHeight > 825 && (
                 <Segment
                   style={{
                     display:
-                      pathname === "/bz-test-app"
-                        ? "flex"
-                        : pathname === "/bz-test-app/"
+                      pathname === "/bz-test-app" ||
+                      pathname === "/bz-test-app/"
                         ? "flex"
                         : "none",
                     justifyContent: "center",
-                    color: "#f4c700 ",
-                    fontFamily: " Edo",
+                    color: "#f4c700",
+                    fontFamily: "Edo",
                     fontSize: "5em",
                     margin: "0%",
                     backgroundColor: "transparent",
@@ -216,17 +228,11 @@ const MobileContainer = ({ children, activeSection }) => {
   const handleToggle = () => setSidebarOpened(!sidebarOpened);
   const handleSidebarHide = () => setSidebarOpened(false);
 
-  const menuItems = [
-    { name: "home", label: "Home" },
-    { name: "about", label: "About" },
-    { name: "contact", label: "Contact" },
-  ];
-
   return (
     <Media at="mobile">
       <Sidebar.Pushable
         style={{
-          height: "100%",
+          height: "fit-content",
           width: "100%",
           position: "fixed",
           zIndex: 11,
@@ -283,8 +289,7 @@ const MobileContainer = ({ children, activeSection }) => {
         <Sidebar.Pusher
           dimmed={sidebarOpened}
           style={{
-            height: "100%",
-            overflowY: sidebarOpened ? "hidden" : "auto",
+            height: sidebarOpened ? "100vh" : "auto",
           }}
         >
           <Segment
