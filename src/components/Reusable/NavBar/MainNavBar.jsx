@@ -149,12 +149,12 @@ const DesktopContainer = ({ children, activeSection }) => {
                 padding: "0%",
                 border: "none",
                 backgroundColor:
-                  isScrolled || windowHeight < 820 ? " #121212" : "transparent",
+                  isScrolled || windowHeight < 825 ? " #121212" : "transparent",
                 borderRadius: "0%",
                 boxShadow: "none",
               }}
             >
-              {!isScrolled && windowHeight > 820 && (
+              {!isScrolled && windowHeight > 825 && (
                 <Segment
                   style={{
                     display:
