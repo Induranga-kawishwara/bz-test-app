@@ -46,12 +46,12 @@ const SecureOrganization = () => {
       <Container>
         <Grid container doubling columns={4}>
           {cardData.map((card, index) => (
-            <Grid.Column key={index} textAlign="center" className="clipArt">
+            <Grid.Column key={index} textAlign="left" className="clipArt">
               <Card
                 style={{
                   boxShadow: "none",
                   width: "100%",
-                  textAlign: "center",
+                  textAlign: "left",
                   backgroundColor: "#212121",
                 }}
               >
