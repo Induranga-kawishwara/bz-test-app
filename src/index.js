@@ -1,4 +1,6 @@
 import React from "react";
+import "./index.css";
+import "semantic-ui-less/semantic.less";
 import ReactDOM from "react-dom";
 import App from "./App";
 
