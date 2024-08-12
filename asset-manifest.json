@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bz-test-app/static/css/main.50959842.css",
-    "main.js": "/bz-test-app/static/js/main.df426ef2.js",
+    "main.css": "/bz-test-app/static/css/main.904d17cd.css",
+    "main.js": "/bz-test-app/static/js/main.98674c92.js",
     "static/media/brand-icons.svg": "/bz-test-app/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/bz-test-app/static/media/icons.62d9dae4e0040e81c980.svg",
     "static/media/charitha.png": "/bz-test-app/static/media/charitha.0ef1e24b6c88566eb994.png",
@@ -44,11 +44,11 @@
     "static/media/equalizer.png": "/bz-test-app/static/media/equalizer.45653bd523cbf83350c9.png",
     "static/media/bhasha.png": "/bz-test-app/static/media/bhasha.09154684ba41775c128d.png",
     "index.html": "/bz-test-app/index.html",
-    "main.50959842.css.map": "/bz-test-app/static/css/main.50959842.css.map",
-    "main.df426ef2.js.map": "/bz-test-app/static/js/main.df426ef2.js.map"
+    "main.904d17cd.css.map": "/bz-test-app/static/css/main.904d17cd.css.map",
+    "main.98674c92.js.map": "/bz-test-app/static/js/main.98674c92.js.map"
   },
   "entrypoints": [
-    "static/css/main.50959842.css",
-    "static/js/main.df426ef2.js"
+    "static/css/main.904d17cd.css",
+    "static/js/main.98674c92.js"
   ]
 }
